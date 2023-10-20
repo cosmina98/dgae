@@ -1,0 +1,43 @@
+# Node artifact files
+
+*wandb*
+*sbatch_log*
+*/data/*
+
+# Datafiles
+*.npz
+*.csv
+*.pkl
+*.pt
+*.sdf
+
+# Compiled Java class files
+*.class
+
+
+# Package files
+*.jar
+
+/img/*
+
+# JetBrains IDE
+.idea/
+
+# Unit test reports
+TEST*.xml
+
+
+# Applications
+*.app
+*.exe
+*.war
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+
