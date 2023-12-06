@@ -8,14 +8,15 @@ import torch
 import time
 from utils.func import plot_graphs, get_edge_masks, init_model
 from utils.sample import sample
-from utils.eval import get_mol_metric, init_autoencoder_running_metrics, init_prior_running_metrics
+from utils.eval import get_mol_metric
 from utils.mol_utils import gen_mol
 from utils.losses import get_losses
 from utils.sample import sample_batch
-from utils.func import dense_zq
+from utils.func import quantizer
 from graph_stats.stats import eval_torch_batch
 from utils.logger import log_running_metrics, log_step_autoencoder, save_model, log_mol_metrics, \
-    log_step_prior, log_mmd_metrics
+    log_step_prior, log_mmd_metrics, init_autoencoder_running_metrics, init_prior_running_metrics
+#from fsq import FSQ
 
 
 
@@ -27,7 +28,8 @@ class Trainer:
 
         self.train_loader, self.test_loader = dataloaders
         model = init_model(config, data_info, self.device)
-        self.encoder, self.decoder, self.quantizer, self.transformer, self.opt, self.scheduler = model
+        self.encoder, self.decoder, self.transformer, self.opt, self.scheduler = model
+        #self.fsq = FSQ([7]*7)
 
         # Extract configuration variables
         self.epochs = config.training.epochs
@@ -37,14 +39,9 @@ class Trainer:
         self.n_node_feat = data_info.n_node_feat
         self.dataset = config.data.data
         self.decay_iteration = config.training.decay_iteration
-        self.cb_size = config.model.quantizer.codebook_size
-        self.gamma = config.model.gamma
         self.n_logging_steps = config.log.n_loggin_steps
         self.n_logging_epochs = config.log.n_loggin_epochs
         self.mol_data = data_info.mol
-        self.init_steps = config.model.quantizer.init_steps
-        if config.train_prior:
-            self.sort_indices = utils.func.sort_indices
 
         # Define Logger
         if config.train_prior:
@@ -66,33 +63,10 @@ class Trainer:
         self.best_run = {}
 
 
-
-
-
-
-
-
     def autoencoder(self) -> None:
         print(f'Train data contains {len(self.train_loader)} batches with size {self.train_loader.batch_size}')
         times = time.time(), time.process_time()
         step = 0
-        if self.init_steps > 0:
-
-            print('Initialization starts...')
-            self.quantizer.collect = False
-            for epoch in range(1, self.epochs):
-                for batch in self.train_loader:
-                    # Train the autoencoder
-                    self.fit_autoencoder(batch.to(self.device))
-                    print(step)
-                    step += 1
-                    if step >= self.init_steps:
-                        self.quantizer.collect = True
-
-                    if self.init_steps == 0:
-                        break
-                if self.init_steps == 0:
-                    break
 
 
         print('Training starts...')
@@ -114,12 +88,12 @@ class Trainer:
             # Log autoencoder results
             if epoch % self.n_logging_epochs == 0:
                 logged_metrics = log_running_metrics(self.metrics, self.wandb, step, key='train')
-                to_save = (self.encoder, self.decoder, self.quantizer, self.opt, self.scheduler)
-                self.best_run = save_model(logged_metrics['recon_loss'], self.best_run, to_save, step,
+                to_save = (self.encoder, self.decoder, self.opt, self.scheduler)
+                self.best_run = save_model(logged_metrics['loss'], self.best_run, to_save, step,
                                            prefix='train_rec_loss', minimize=True, wandb=self.wandb)
                 logged_metrics = log_running_metrics(self.metrics, self.wandb, step, key='val', times=times)
-                to_save = (self.encoder, self.decoder, self.quantizer, self.opt, self.scheduler)
-                self.best_run = save_model(logged_metrics['recon_loss'], self.best_run, to_save, step,
+                to_save = (self.encoder, self.decoder, self.opt, self.scheduler)
+                self.best_run = save_model(logged_metrics['loss'], self.best_run, to_save, step,
                                            prefix='val_rec_loss', minimize=True, wandb=self.wandb)
 
                 if self.mol_data:
@@ -133,52 +107,32 @@ class Trainer:
         # Set model mode (train/eval) based on the "train" parameter
         if train:
             self.encoder.train()
-            self.quantizer.train()
             self.decoder.train()
             self.opt.zero_grad()
         else:
             self.encoder.eval()
-            self.quantizer.eval()
             self.decoder.eval()
 
         # Encoding, quantization, and decoding
         ze, w0 = self.encoder(batch)
-
-        if self.init_steps > 0:
-            zq = ze
-            if self.quantizer.collect:
-                collect = self.quantizer.collect_samples(zq.reshape(zq.shape[0], self.quantizer.nc,
-                                                                 self.quantizer.embedding_dim).detach())
-            else:
-                collect = True
-        else:
-            zq, commit, codebook, perplex, indices = self.quantizer(ze)
+        zq = quantizer(ze, 2)
 
         zq, node_masks = to_dense_batch(zq, batch.batch, max_num_nodes=self.max_node_num)
-
+        #zq, _ = self.fsq(zq)
         masks = node_masks.detach(), get_edge_masks(node_masks)
+
         nodes_rec, edges_rec = self.decoder(zq, mask=node_masks)
 
         # Compute partial losses and reconstruction
-        recon_loss, rec_losses = get_losses(batch, nodes_rec, edges_rec, node_masks.unsqueeze(-1), self.annotated_nodes,
+        loss, rec_losses = get_losses(batch, nodes_rec, edges_rec, node_masks.unsqueeze(-1), self.annotated_nodes,
                                             self.annotated_edges, self. max_node_num, self.n_node_feat, masks[1])
-        if self.init_steps>0:
-            loss = recon_loss
-        else:
-            loss = recon_loss + (codebook + commit) * self.gamma
 
         if train:
             loss.backward()
             self.opt.step()
-        # Evaluate and log the results metrics, batch, rec_losses, vq_losses, masks, n_node_feat, train, annotated_nodes)
-        if self.init_steps > 0:
-            if not collect:
-                self.init_steps = 0
-        else:
-            vq_losses = loss, recon_loss, codebook, commit, perplex
-            nodes_rec, edges_rec = log_step_autoencoder(self.metrics, batch, rec_losses, vq_losses, masks,
-                                            self.n_node_feat, train, self.annotated_nodes)
 
+        nodes_rec, edges_rec = log_step_autoencoder(self.metrics, batch, rec_losses, loss, masks,
+                                            self.n_node_feat, train, self.annotated_nodes)
         return nodes_rec, edges_rec.permute(0, 3, 1, 2)
 
     def prior(self) -> None:
@@ -192,9 +146,6 @@ class Trainer:
             for batch in self.train_loader:
                 # Train the prior
                 self.fit_prior(batch.to(self.device))
-                #if ref.shape[0] < 117:
-                #    adj = to_dense_adj(batch.edge_index, batch.batch, max_num_nodes=self.max_node_num).to(self.device)
-                #    ref = torch.cat((ref, adj), dim=0)
                 if step % self.n_logging_steps == 0:
                     metrics = log_running_metrics(self.metrics, self.wandb, step, key='iter', times=times)
                     annots, adjs = sample_batch(self.n_samples, self.transformer, self.quantizer, self.decoder)

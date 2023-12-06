@@ -40,18 +40,17 @@ model:
     normalization: batch_norm
   quantizer:
     name: Quantizer
-    nz: 8
+    nz: 7
     codebook_size: 32
     nc: 2
     commitment_cost: 0.25
     decay: 0.99
     epsilon: 0.000_01
-    init_steps: 1000
   gamma: 0.1
 
 log:
     n_loggin_steps: 1000
     n_loggin_epochs: 1
-    wandb: online  # disabled, offline or online
+    wandb: disabled  # disabled, offline or online
     debug: False
 
