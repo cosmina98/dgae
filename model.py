@@ -59,7 +59,7 @@ class Encoder(nn.Module):
         layers = [nn_.GnnSparse(nnf, nef, nhf, nhf, mlp_n_layers, mlp_hidden_size, normalization=normalization)]
         for layer in range(1, n_layers - 1):
             layers.append(nn_.GnnSparse(nhf, nhf, nhf, nhf, mlp_n_layers, mlp_hidden_size, normalization=normalization))
-        layers.append(nn_.GnnSparse(nhf, nhf, nz, 1, mlp_n_layers, mlp_hidden_size, normalization=None))
+        layers.append(nn_.GnnSparse(nhf, nhf, nz, 1, mlp_n_layers, mlp_hidden_size, normalization=normalization))
         #self.add_input_noise = config.model.encoder.add_input_noise
         self.layers = nn.Sequential(*layers)
 
@@ -78,6 +78,137 @@ class Encoder(nn.Module):
                                                edge_attr=edge_feat)
         return node_feat, edge_feat
 
+class Quantizer(nn.Module):
+    # Adapted from https://github.com/Jackson-Kang/Pytorch-VAE-tutorial/
+    # blob/master/02_Vector_Quantized_Variational_AutoEncoder.ipynb
+    def __init__(self, config):
+        super().__init__()
+        # error_msg = 'The size of your latent vector should be dividable by the dimension of the vector in the codebook'
+        # assert embedding_dim % latent_vectors_by_node == 0, error_msg
+        train_prior = config.train_prior
+        config = config.model.quantizer
+        self.init_steps = config.init_steps
+        self.n_embeddings = config.codebook_size
+        self.nc = config.nc
+        self.embedding_dim = config.nz // self.nc
+        self.commitment_cost = config.commitment_cost
+        self.decay = config.decay
+        self.epsilon = config.epsilon
+
+
+        init_samples = torch.Tensor(0, self.nc, self.embedding_dim)
+        init_bound = 1 / self.n_embeddings
+        embedding = torch.Tensor(self.nc, self.n_embeddings, self.embedding_dim)
+        embedding.uniform_(-init_bound, init_bound)
+
+        self.register_buffer("init_samples", init_samples)
+        if train_prior:
+            self.register_buffer("init_samples", torch.zeros(0, self.nc, self.embedding_dim))
+            #self.register_buffer("init_samples", torch.zeros(100_000, self.nc, self.embedding_dim))
+        self.register_buffer("embedding", embedding)
+        self.register_buffer("ema_count", torch.zeros(self.nc, self.n_embeddings))
+        self.register_buffer("ema_weight", self.embedding.clone())
+
+        #if self.nc == 2:
+        #    self.register_buffer("oneVectIdx", torch.zeros(self.n_embeddings ** 2))
+
+        self.encod_sum = 0
+        self.idxToRank = 0
+        if self.init_steps > 0:
+            self.collect = True
+
+    def encode(self, x):
+        nc, m, d = self.embedding.size()
+        x_flat = x.reshape(-1, self.nc, d)
+        x_flat_detached = x_flat.detach()
+        diff = x_flat_detached.unsqueeze(2) - self.embedding.unsqueeze(0)
+        distances = torch.sum(diff ** 2, -1)
+        indices = torch.argmin(distances.float(), dim=-1)
+        idx0 = torch.arange(self.nc).unsqueeze(0).repeat(indices.shape[0], 1)
+        quantized = self.embedding[idx0, indices]
+        return quantized, indices
+
+    def retrieve_random_codebook(self, random_indices):
+        quantized = F.embedding(random_indices, self.embedding)
+        quantized = quantized.transpose(1, 3)
+        return quantized
+
+    def indices_to_zq(self, indices, padded=False):
+        nc = self.embedding.shape[0]
+        nv = self.embedding.shape[-1]
+        device = indices.device
+        indices_flatten = indices.flatten(0, 1)
+        if padded:
+            embedding = torch.cat((self.embedding, torch.zeros(nc, 1, nv, device=device)), dim=1)
+        else:
+            embedding = self.embedding
+        idx0 = torch.arange(self.nc).unsqueeze(0).repeat(indices_flatten.shape[0], 1)
+        quantized = embedding[idx0, indices_flatten]
+        quantized = quantized.reshape(*indices.shape, -1)
+        return quantized
+
+    def sort_embedding(self):
+        idx0 = torch.arange(self.nc).unsqueeze(1).repeat(1, self.embedding.shape[1])
+        self.embedding = self.embedding[idx0, self.ema_count.sort(1, descending=True)[1]]
+        self.ema_count = self.ema_count[idx0, self.ema_count.sort(1, descending=True)[1]]
+
+    def forward(self, x, mask=None):
+        nc, m, d = self.embedding.size()
+        x_flat = x.reshape(-1, self.nc, d)
+        x_flat_detached = x_flat.detach()
+
+        diff = x_flat_detached.unsqueeze(2) - self.embedding.unsqueeze(0)
+
+        distances = torch.sum(diff ** 2, -1)
+
+        indices = torch.argmin(distances.float(), dim=-1)
+
+        encodings = F.one_hot(indices, m).float()
+        idx0 = torch.arange(self.nc).unsqueeze(0).repeat(indices.shape[0], 1)
+        quantized = self.embedding[idx0, indices]
+
+        if self.training:
+            self.ema_count = self.decay * self.ema_count + (1 - self.decay) * torch.sum(encodings, dim=0)
+            n = torch.sum(self.ema_count, 1, keepdim=True)
+            self.ema_count = (self.ema_count + self.epsilon) / (n + m * self.epsilon) * n
+            dw = torch.matmul(encodings.permute(1, 2, 0), x_flat_detached.permute(1, 0, 2))
+            self.ema_weight = self.decay * self.ema_weight + (1 - self.decay) * dw
+            self.embedding = self.ema_weight / self.ema_count.unsqueeze(-1)
+
+        if mask is not None:
+            quantized = quantized * mask.unsqueeze(-1)
+
+        codebook_loss = F.mse_loss(x_flat.detach(), quantized)
+        e_latent_loss = F.mse_loss(x_flat, quantized.detach())
+        commitment_loss = self.commitment_cost * e_latent_loss
+
+        quantized = x_flat + (quantized - x_flat).detach()
+        quantized = quantized.reshape_as(x)
+
+        avg_probs = torch.mean(encodings, dim=0)
+        perplexity = torch.exp(-torch.sum(avg_probs * torch.log(avg_probs + 1e-10)))
+        return quantized, commitment_loss, codebook_loss, perplexity, indices
+
+    def collect_samples(self, zq):
+        self.init_samples = torch.cat((self.init_samples, zq), dim=0)
+        if self.init_samples.shape[0] >= 100_000:
+            self.init_samples = self.init_samples[-100_000:]
+            self.collect = False
+            self.kmeans_init()
+            self.init_samples = torch.Tensor(0, self.nc, self.embedding_dim)
+            return False
+        else:
+            return True
+
+    def kmeans_init(self):
+        device = self.init_samples.device
+        init_samples = self.init_samples.cpu().numpy()
+        ks = []
+        for c in range(self.nc):
+            k = kmeans2(init_samples[:, c], self.n_embeddings, minit='++')
+            k = torch.from_numpy(k[0])
+            ks.append(k)
+        self.embedding = torch.stack(ks, dim=0).to(device)
 
 
 class PositionalEncoding(nn.Module):

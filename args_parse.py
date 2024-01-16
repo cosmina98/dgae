@@ -5,13 +5,13 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--dataset", type=str,
-        default='zinc',
+        default='enzymes',
         help="Name of the dataset. Available: qm9, zinc, community, ego, enzymes"
     )
 
     parser.add_argument(
         "--work_type", type=str,
-        default='train_autoencoder', help="Options: train_autoencoder, train_prior, sample"
+        default='sample', help="Options: train_autoencoder, train_prior, sample"
     )
 
     parser.add_argument(

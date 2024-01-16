@@ -88,7 +88,10 @@ class GnnSparse(MessagePassing):
         if skip_connection:
             node_feat = node_feat + x
 
-        if self.normalization is not None:
+        if self.normalization == 'batch_norm':
+            self.edge_feat = self.edge_norm(self.edge_feat)
+            node_feat = self.node_norm(node_feat)
+        elif self.normalization == 'layer_norm':
             self.edge_feat = self.edge_norm(self.edge_feat)
             node_feat = self.node_norm(node_feat)
         return node_feat, self.edge_feat

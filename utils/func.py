@@ -7,15 +7,16 @@ from plotly.subplots import make_subplots
 from torch_geometric.data import Data
 from torch_geometric.utils import to_dense_adj, dense_to_sparse, to_dense_batch
 import torch.optim as optim
-from model import Encoder, Decoder, Transformer2d
+from model import Encoder, Decoder, Quantizer, Transformer2d
 
 
 def init_model(config, data_info, device):
     encoder = Encoder(config, data_info).to(device)
     decoder = Decoder(config, data_info).to(device)
+    quantizer = Quantizer(config).to(device)
     transformer = None
     if config.work_type == 'train_autoencoder':
-        params = list(encoder.parameters()) + list(decoder.parameters())
+        params = list(encoder.parameters()) + list(decoder.parameters()) + list(quantizer.parameters())
     elif config.work_type == 'train_prior':
         transformer = Transformer2d(config).to(device)
         params = transformer.parameters()
@@ -32,6 +33,7 @@ def init_model(config, data_info, device):
         path = os.path.join('./wandb', config.autoencoder_path, 'files/best_run_val_rec_loss.pt')
         saved_model = torch.load(path, map_location=torch.device(device))
         encoder.load_state_dict(saved_model['encoder'])
+        quantizer.load_state_dict(saved_model['quantizer'])
         decoder.load_state_dict(saved_model['decoder'])
 
         if config.work_type == 'sample':
@@ -43,9 +45,11 @@ def init_model(config, data_info, device):
             transformer.load_state_dict(saved_model['transformer'])
 
     else:
-        params = list(encoder.parameters()) + list(decoder.parameters())
+        params = list(encoder.parameters()) \
+                 + list(decoder.parameters()) \
+                 + list(quantizer.parameters())
         opt = optim.Adam(params, lr=config.training.learning_rate, betas=config.training.betas)
-    return encoder, decoder, transformer, opt, scheduler
+    return encoder, decoder, quantizer, transformer, opt, scheduler
 
 def get_features(adjs, moment = 3):
     n = adjs.shape[-1]
@@ -290,7 +294,22 @@ def get_sparse_graphs(annots, adjs):
         graphs.append(data)
     return graphs
 
+def dense_zq(zq, indices, quantizer, batch, max_node_num, sort):
+        # Prepare indices and node masks
+        device = zq.device
+        indices, node_masks = to_dense_batch(indices, batch.batch, max_num_nodes=max_node_num)
+        cb_size = quantizer.n_embeddings
+        indices[~node_masks] = cb_size
 
+        # Sort indices if needed
+        if sort:
+            indices = sort_indices(indices)
+
+        # Convert indices to zq
+        zq = quantizer.indices_to_zq(indices, padded=True)
+        sz = indices.shape[1]
+        masks = torch.triu(torch.full((sz, sz), float('-inf'), device=device), diagonal=1)
+        return zq, masks, indices
 
 
 def atom_number_to_one_hot(x, dataset):
@@ -335,16 +354,10 @@ def from_sparse_to_dense(batch, config):
     return adjs
 
 
-def quantizer(x, L):
-    if L == 2:
-        x = (x.tanh() + 1) * .5
-        x = x.round() + x - x.detach()
-        x = x * 2 - 1
-
-    elif L > 2:
-        x = ((L // 2) * x.tanh())
-        x = x.round().detach() + x - x.detach()
-    elif L == 0:
-        return x
-    return x
-
+def sort_indices(indices):
+    bs, n, nlv = indices.shape
+    indices0 = torch.arange(bs).unsqueeze(1).repeat(1, indices.shape[1]).flatten()
+    for i in reversed(range(nlv)):
+        indices = indices[indices0, indices[:, :, i].sort(dim=1, stable=True)[1].flatten()]
+        indices = indices.reshape(bs, n, nlv)
+    return indices

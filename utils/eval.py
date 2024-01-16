@@ -8,8 +8,54 @@ from rdkit import rdBase
 import pickle
 import torch
 from torch_geometric.utils import to_dense_batch
-
+from torchmetrics import MeanMetric
 import random
+
+def init_autoencoder_running_metrics(annotated_nodes):
+    metric_names = ['loss', 'edge_loss', 'edge_acc', 'edge_acc',
+                    'graph_rec', 'commit', 'codebook', 'perplexity', 'recon_loss']
+    if annotated_nodes:
+        metric_names += ['node_loss', 'node_acc']
+
+    metrics = {}
+    metrics['train'] = {}
+    metrics['iter'] = {}
+    metrics['val'] = {}
+    for metric_step in metrics:
+        for metric in metric_names:
+            metrics[metric_step][metric] = MeanMetric()
+    return metrics
+
+def init_prior_running_metrics():
+    metric_names = ['loss']
+    metrics = {}
+    metrics['train'] = {}
+    metrics['iter'] = {}
+    metrics['val'] = {}
+    for metric_step in metrics:
+        for metric in metric_names:
+            metrics[metric_step][metric] = MeanMetric()
+    return metrics
+
+def eval_sample(transformer, quantizer, decoder, dataset):
+    print(dataset)
+    if dataset == 'zinc' or dataset == 'qm9':
+        N_SAMPLE = 1000
+        annots, adjs = sample(N_SAMPLE, transformer, quantizer, decoder)
+        gen_mols, num_no_correct = gen_mol(annots, adjs, dataset)
+        metrics = get_mol_metric(gen_mols, dataset, num_no_correct)
+        log_iter.log(metrics)
+        log_iter.save_prior(metrics['nspdk'], transformer, opt, scheduler, step,
+                                 name='nspdk')
+    else:
+        N_SAMPLE = 117
+        annots, adjs = sample(N_SAMPLE, transformer, quantizer, decoder)
+        ref = to_dense_adj(batch.edge_index, batch=batch.batch, max_num_nodes=max_node_num)
+        metrics = eval_torch_batch(ref_batch=ref, pred_batch=adjs, methods=None)
+        metrics['avg'] = sum(metrics.values()) / 3
+        log_iter.log(metrics)
+        log_iter.save_prior(metrics['avg'], transformer, opt, scheduler, step,
+                                 name='Avg')
 
 
 def reconstruction_stats(batch, edges_rec, nodes_rec, masks_nodes, masks_edges, n_node_feat):

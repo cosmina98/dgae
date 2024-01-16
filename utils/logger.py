@@ -6,33 +6,6 @@ from torch_geometric.utils import to_dense_adj
 from graph_stats.stats import eval_torch_batch
 from utils.eval import reconstruction_stats, get_mol_metric
 from utils.mol_utils import gen_mol
-from torchmetrics import MeanMetric
-
-
-def init_autoencoder_running_metrics(annotated_nodes):
-    metric_names = ['loss', 'edge_loss', 'edge_acc', 'edge_acc', 'graph_rec']
-    if annotated_nodes:
-        metric_names += ['node_loss', 'node_acc']
-
-    metrics = {}
-    metrics['train'] = {}
-    metrics['iter'] = {}
-    metrics['val'] = {}
-    for metric_step in metrics:
-        for metric in metric_names:
-            metrics[metric_step][metric] = MeanMetric()
-    return metrics
-
-def init_prior_running_metrics():
-    metric_names = ['loss']
-    metrics = {}
-    metrics['train'] = {}
-    metrics['iter'] = {}
-    metrics['val'] = {}
-    for metric_step in metrics:
-        for metric in metric_names:
-            metrics[metric_step][metric] = MeanMetric()
-    return metrics
 
 
 def log_running_metrics(metrics, wandb, step, key, times=None):
@@ -53,9 +26,10 @@ def log_running_metrics(metrics, wandb, step, key, times=None):
         wandb.log({key: log_metrics}, step=step)
     return log_metrics
 
-def log_step_autoencoder(metrics, batch, rec_losses, loss, masks, n_node_feat, train, annotated_nodes):
+def log_step_autoencoder(metrics, batch, rec_losses, vq_losses, masks, n_node_feat, train, annotated_nodes):
     train_metrics, iter_metrics, val_metrics = metrics.values()
     node_loss, edge_loss, nodes_rec, edges_rec = rec_losses
+    loss, recon_loss, codebook, commit, perplex = vq_losses
     node_masks, edge_masks = masks
     '''
     nc = indices.shape[-1]
@@ -72,7 +46,8 @@ def log_step_autoencoder(metrics, batch, rec_losses, loss, masks, n_node_feat, t
     stats = reconstruction_stats(batch, edges_rec, nodes_rec, node_masks, edge_masks, n_node_feat)
     err_edges, edge_acc, err_nodes, node_acc, n_graph_rec, graph_rec = stats
 
-    metric_values = (loss.item(), edge_loss.item(), edge_acc.item(), n_graph_rec.item())
+    metric_values = (loss.item(), edge_loss.item(), edge_acc.item(), n_graph_rec.item(),
+                     codebook.item(), commit.item(), perplex.item(), recon_loss.item())
     if annotated_nodes:
         metric_values += (node_loss.item(), node_acc.item())
         nodes_rec = nodes_rec.detach().cpu()
@@ -98,7 +73,7 @@ def save_model(metric, best_metrics, to_save, step, prefix, minimize=True, wandb
     if prior:
         transformer, opt, scheduler = to_save
     else:
-        encoder, decoder, opt, scheduler = to_save
+        encoder, decoder, quantizer, opt, scheduler = to_save
     if prefix not in best_metrics:
 
         best_metrics[prefix] = metric
@@ -131,6 +106,7 @@ def save_model(metric, best_metrics, to_save, step, prefix, minimize=True, wandb
             torch.save({
                 'iteration': step,
                 'encoder': encoder.state_dict(),
+                'quantizer': quantizer.state_dict(),
                 'decoder': decoder.state_dict(),
                 'optimizer': opt.state_dict(),
                 'scheduler': scheduler.state_dict(),
