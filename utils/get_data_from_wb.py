@@ -106,15 +106,16 @@ def plot_errplot_list(run_list, run_name, key, prior=False, up=False):
     print(stds)
     print(means)
     plt.bar(x=run_name,
-            color=cm([0, 0, 0, 0.5, 0.5, 0.4, 1, 1, 1, 1]),
+            color=cm([0, 0, 0, 0.35, 0.5, 0.4, 1, 1, 1, 1]),
             height=means, yerr=stds, capsize=10)
-    labels = ['$K^C=256$', '$K^C=1024$', '$K^C=1000$', '$K^C=4096$']
+    labels = ['$M^C=256$', '$M^C=1024$', '$M^C=1000$', '$M^C=4096$']
     colors = [0, 0.5, 0.4, 1.]
     handles = [plt.Rectangle((0, 0), 1, 1, color=cm(color)) for color in colors]
     plt.legend(handles, labels)
     plt.title('Effect of the codebook sizes \nand partitioning on reconstruction', fontsize=18)
     #'Fréchet Chemical Distance'
-    plt.ylabel('Reconstruction loss', fontsize=14)
+    plt.ylabel('Reconstruction loss', fontsize=16)
+    plt.xlabel('Codebook size $m$ and number of vectors $C$: $m^C$', fontsize=16)
     plt.show()
 
 
@@ -127,7 +128,7 @@ def plot_timeseries_list(run_list, timesteps, names, key, title=None, y_max=None
     colors: colormap for the plots
     """
     # Getting the colormap
-    cm = plt.get_cmap('plasma')
+    cm = plt.get_cmap('magma')
 
     # Calculate the average and standard deviation of all timeseries
     length = len(timesteps)
@@ -146,10 +147,10 @@ def plot_timeseries_list(run_list, timesteps, names, key, title=None, y_max=None
         # Plot the standard deviation
         ax.fill_between(timesteps, avg_timeseries[:length] - std_timeseries[:length],
                         avg_timeseries[:length] + std_timeseries[:length],
-                        color=cm(0.8 * i/(n-1) + 0.1), alpha=0.3)
+                        color=cm(0.8 * i/(n-1) + 0.1), alpha=0.2)
 
     # Setting the legend
-    ax.legend()
+    ax.legend(fontsize=10, loc=1)
 
     # Show the plot
     plt.ylim(0, y_max)
@@ -216,19 +217,19 @@ def concatenate_arrays(arrays):
 
 
 # plot_timeseries_list([all, no_path, no_spectre, no_random, no_cycles], np.arange(20)+1,
-#                      ['all', 'without p-paths', 'without spectral embedding', 'without random features', 'without c-cycles'],
+#                      ['all', 'no p-paths', 'no spectral embedding', 'no random features', 'no c-cycles'],
 #                      'val.recon_loss', title='Effect of the feature augmentation', y_max=0.005)
-
+#
 # plot_timeseries_list([no_feat, only_path, only_spectre, only_random, only_cycles], np.arange(20)+1,
-#                      ['no additional feature', 'only p-paths', 'only spectral embedding', 'only random features', 'only c-cycles'],
+#                      ['no feature augmentation', 'p-paths', 'spectral embedding', 'random features', 'c-cycles'],
 #                      'val.recon_loss', title='Effect of the feature augmentation', y_max=0.01)
 
 #plot_timeseries_list([init, no_init], np.arange(20)+1,
 #                     ['K-means++', 'No init.'], 'val.recon_loss')
 
-label = ['C=1 \n K=256', 'C=2 \nK=16', 'C=4 \nK=4', 'C=1 \nK=1024', 'C=2 \nK=32','C=3 \nK=10', 'C=1 \nK=4096', 'C=2 \nK=64', 'C=3 \nK=16', 'C=4 \nK=8']
+label = ['$256^1$', '$16^2$', '$4^4$', '$1024^1$', '$32^2$','$10^3$', '$4096^1$', '$64^2$', '$16^3$', '$8^4$']
 #plot_errplot_list([c1_k256, c2_k16, c4_k4, c1_k1024, c2_k32, c3_k10, c1_k4096, c2_k64, c3_k16, c4_k8], label,
 #                  'val.recon_loss')
 
 plot_errplot_list([c1_k256p, c2_k16p, c4_k4p, c1_k1024p, c2_k32p, c3_k10p, c1_k4096p, c2_k64p, c3_k16p, c4_k8p], label,
-                 'Mol eval iter.valid', prior=True, up=True)
+                 'Mol eval iter.nspdk', prior=True, up=True)

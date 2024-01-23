@@ -43,15 +43,16 @@ model:
     nz: 8
     codebook_size: 32
     nc: 2
+    turn_off: True
     commitment_cost: 0.25
     decay: 0.99
     epsilon: 0.000_01
-    init_steps: 1000
+    init_steps: 0
   gamma: 0.1
 
 log:
     n_loggin_steps: 1000
     n_loggin_epochs: 1
-    wandb: online  # disabled, offline or online
+    wandb: disabled  # disabled, offline or online
     debug: False
 

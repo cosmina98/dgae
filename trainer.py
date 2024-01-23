@@ -29,6 +29,11 @@ class Trainer:
         model = init_model(config, data_info, self.device)
         self.encoder, self.decoder, self.quantizer, self.transformer, self.opt, self.scheduler = model
 
+        encoder_size = sum(p.numel() for p in self.encoder.parameters() if p.requires_grad)
+        decoder_size = sum(p.numel() for p in self.decoder.parameters() if p.requires_grad)
+        quantizer_size = sum(p.numel() for p in self.quantizer.parameters() if p.requires_grad)
+        print(f'Encoder size: {encoder_size}. Decoder size: {decoder_size}. Quantizer size: {quantizer_size}')
+
         # Extract configuration variables
         self.epochs = config.training.epochs
         self.max_node_num = config.data.max_node_num
@@ -43,6 +48,8 @@ class Trainer:
         self.n_logging_epochs = config.log.n_loggin_epochs
         self.mol_data = data_info.mol
         self.init_steps = config.model.quantizer.init_steps
+        self.quantization = not config.model.quantizer.turn_off
+        print(self.quantization)
         if config.train_prior:
             self.sort_indices = utils.func.sort_indices
 
@@ -152,7 +159,12 @@ class Trainer:
             else:
                 collect = True
         else:
-            zq, commit, codebook, perplex, indices = self.quantizer(ze)
+            if self.quantization:
+                zq, commit, codebook, perplex, indices = self.quantizer(ze)
+            else:
+                zq = ze
+                codebook, commit = torch.zeros(1).to(self.device), torch.zeros(1).to(self.device)
+                perplex = torch.zeros(1).to(self.device)
 
         zq, node_masks = to_dense_batch(zq, batch.batch, max_num_nodes=self.max_node_num)
 
