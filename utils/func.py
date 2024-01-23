@@ -361,3 +361,11 @@ def sort_indices(indices):
         indices = indices[indices0, indices[:, :, i].sort(dim=1, stable=True)[1].flatten()]
         indices = indices.reshape(bs, n, nlv)
     return indices
+
+def get_edge_target(batch):
+    dense_edge_attr = to_dense_adj(batch.edge_index, batch=batch.batch, edge_attr=batch.edge_attr,
+                                   max_num_nodes=batch.max_num_nodes[0])
+    no_edge = 1 - dense_edge_attr.sum(-1, keepdim=True)
+    dense_edge_attr = torch.cat((no_edge, dense_edge_attr), dim=-1)
+    return dense_edge_attr.argmax(-1)
+

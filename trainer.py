@@ -63,7 +63,7 @@ class Trainer:
             wandb.init(project=f'VQ-GAE_{config.dataset}_{config.work_type}', config=config, mode=config.log.wandb)
             wandb.save("*.pt")
             batch = next(iter(self.test_loader))
-            self.n_samples = batch.edge_target.shape[0]
+            self.n_samples = batch.num_graphs
         else:
             self.n_samples = config.n_samples
         if config.log.wandb == 'online' or config.log.wandb == 'offline':

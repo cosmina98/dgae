@@ -2,6 +2,7 @@ import os
 import torch
 import numpy as np
 import pickle
+import time
 from torch_geometric.data import Data, InMemoryDataset, download_url
 from torch_geometric.utils import from_networkx
 from utils.func import atom_number_to_one_hot, from_dense_numpy_to_sparse
@@ -43,22 +44,34 @@ class KekulizedMolDataset(InMemoryDataset):
     def process(self):
         if self.dataset == 'zinc':
             filepath = os.path.join(self.raw_dir, 'zinc250k_kekulized.npz')
+            max_num_nodes = 38
         elif self.dataset == 'qm9':
             filepath = os.path.join(self.raw_dir, 'qm9_kekulized.npz')
-
+            max_num_nodes = 9
+        start = time.time()
         load_data = np.load(filepath)
-        xs = load_data['arr_0']
-        adjs = load_data['arr_1']
-        chem_props = load_data['arr_2']
+        xs = load_data['arr_0'][:150000]
+        adjs = load_data['arr_1'][:150000]
+        load_data = 0
         data_list = []
 
-        for x, adj, chem_prop in zip(xs, adjs, chem_props):
+        for i, (x, adj) in enumerate(zip(xs, adjs)):
             x = atom_number_to_one_hot(x, self.dataset)
             edge_index, edge_attr = from_dense_numpy_to_sparse(adj)
-            data = Data(x=x, edge_index=edge_index, edge_attr=edge_attr, y=chem_prop[1:], smiles=chem_prop[0])
+            data = Data(x=x, edge_index=edge_index, edge_attr=edge_attr, max_num_nodes=max_num_nodes)
+            if self.pre_transform is not None:
+                data = self.pre_transform(data)
             data_list.append(data)
+            if (i+1) % 1000 == 0:
+                print(f'{i+1} graphs processed... process continue')
+
+        print(f'{len(data_list)} graphs processed')
         data, slices = self.collate(data_list)
+        data_list = 0
+        print('Data collated')
         torch.save((data, slices), self.processed_paths[0])
+        time_taken = time.time() - start
+        print(f'Preprocessing took {time_taken} seconds')
 
 class FromNetworkx(InMemoryDataset):
     def __init__(self, root, dataset=None, transform=None, pre_transform=None, pre_filter=None):

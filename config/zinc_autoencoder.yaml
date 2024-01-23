@@ -4,10 +4,10 @@ data:
   dir: './data'
   max_node_num: 38
   max_feat_num: 9
-  add_spectral_feat: True
-  add_cycles_feat: True
+  add_spectral_feat: False
+  add_cycles_feat: False
   add_path_feat: True
-  add_random_feat: True
+  add_random_feat: False
 
 training:
   log: False
@@ -43,7 +43,7 @@ model:
     nz: 8
     codebook_size: 32
     nc: 2
-    turn_off: True
+    turn_off: False
     commitment_cost: 0.25
     decay: 0.99
     epsilon: 0.000_01

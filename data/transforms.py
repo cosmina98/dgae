@@ -53,18 +53,18 @@ class AddSynFeat(BaseTransform):
 
 
             dense_edge_attr = to_dense_adj(data.edge_index, edge_attr=data.edge_attr, max_num_nodes=self.max_num_nodes)
-            if len(dense_edge_attr.shape) == 4:
-                no_edge = 1 - dense_edge_attr.sum(-1, keepdim=True)
-                dense_edge_attr = torch.cat((no_edge, dense_edge_attr), dim=-1)
-                data.edge_target = dense_edge_attr.argmax(-1)
-            else:
-                data.edge_target = dense_edge_attr
+            # if len(dense_edge_attr.shape) == 4:
+            #     no_edge = 1 - dense_edge_attr.sum(-1, keepdim=True)
+            #     dense_edge_attr = torch.cat((no_edge, dense_edge_attr), dim=-1)
+            #     data.edge_target = dense_edge_attr.argmax(-1)
+            # else:
+            #     data.edge_target = dense_edge_attr
 
         else:
             data.x = torch.cat((data.x, torch.zeros(data.x.shape[0], 3)), dim=-1)
             data.edge_index_ext = data.edge_index
             data.edge_attr_ext = torch.zeros(0, 6)
-            data.edge_target = (torch.zeros(1, self.max_num_nodes, self.max_num_nodes)).long()
+            # data.edge_target = (torch.zeros(1, self.max_num_nodes, self.max_num_nodes)).long()
         return data
 
 class AddNoFeat(BaseTransform):
@@ -78,8 +78,8 @@ class AddNoFeat(BaseTransform):
     def __call__(self, data):
         data.edge_index_ext = data.edge_index
         data.edge_attr_ext = data.edge_attr
-        data.edge_target = to_dense_adj(data.edge_index, max_num_nodes=38)
-        data.edge_target = data.edge_target.long()
+        # data.edge_target = to_dense_adj(data.edge_index, max_num_nodes=38)
+        # data.edge_target = data.edge_target.long()
         return data
 
 class AddRandomFeat(BaseTransform):
@@ -172,5 +172,5 @@ class AddSynFeatToUnannotated(BaseTransform):
         data.edge_attr_ext = edge_feat
         data.edge_attr = torch.ones(data.edge_index.shape[1], 1)
 
-        data.edge_target = to_dense_adj(data.edge_index, max_num_nodes=self.max_num_nodes)
+        # data.edge_target = to_dense_adj(data.edge_index, max_num_nodes=self.max_num_nodes)
         return data

@@ -2,6 +2,7 @@ from utils.chem_func import mols_to_smiles
 from graph_stats.stats import eval_graph_list
 from utils.mol_utils import mols_to_nx, load_smiles, gen_mol
 from utils.sample import sample
+from utils.func import get_edge_target
 from fcd_torch import FCD
 import rdkit.Chem as Chem
 from rdkit import rdBase
@@ -71,7 +72,7 @@ def reconstruction_stats(batch, edges_rec, nodes_rec, masks_nodes, masks_edges, 
         int: the number of graphs, for which the edges are reconstructed totally correctly
     '''
 
-    edges_true = batch.edge_target
+    edges_true = get_edge_target(batch)
     if nodes_rec is not None:
         max_node_num = nodes_rec.shape[1]
         dense_nodes, _ = to_dense_batch(batch.x, batch.batch, max_num_nodes=max_node_num)

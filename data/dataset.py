@@ -28,7 +28,7 @@ def get_dataset(dataset: str, config: EasyDict) -> Tuple[List[DataLoader], EasyD
             transforms.append(AddRandomFeat())
         # Create the dataset with the chosen transforms
         #config.log.debug = config.log.ebug
-        data = KekulizedMolDataset('./data/', transform=Compose(transforms), dataset=dataset)
+        data = KekulizedMolDataset('./data/', pre_transform=Compose(transforms), dataset=dataset)
 
         # Load the test indices from the corresponding file
         train_idx, test_idx = get_indices(config, dataset, len(data))

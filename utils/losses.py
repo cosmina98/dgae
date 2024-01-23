@@ -1,7 +1,7 @@
 import torch
 import torch.nn.functional as F
 from torch_geometric.utils import dense_to_sparse, to_dense_adj, to_dense_batch
-from utils.func import discretize
+from utils.func import discretize, get_edge_target
 
 
 
@@ -51,7 +51,10 @@ def get_edge_loss_and_recon(batch, edges_rec, edge_masks):
     '''
     edges_rec = (edges_rec.transpose(1, 2) + edges_rec) * .5
     edges_rec = edges_rec.log_softmax(-1)
-    edge_loss = F.nll_loss(edges_rec.permute(0, 3, 1, 2).contiguous(), batch.edge_target, reduction='none')
+    edge_target = get_edge_target(batch)
+
+
+    edge_loss = F.nll_loss(edges_rec.permute(0, 3, 1, 2).contiguous(), edge_target, reduction='none')
     edge_loss = edge_loss * edge_masks.squeeze()
     edge_loss = edge_loss.mean()
     edges_rec = discretize(edges_rec, edge_masks)
