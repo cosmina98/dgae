@@ -1,4 +1,4 @@
-# Vector-Quantized Graph Auto-Encoder
+# Discrete Graph Auto-Encoder
 
 ## Welcome to the official repository of the Discrete Graph Auto-Encoder (DGAE)!
 
