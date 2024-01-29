@@ -18,21 +18,14 @@ from utils.logger import log_running_metrics, log_step_autoencoder, save_model, 
     log_step_prior, log_mmd_metrics
 
 
-
 class Trainer:
     def __init__(self, dataloaders, config, data_info):
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-        #self.device = 'cpu'
-        print(f'Run on {self.device}')
+        print(f'Run training on : {self.device}')
 
         self.train_loader, self.test_loader = dataloaders
         model = init_model(config, data_info, self.device)
         self.encoder, self.decoder, self.quantizer, self.transformer, self.opt, self.scheduler = model
-
-        encoder_size = sum(p.numel() for p in self.encoder.parameters() if p.requires_grad)
-        decoder_size = sum(p.numel() for p in self.decoder.parameters() if p.requires_grad)
-        quantizer_size = sum(p.numel() for p in self.quantizer.parameters() if p.requires_grad)
-        print(f'Encoder size: {encoder_size}. Decoder size: {decoder_size}. Quantizer size: {quantizer_size}')
 
         # Extract configuration variables
         self.epochs = config.training.epochs
@@ -48,7 +41,8 @@ class Trainer:
         self.n_logging_epochs = config.log.n_loggin_epochs
         self.mol_data = data_info.mol
         self.init_steps = config.model.quantizer.init_steps
-        self.quantization = not config.model.quantizer.turn_off
+        #self.quantization = not config.model.quantizer.turn_off
+        self.quantization = True
         print(self.quantization)
         if config.train_prior:
             self.sort_indices = utils.func.sort_indices
@@ -71,12 +65,6 @@ class Trainer:
         else:
             self.wandb = None
         self.best_run = {}
-
-
-
-
-
-
 
 
     def autoencoder(self) -> None:

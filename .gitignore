@@ -19,6 +19,7 @@
 *.jar
 
 /img/*
+/private/*
 
 # JetBrains IDE
 .idea/

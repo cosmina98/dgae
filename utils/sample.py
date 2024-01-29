@@ -8,7 +8,7 @@ def sample_batch(n_samples, transformer, quantizer, decoder):
     with torch.no_grad():
         start = time.time()
         transformer.init_sampler(n_samples)
-        zq, masks, indices = sample_prior3(n_samples, transformer, quantizer)
+        zq, masks, indices = sample_prior(n_samples, transformer, quantizer)
         node_masks, edge_masks = get_mask_from_indices(indices, quantizer.n_embeddings)
         zq = quantizer.indices_to_zq(indices.long(), padded=True)
         masks = node_masks.unsqueeze(-1)
@@ -51,7 +51,6 @@ def sample(n_sample, transformer, quantizer, decoder):
             annots = torch.cat((annots, ann), dim=0)
             adjs = torch.cat((adjs, adj), dim=0)
     return annots, adjs
-
 
 
 def get_mask_from_indices(indices, mask_indice):
@@ -111,7 +110,7 @@ def sample_prior(n_samples, transformer, quantizer):
         return Z, mask.unsqueeze(-1), indices
 
 
-def sample_prior3(n_samples, transformer, quantizer, padding=True):
+def sample_prior(n_samples, transformer, quantizer, padding=True):
     with torch.no_grad():
         transformer.train()
         embeddings = quantizer.embedding
@@ -155,55 +154,5 @@ def sample_prior3(n_samples, transformer, quantizer, padding=True):
             z_completed[:, :, c, :][idx] = n_embeddings
 
         samples = z_completed[:, 1:].flatten(-2)
-        mask = indices[:, :, 0] != n_embeddings
-    return samples, mask.unsqueeze(-1), indices
-
-def sample_prior1(n_samples, transformer, quantizer, padding=True):
-    with torch.no_grad():
-        transformer.train()
-        embeddings = quantizer.embedding
-        n_embeddings = embeddings.shape[-1]
-        n_max = transformer.n_max
-        nzn = transformer.nz
-        nlv = transformer.nc
-        nv = nzn // nlv
-        device = embeddings.device
-        n_cat = transformer.out_dim
-
-        if padding:
-            embeddings = torch.cat((embeddings, torch.zeros(nlv, 1, nv).to(device)), dim=1)
-
-        samples = torch.zeros(n_samples, n_max + 1, nlv,  nv).to(device)
-        indices = torch.zeros(n_samples, n_max, nlv, dtype=torch.long).to(device)
-        samples2 = torch.zeros(n_samples, n_max, nv).to(device)
-
-
-        for i in range(0, n_max):
-            mask = torch.triu(torch.full((i + 1, i + 1), float('-inf')), diagonal=1).to(device)
-            tril = torch.tril(torch.full((n_cat, n_cat), float('-inf')), diagonal=-1).to(device)
-            toK, toV, toQ = 3 * [samples[:, :i+1].flatten(2)]
-            logit = transformer.transformer1(toK, toV, toQ, mask=mask)[:, -1]
-            if i > 0:
-                logit = logit + tril[indices[:, i - 1, 0]]
-
-            idx1 = Categorical(logits=logit.softmax(-1).log()).sample()
-
-            indices[:, i, 0] = idx1.squeeze()
-            embed_sampled = embeddings[0, idx1]
-            samples2[:, i] = embed_sampled.squeeze()
-
-            embed2 = torch.cat((samples[:, :i + 1].flatten(2), samples2[:, :i + 1]), dim=-1)
-            toK, toV, toQ = 3 * [embed2]
-            logit2 = transformer.transformer2(toV, toK, toQ, mask=mask)[:, -1]
-
-            idx2 = Categorical(logits=logit2.softmax(-1).log()).sample()
-
-            idx2[idx1 == 32] = 32
-            indices[:, i, 1] = idx2.squeeze()
-            emb1 = embeddings[1, idx2]
-            samples[:, i + 1, 1] = emb1
-
-            samples[:, i + 1, 0] = embed_sampled.squeeze()
-        samples = samples[:, 1:].flatten(-2)
         mask = indices[:, :, 0] != n_embeddings
     return samples, mask.unsqueeze(-1), indices

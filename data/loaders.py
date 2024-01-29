@@ -50,8 +50,8 @@ class KekulizedMolDataset(InMemoryDataset):
             max_num_nodes = 9
         start = time.time()
         load_data = np.load(filepath)
-        xs = load_data['arr_0'][:150000]
-        adjs = load_data['arr_1'][:150000]
+        xs = load_data['arr_0']
+        adjs = load_data['arr_1']
         load_data = 0
         data_list = []
 
@@ -120,6 +120,12 @@ class FromNetworkx(InMemoryDataset):
         data_list = []
         for g in graph_list:
             data = from_networkx(g)
+            if self.dataset == 'ego':
+                data.max_num_nodes = 18
+            elif self.dataset == 'community':
+                data.max_num_nodes = 20
+            elif self.dataset == 'enzymes':
+                data.max_num_nodes = 125
             data_list.append(data)
         data, slices = self.collate(data_list)
         torch.save((data, slices), self.processed_paths[0])

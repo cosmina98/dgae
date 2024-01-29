@@ -2,8 +2,6 @@ import torch
 import os
 import networkx as nx
 import matplotlib.pyplot as plt
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 from torch_geometric.data import Data
 from torch_geometric.utils import to_dense_adj, dense_to_sparse, to_dense_batch
 import torch.optim as optim
@@ -73,112 +71,6 @@ def get_features(adjs, moment = 3):
     return node_feat, edge_feat, mask
 
 
-def get_plotly_graph(g):
-    pos = nx.spring_layout(g)
-
-    # edges trace
-    edge_x = []
-    edge_y = []
-    for edge in g.edges():
-        x0, y0 = pos[edge[0]]
-        x1, y1 = pos[edge[1]]
-        edge_x.append(x0)
-        edge_x.append(x1)
-        edge_x.append(None)
-        edge_y.append(y0)
-        edge_y.append(y1)
-        edge_y.append(None)
-
-    edge_trace = go.Scatter(
-        x=edge_x, y=edge_y,
-        line=dict(color='black', width=1),
-        hoverinfo='none',
-        showlegend=False,
-        mode='lines')
-
-    # nodes trace
-    node_x = []
-    node_y = []
-    text = []
-    for node in g.nodes():
-        x, y = pos[node]
-        node_x.append(x)
-        node_y.append(y)
-        text.append(node)
-
-    node_trace = go.Scatter(x=node_x, y=node_y,mode='markers+text',showlegend=False,hoverinfo='none',
-                            marker=dict(color='blue',size=5,line=None))
-
-    layout = dict(plot_bgcolor='white', paper_bgcolor='white', title_text='some graphs',
-                  margin=dict(t=10, b=10, l=10, r=10, pad=0),
-                  xaxis=dict(linecolor='black',
-                             showgrid=False,
-                             showticklabels=False,
-                             mirror=True),
-                  yaxis=dict(linecolor='black',
-                             showgrid=False,
-                             showticklabels=False,
-                             mirror=True))
-
-    fig = go.Figure(data=[edge_trace, node_trace], layout=layout)
-    return fig
-
-def get_plotly_data(g):
-    pos = nx.spring_layout(g)
-    edge_x = []
-    edge_y = []
-    for edge in g.edges():
-        x0, y0 = pos[edge[0]]
-        x1, y1 = pos[edge[1]]
-        edge_x.append(x0)
-        edge_x.append(x1)
-        edge_x.append(None)
-        edge_y.append(y0)
-        edge_y.append(y1)
-        edge_y.append(None)
-
-    edge_trace = go.Scatter( x=edge_x, y=edge_y, line=dict(color='black', width=1), hoverinfo='none',
-                             showlegend=False, mode='lines')
-
-    # nodes trace
-    node_x = []
-    node_y = []
-    text = []
-    for node in g.nodes():
-        x, y = pos[node]
-        node_x.append(x)
-        node_y.append(y)
-        text.append(node)
-
-    node_trace = go.Scatter(x=node_x, y=node_y, mode='markers+text', showlegend=False, hoverinfo='none',
-                            marker=dict(color='blue', size=5, line=None))
-    return edge_trace, node_trace
-
-def get_plotly_fig(adjs, max_plot = 16):
-    n_plot = min(adjs.shape[0], max_plot)
-    adjs_numpy = adjs.detach().cpu().numpy()
-    fig = make_subplots(rows=n_plot//4, cols=4)
-    for i in range(n_plot):
-        g = nx.from_numpy_array(adjs_numpy[i])
-        g.remove_nodes_from(list(nx.isolates(g)))
-        edge_trace, node_trace = get_plotly_data(g)
-        fig.add_trace(edge_trace,
-                                 row = (i // 4)+1, col = (i % 4)+1)
-        fig.add_trace(node_trace,
-                                 row = (i // 4)+1, col = (i % 4)+1)
-
-    layout = dict(plot_bgcolor='white',
-                  paper_bgcolor='white',
-                  margin=dict(t=10, b=10, l=10, r=10, pad=0),
-                  height=400,
-                  width=400,
-                  title_text="Side By Side Subplots"
-                  )
-    fig.update_layout(layout)
-    fig.update_xaxes(ticks='', showticklabels=False)
-    fig.update_yaxes(ticks='', showticklabels=False)
-    return fig
-
 def get_plt_fig(adjs, max_plot=9, title=None):
     n_plot = min(adjs.shape[0], max_plot)
     adjs_numpy = adjs.detach().cpu().numpy()
@@ -213,14 +105,11 @@ def get_plt_fig_list(adjs, max_plot=16, title=None):
 def plot_graphs(batch, max_plot=16, wandb=None, title=None):
     if isinstance(batch, Data):
         batch = to_dense_adj(batch.edge_index, batch.batch)
-    if wandb is not None:
-        fig = get_plotly_fig(batch)
-        wandb.log({'Reconstructed graphs': fig})
-    else:
-        fig = get_plt_fig(batch, max_plot=max_plot, title=title)
-        fig.savefig("qm9_train.svg")
-        fig.show()
-        plt.show()
+
+    fig = get_plt_fig(batch, max_plot=max_plot, title=title)
+    fig.savefig("qm9_train.svg")
+    fig.show()
+    plt.show()
 
 
 def plot_reconstructed(edge_rec, batch, graph_reconstructed):
@@ -365,7 +254,10 @@ def sort_indices(indices):
 def get_edge_target(batch):
     dense_edge_attr = to_dense_adj(batch.edge_index, batch=batch.batch, edge_attr=batch.edge_attr,
                                    max_num_nodes=batch.max_num_nodes[0])
-    no_edge = 1 - dense_edge_attr.sum(-1, keepdim=True)
-    dense_edge_attr = torch.cat((no_edge, dense_edge_attr), dim=-1)
-    return dense_edge_attr.argmax(-1)
+    if len(dense_edge_attr.shape) == 3:
+        return dense_edge_attr
+    else:
+        no_edge = 1 - dense_edge_attr.sum(-1, keepdim=True)
+        dense_edge_attr = torch.cat((no_edge, dense_edge_attr), dim=-1)
+        return dense_edge_attr.argmax(-1)
 

@@ -17,7 +17,7 @@ transformer:
 log:
     n_loggin_steps: 2000
     n_loggin_epochs: 1
-    wandb: online
+    wandb: disabled
     debug: False
 
 #autoencoder_path: run-20230621_162024-4dec9att

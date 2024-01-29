@@ -19,5 +19,5 @@ transformer:
 log:
     n_loggin_steps: 10000
     n_loggin_epochs: 1
-    wandb: online
+    wandb: disabled
     debug: False

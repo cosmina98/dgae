@@ -2,14 +2,10 @@ import os
 
 import yaml
 from easydict import EasyDict as edict
-import wandb
-
-MY_WB_NAME = 'yobo'
 
 def get_config(args):
-
-    config_dir = f'./config/{args.dataset}_autoencoder.yaml'
-    config = edict(yaml.load(open(config_dir, 'r'), Loader=yaml.FullLoader))
+    config_path = f'./config/{args.dataset}_autoencoder.yaml'
+    config = edict(yaml.load(open(config_path, 'r'), Loader=yaml.FullLoader))
     config.training.betas = (config.training.beta1, config.training.beta2)
     config.dataset = args.dataset
     config.work_type = args.work_type
@@ -18,12 +14,8 @@ def get_config(args):
 
 
 def get_prior_config(args):
-    wandb.login(key='c6350accf3d3ceacf6585d4d9515f3ff37db8712')
-    api = wandb.Api()
-    run_id = args.model_folder[-8:]
-    run_name = f'{MY_WB_NAME}/VQ-GAE_{args.dataset}_train_autoencoder/{run_id}'
-    run = api.run(run_name)
-    config_autoencoder = run.config
+    config_path = args.model_folder
+    config_autoencoder = edict(yaml.load(open(config_path, 'r'), Loader=yaml.FullLoader))
     config_dir = f'./config/{args.dataset}_prior.yaml'
     config = yaml.load(open(config_dir, 'r'), Loader=yaml.FullLoader)
     config = edict({**config_autoencoder, **config})
@@ -32,20 +24,19 @@ def get_prior_config(args):
     config.work_type = args.work_type
     config.autoencoder_path = args.model_folder
     config.train_prior = True
-
-    #config.data.add_spectral_feat=False
-    #config.data.add_cycles_feat=False
-    #config.data.add_path_feat=True
-    #config.model.quantizer.nc=2
     config.model.quantizer.init_steps = 0
     return config
 
 def get_sample_config(args):
-    run_id = args.model_folder[-8:]
-    api = wandb.Api()
-    run_name = f'{MY_WB_NAME}/VQ-GAE_{args.dataset}_train_prior/{run_id}'
-    run = api.run(run_name)
-    config = run.config
+    config_path = args.model_folder
+    config_dict = yaml.load(open(config_path, 'r'),Loader=yaml.FullLoader)
+
+    dict_ = {}
+    for key in config_dict:
+        if key != 'wandb_version' and key != '_wandb':
+            dict_[key] = config_dict[key]['value']
+    print(dict_)
+    config = edict(dict_)
     config = edict({**config})
     config.folder_name = args.model_folder
     config.betas = (config.training.beta1, config.training.beta2)

@@ -4,10 +4,10 @@ data:
   dir: './data'
   max_node_num: 38
   max_feat_num: 9
-  add_spectral_feat: False
-  add_cycles_feat: False
+  add_spectral_feat: True
+  add_cycles_feat: True
   add_path_feat: True
-  add_random_feat: False
+  add_random_feat: True
 
 training:
   log: False

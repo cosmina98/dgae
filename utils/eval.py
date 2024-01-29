@@ -94,6 +94,7 @@ def reconstruction_stats(batch, edges_rec, nodes_rec, masks_nodes, masks_edges, 
     else:
         edges_rec = edges_rec.round()
     edges_rec[(1-masks_edges).squeeze().bool()] = 0
+
     edge_rec = edges_rec.squeeze() == edges_true
 
     n_edges_corr = edge_rec.sum([1, 2])
