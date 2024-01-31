@@ -1,5 +1,3 @@
-import os
-
 import yaml
 from easydict import EasyDict as edict
 
@@ -35,7 +33,6 @@ def get_sample_config(args):
     for key in config_dict:
         if key != 'wandb_version' and key != '_wandb':
             dict_[key] = config_dict[key]['value']
-    print(dict_)
     config = edict(dict_)
     config = edict({**config})
     config.folder_name = args.model_folder

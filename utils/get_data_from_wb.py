@@ -57,6 +57,8 @@ c2_k64p = ['vuuebyr6', 'hwiwnsxj', 'xb1jpgyw']
 c3_k16p = ['6uvttsk3', 'u00jgri6', 'boemcnq0']
 c4_k8p = ['vscsq7h8', 'bwh7dle4', '1xp8oa7m']
 
+no_quanti =  ['o3zhb970', 'hj2nhp7s', 'ahbg4h6w']
+
 
 
 def get_timeseries(run_id_list, key, prior = False):
@@ -70,7 +72,7 @@ def get_timeseries(run_id_list, key, prior = False):
             train = 'autoencoder'
         run_name = f'{MY_WB_NAME}/VQ-GAE_{dataset}_train_{train}/{run_id}'
         run = api.run(run_name)
-        data = run.history(keys=[key])[:70]
+        data = run.history(keys=[key])#[:70]
         timeseries.append(data[key].to_numpy())
     return timeseries
 
@@ -97,25 +99,27 @@ def plot_errplot_list(run_list, run_name, key, prior=False, up=False):
         value = []
         for serie in timeseries:
             if up:
-                val = np.max(serie[:length])
+                val = np.max(serie)
             else:
-                val = np.min(serie[:length])
+                val = np.min(serie)
             value.append(val)
         means.append(np.asarray(value).mean())
         stds.append(np.asarray(value).std())
     print(stds)
-    print(means)
+    print(means / np.array([256, 256, 256, 1024, 1024, 1000, 4096, 4096, 4096, 4096]))
+    means = means / np.array([256, 256, 256, 1024, 1024, 1000, 4096, 4096, 4096, 4096])
+    stds = stds / np.array([256, 256, 256, 1024, 1024, 1000, 4096, 4096, 4096, 4096])
     plt.bar(x=run_name,
-            color=cm([0, 0, 0, 0.35, 0.5, 0.4, 1, 1, 1, 1]),
+            color=cm([0, 0, 0, 0.4, 0.4, 0.3, 0.8, 0.8, 0.8, 0.8]),
             height=means, yerr=stds, capsize=10)
-    labels = ['$M^C=256$', '$M^C=1024$', '$M^C=1000$', '$M^C=4096$']
-    colors = [0, 0.5, 0.4, 1.]
+    labels = ['$M=256$', '$M=1000$', '$M=1024$', '$M=4096$']
+    colors = [0, 0.3, 0.4, 0.8, 1.]
     handles = [plt.Rectangle((0, 0), 1, 1, color=cm(color)) for color in colors]
     plt.legend(handles, labels)
-    plt.title('Effect of the codebook sizes \nand partitioning on reconstruction', fontsize=18)
+    plt.title('Dictonary Usage', fontsize=20)
     #'Fréchet Chemical Distance'
-    plt.ylabel('Reconstruction loss', fontsize=16)
-    plt.xlabel('Codebook size $m$ and number of vectors $C$: $m^C$', fontsize=16)
+    plt.ylabel('Normalized Perplexity', fontsize=14)
+    plt.xlabel('Codebook size $m$ and number of vectors $C$: $m^C$', fontsize=14)
     plt.show()
 
 
@@ -228,8 +232,8 @@ def concatenate_arrays(arrays):
 #                     ['K-means++', 'No init.'], 'val.recon_loss')
 
 label = ['$256^1$', '$16^2$', '$4^4$', '$1024^1$', '$32^2$','$10^3$', '$4096^1$', '$64^2$', '$16^3$', '$8^4$']
-#plot_errplot_list([c1_k256, c2_k16, c4_k4, c1_k1024, c2_k32, c3_k10, c1_k4096, c2_k64, c3_k16, c4_k8], label,
-#                  'val.recon_loss')
+plot_errplot_list([c1_k256, c2_k16, c4_k4, c1_k1024, c2_k32, c3_k10, c1_k4096, c2_k64, c3_k16, c4_k8], label,
+                 'val.perplexity', up=False)
 
-plot_errplot_list([c1_k256p, c2_k16p, c4_k4p, c1_k1024p, c2_k32p, c3_k10p, c1_k4096p, c2_k64p, c3_k16p, c4_k8p], label,
-                 'Mol eval iter.nspdk', prior=True, up=True)
+# plot_errplot_list([c1_k256p, c2_k16p, c4_k4p, c1_k1024p, c2_k32p, c3_k10p, c1_k4096p, c2_k64p, c3_k16p, c4_k8p], label,
+#                  'Mol eval iter.nspdk', prior=True, up=False)
