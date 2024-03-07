@@ -19,5 +19,3 @@ log:
     n_loggin_epochs: 1
     wandb: disabled
     debug: False
-
-#autoencoder_path: run-20230621_162024-4dec9att

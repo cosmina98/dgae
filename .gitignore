@@ -3,6 +3,7 @@
 *wandb*
 *sbatch_log*
 */data/*
+*get_data_from_wb.py
 
 # Datafiles
 *.npz
