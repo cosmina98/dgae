@@ -5,7 +5,7 @@
 ![Autoencoder image](autoencoder.png)
 
 This repository contains the source code for the VQ-GAE, a powerful autoencoder for graph data that uses vector quantization to learn discrete representations. 
-
+l
 ### Installation
 
 Their are 4 dependencies to install. 
