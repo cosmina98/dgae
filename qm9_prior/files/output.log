@@ -1,0 +1,1939 @@
+
+wandb: WARNING Symlinked 0 file into the W&B run directory, call wandb.save again to sync new files.
+Train data contains 3775 batches with size 32
+Training starts...
+Epoch 1 starts...
+Running metrics for iter afer 2000 steps/epochs and 218.88672018051147 seconds
+{'loss': tensor(1.2683), 'clock_time': 218.88672018051147, 'process_time': 215.049320359}
+Time to generate 1000: 0.4777665138244629 sec.
+Time computing degree mmd:  0:00:05.458879
+[91mnspdk    [39m : [94m0.005105
+{'valid': 798, 'unique': 0.995, 'novel': 0.8110552763819096, 'nspdk': 0.005104893159615764, 'fcd': 2.0788705634466282, 'valid_with_corr': 1000}
+Running metrics for train afer 3776 steps/epochs and 451.46453166007996 seconds
+{'loss': tensor(1.1855), 'clock_time': 451.46453166007996, 'process_time': 443.29137375199997}
+Running metrics for val afer 3776 steps/epochs and 451.46653628349304 seconds
+{'loss': tensor(1.0879), 'clock_time': 451.46653628349304, 'process_time': 443.292321777}
+Time to generate 1000: 0.1288924217224121 sec.
+Time computing degree mmd:  0:00:05.506810
+[91mnspdk    [39m : [94m0.004328
+{'valid': 799, 'unique': 0.998, 'novel': 0.7975951903807615, 'nspdk': 0.004328100116547745, 'fcd': 1.7368127129714388, 'valid_with_corr': 1000}
+Epoch 2 starts...
+Running metrics for iter afer 4000 steps/epochs and 493.86222863197327 seconds
+{'loss': tensor(1.0883), 'clock_time': 493.86222863197327, 'process_time': 485.354322165}
+Time to generate 1000: 0.1301591396331787 sec.
+Time computing degree mmd:  0:00:05.561740
+[91mnspdk    [39m : [94m0.004616
+{'valid': 834, 'unique': 0.999, 'novel': 0.8018018018018018, 'nspdk': 0.004616144097745745, 'fcd': 1.7238167848261519, 'valid_with_corr': 1000}
+Running metrics for iter afer 6000 steps/epochs and 724.6913185119629 seconds
+{'loss': tensor(1.0398), 'clock_time': 724.6913185119629, 'process_time': 713.769293469}
+Time to generate 1000: 0.1286020278930664 sec.
+Time computing degree mmd:  0:00:05.526729
+[91mnspdk    [39m : [94m0.003845
+{'valid': 868, 'unique': 0.992, 'novel': 0.7852822580645161, 'nspdk': 0.0038445313311322726, 'fcd': 1.64503211596071, 'valid_with_corr': 1000}
+Running metrics for train afer 7551 steps/epochs and 928.0387065410614 seconds
+{'loss': tensor(1.0305), 'clock_time': 928.0387065410614, 'process_time': 914.9793796380001}
+Running metrics for val afer 7551 steps/epochs and 928.0406498908997 seconds
+{'loss': tensor(1.0367), 'clock_time': 928.0406498908997, 'process_time': 914.980306757}
+Time to generate 1000: 0.12767887115478516 sec.
+Time computing degree mmd:  0:00:05.581957
+[91mnspdk    [39m : [94m0.003424
+{'valid': 849, 'unique': 0.994, 'novel': 0.7716297786720322, 'nspdk': 0.0034242427411376175, 'fcd': 1.6761122725839996, 'valid_with_corr': 1000}
+Epoch 3 starts...
+Running metrics for iter afer 8000 steps/epochs and 994.483421087265 seconds
+{'loss': tensor(1.0113), 'clock_time': 994.483421087265, 'process_time': 980.448804258}
+Time to generate 1000: 0.12937259674072266 sec.
+Time computing degree mmd:  0:00:05.563366
+[91mnspdk    [39m : [94m0.003897
+{'valid': 851, 'unique': 0.998, 'novel': 0.7655310621242485, 'nspdk': 0.003897252738316953, 'fcd': 1.4866473038308143, 'valid_with_corr': 1000}
+Running metrics for iter afer 10000 steps/epochs and 1225.0756750106812 seconds
+{'loss': tensor(0.9942), 'clock_time': 1225.0756750106812, 'process_time': 1209.0077793140001}
+Time to generate 1000: 0.130462646484375 sec.
+Time computing degree mmd:  0:00:05.543096
+[91mnspdk    [39m : [94m0.004303
+{'valid': 827, 'unique': 0.995, 'novel': 0.8040201005025126, 'nspdk': 0.004303320515998049, 'fcd': 1.3370572715511067, 'valid_with_corr': 1000}
+Running metrics for train afer 11326 steps/epochs and 1404.1071927547455 seconds
+{'loss': tensor(0.9921), 'clock_time': 1404.1071927547455, 'process_time': 1386.5250504770001}
+Running metrics for val afer 11326 steps/epochs and 1404.1090190410614 seconds
+{'loss': tensor(1.0092), 'clock_time': 1404.1090190410614, 'process_time': 1386.52602381}
+Time to generate 1000: 0.12727904319763184 sec.
+Time computing degree mmd:  0:00:05.589953
+[91mnspdk    [39m : [94m0.003245
+{'valid': 856, 'unique': 0.996, 'novel': 0.7871485943775101, 'nspdk': 0.0032451140933296707, 'fcd': 1.294421658970645, 'valid_with_corr': 1000}
+Epoch 4 starts...
+Running metrics for iter afer 12000 steps/epochs and 1494.236884355545 seconds
+{'loss': tensor(0.9825), 'clock_time': 1494.236884355545, 'process_time': 1475.467058007}
+Time to generate 1000: 0.13027095794677734 sec.
+Time computing degree mmd:  0:00:05.578043
+[91mnspdk    [39m : [94m0.002904
+{'valid': 862, 'unique': 0.997, 'novel': 0.7813440320962889, 'nspdk': 0.0029041690474094772, 'fcd': 1.4778613846759825, 'valid_with_corr': 1000}
+Running metrics for iter afer 14000 steps/epochs and 1725.0839757919312 seconds
+{'loss': tensor(0.9732), 'clock_time': 1725.0839757919312, 'process_time': 1703.891674164}
+Time to generate 1000: 0.13021254539489746 sec.
+Time computing degree mmd:  0:00:05.634152
+[91mnspdk    [39m : [94m0.003321
+{'valid': 856, 'unique': 0.995, 'novel': 0.7597989949748744, 'nspdk': 0.0033214095809625532, 'fcd': 1.4703788027859872, 'valid_with_corr': 1000}
+Running metrics for train afer 15101 steps/epochs and 1880.699515581131 seconds
+{'loss': tensor(0.9719), 'clock_time': 1880.699515581131, 'process_time': 1858.212942761}
+Running metrics for val afer 15101 steps/epochs and 1880.7013099193573 seconds
+{'loss': tensor(0.9951), 'clock_time': 1880.7013099193573, 'process_time': 1858.213848592}
+Time to generate 1000: 0.12964153289794922 sec.
+Time computing degree mmd:  0:00:05.606090
+[91mnspdk    [39m : [94m0.003427
+{'valid': 867, 'unique': 0.995, 'novel': 0.7839195979899497, 'nspdk': 0.0034266327103751326, 'fcd': 1.3150143757158297, 'valid_with_corr': 1000}
+Epoch 5 starts...
+Running metrics for iter afer 16000 steps/epochs and 1994.471450328827 seconds
+{'loss': tensor(0.9634), 'clock_time': 1994.471450328827, 'process_time': 1971.039684879}
+Time to generate 1000: 0.13151335716247559 sec.
+Time computing degree mmd:  0:00:05.606561
+[91mnspdk    [39m : [94m0.002616
+{'valid': 884, 'unique': 0.998, 'novel': 0.7635270541082164, 'nspdk': 0.0026156018506472978, 'fcd': 1.395046939143679, 'valid_with_corr': 1000}
+Running metrics for iter afer 18000 steps/epochs and 2224.13121008873 seconds
+{'loss': tensor(0.9578), 'clock_time': 2224.13121008873, 'process_time': 2198.341908473}
+Time to generate 1000: 0.12936711311340332 sec.
+Time computing degree mmd:  0:00:05.584437
+[91mnspdk    [39m : [94m0.003455
+{'valid': 875, 'unique': 0.995, 'novel': 0.771859296482412, 'nspdk': 0.0034546931114400325, 'fcd': 1.5579607460959686, 'valid_with_corr': 1000}
+Running metrics for train afer 18876 steps/epochs and 2355.7407829761505 seconds
+{'loss': tensor(0.9575), 'clock_time': 2355.7407829761505, 'process_time': 2328.853888422}
+Running metrics for val afer 18876 steps/epochs and 2355.7425587177277 seconds
+{'loss': tensor(0.9910), 'clock_time': 2355.7425587177277, 'process_time': 2328.854799611}
+Time to generate 1000: 0.12884521484375 sec.
+Time computing degree mmd:  0:00:05.592528
+[91mnspdk    [39m : [94m0.002753
+{'valid': 884, 'unique': 0.996, 'novel': 0.7730923694779116, 'nspdk': 0.002752635702714834, 'fcd': 1.0870108418231972, 'valid_with_corr': 1000}
+Epoch 6 starts...
+Running metrics for iter afer 20000 steps/epochs and 2493.9050149917603 seconds
+{'loss': tensor(0.9522), 'clock_time': 2493.9050149917603, 'process_time': 2465.433280879}
+Time to generate 1000: 0.13132524490356445 sec.
+Time computing degree mmd:  0:00:05.619587
+[91mnspdk    [39m : [94m0.003463
+{'valid': 884, 'unique': 0.998, 'novel': 0.7464929859719439, 'nspdk': 0.0034625254712091214, 'fcd': 1.381008492706009, 'valid_with_corr': 1000}
+Running metrics for iter afer 22000 steps/epochs and 2724.038873195648 seconds
+{'loss': tensor(0.9477), 'clock_time': 2724.038873195648, 'process_time': 2693.594720174}
+Time to generate 1000: 0.12999796867370605 sec.
+Time computing degree mmd:  0:00:05.567889
+[91mnspdk    [39m : [94m0.003394
+{'valid': 891, 'unique': 0.998, 'novel': 0.7725450901803608, 'nspdk': 0.003393528110163302, 'fcd': 1.4608806687778149, 'valid_with_corr': 1000}
+Running metrics for train afer 22651 steps/epochs and 2831.2721621990204 seconds
+{'loss': tensor(0.9478), 'clock_time': 2831.2721621990204, 'process_time': 2799.899209385}
+Running metrics for val afer 22651 steps/epochs and 2831.273942232132 seconds
+{'loss': tensor(0.9725), 'clock_time': 2831.273942232132, 'process_time': 2799.900113747}
+Time to generate 1000: 0.12980413436889648 sec.
+Time computing degree mmd:  0:00:05.567716
+[91mnspdk    [39m : [94m0.003095
+{'valid': 856, 'unique': 0.996, 'novel': 0.8002008032128514, 'nspdk': 0.0030945255837982466, 'fcd': 1.3415421223716137, 'valid_with_corr': 1000}
+Epoch 7 starts...
+Running metrics for iter afer 24000 steps/epochs and 2992.8601610660553 seconds
+{'loss': tensor(0.9419), 'clock_time': 2992.8601610660553, 'process_time': 2960.189927639}
+Time to generate 1000: 0.13042473793029785 sec.
+Time computing degree mmd:  0:00:05.606721
+[91mnspdk    [39m : [94m0.003878
+{'valid': 878, 'unique': 0.994, 'novel': 0.7645875251509054, 'nspdk': 0.0038776296169398816, 'fcd': 1.3823924454442782, 'valid_with_corr': 1000}
+Running metrics for iter afer 26000 steps/epochs and 3223.0762424468994 seconds
+{'loss': tensor(0.9411), 'clock_time': 3223.0762424468994, 'process_time': 3188.3800872}
+Time to generate 1000: 0.13013386726379395 sec.
+Time computing degree mmd:  0:00:05.541427
+[91mnspdk    [39m : [94m0.003369
+{'valid': 885, 'unique': 0.996, 'novel': 0.7530120481927711, 'nspdk': 0.0033692633197409116, 'fcd': 1.4380748312311589, 'valid_with_corr': 1000}
+Running metrics for train afer 26426 steps/epochs and 3307.268802165985 seconds
+{'loss': tensor(0.9406), 'clock_time': 3307.268802165985, 'process_time': 3271.848875747}
+Running metrics for val afer 26426 steps/epochs and 3307.2706410884857 seconds
+{'loss': tensor(0.9781), 'clock_time': 3307.2706410884857, 'process_time': 3271.849802243}
+Time to generate 1000: 0.13117575645446777 sec.
+Time computing degree mmd:  0:00:05.544652
+[91mnspdk    [39m : [94m0.002724
+{'valid': 881, 'unique': 0.997, 'novel': 0.7673019057171514, 'nspdk': 0.0027238629782070367, 'fcd': 1.1796700479884557, 'valid_with_corr': 1000}
+Epoch 8 starts...
+Running metrics for iter afer 28000 steps/epochs and 3492.3289880752563 seconds
+{'loss': tensor(0.9362), 'clock_time': 3492.3289880752563, 'process_time': 3454.9155461660002}
+Time to generate 1000: 0.1327366828918457 sec.
+Time computing degree mmd:  0:00:05.581996
+[91mnspdk    [39m : [94m0.003478
+{'valid': 887, 'unique': 0.996, 'novel': 0.7610441767068273, 'nspdk': 0.003478499258404266, 'fcd': 1.2844442746847804, 'valid_with_corr': 1000}
+Running metrics for iter afer 30000 steps/epochs and 3722.4125843048096 seconds
+{'loss': tensor(0.9343), 'clock_time': 3722.4125843048096, 'process_time': 3683.045781224}
+Time to generate 1000: 0.1300678253173828 sec.
+Time computing degree mmd:  0:00:05.589742
+[91mnspdk    [39m : [94m0.002920
+{'valid': 907, 'unique': 0.994, 'novel': 0.7283702213279678, 'nspdk': 0.00291973204456214, 'fcd': 1.2286032163255776, 'valid_with_corr': 1000}
+Running metrics for train afer 30201 steps/epochs and 3782.862606048584 seconds
+{'loss': tensor(0.9350), 'clock_time': 3782.862606048584, 'process_time': 3743.016620805}
+Running metrics for val afer 30201 steps/epochs and 3782.864373445511 seconds
+{'loss': tensor(0.9631), 'clock_time': 3782.864373445511, 'process_time': 3743.01750653}
+Time to generate 1000: 0.1271517276763916 sec.
+Time computing degree mmd:  0:00:05.576339
+[91mnspdk    [39m : [94m0.002988
+{'valid': 893, 'unique': 0.995, 'novel': 0.7477386934673367, 'nspdk': 0.002987660495180733, 'fcd': 1.4110093997235396, 'valid_with_corr': 1000}
+Epoch 9 starts...
+Running metrics for iter afer 32000 steps/epochs and 3990.6949508190155 seconds
+{'loss': tensor(0.9310), 'clock_time': 3990.6949508190155, 'process_time': 3949.143843122}
+Time to generate 1000: 0.12972617149353027 sec.
+Time computing degree mmd:  0:00:05.641658
+[91mnspdk    [39m : [94m0.003621
+{'valid': 892, 'unique': 0.996, 'novel': 0.7751004016064257, 'nspdk': 0.003620987311941215, 'fcd': 1.5826469642037253, 'valid_with_corr': 1000}
+Running metrics for train afer 33976 steps/epochs and 4238.744788646698 seconds
+{'loss': tensor(0.9298), 'clock_time': 4238.744788646698, 'process_time': 4195.093572275}
+Running metrics for val afer 33976 steps/epochs and 4238.746586799622 seconds
+{'loss': tensor(0.9660), 'clock_time': 4238.746586799622, 'process_time': 4195.094494725}
+Time to generate 1000: 0.12976360321044922 sec.
+Time computing degree mmd:  0:00:05.595294
+[91mnspdk    [39m : [94m0.003188
+{'valid': 888, 'unique': 0.998, 'novel': 0.7605210420841684, 'nspdk': 0.00318817867675647, 'fcd': 1.33243313894193, 'valid_with_corr': 1000}
+Epoch 10 starts...
+Running metrics for iter afer 34000 steps/epochs and 4260.052649259567 seconds
+{'loss': tensor(0.9297), 'clock_time': 4260.052649259567, 'process_time': 4216.257539516}
+Time to generate 1000: 0.12938642501831055 sec.
+Time computing degree mmd:  0:00:05.609510
+[91mnspdk    [39m : [94m0.003464
+{'valid': 888, 'unique': 0.996, 'novel': 0.75, 'nspdk': 0.0034644112780549685, 'fcd': 1.4544403943681274, 'valid_with_corr': 1000}
+Running metrics for iter afer 36000 steps/epochs and 4489.723994970322 seconds
+{'loss': tensor(0.9259), 'clock_time': 4489.723994970322, 'process_time': 4444.013280758}
+Time to generate 1000: 0.1295924186706543 sec.
+Time computing degree mmd:  0:00:05.641894
+[91mnspdk    [39m : [94m0.002937
+{'valid': 891, 'unique': 0.995, 'novel': 0.7638190954773869, 'nspdk': 0.0029371586072675093, 'fcd': 1.1946749669335262, 'valid_with_corr': 1000}
+Running metrics for train afer 37751 steps/epochs and 4713.569720506668 seconds
+{'loss': tensor(0.9266), 'clock_time': 4713.569720506668, 'process_time': 4665.974876653}
+Running metrics for val afer 37751 steps/epochs and 4713.571575641632 seconds
+{'loss': tensor(0.9612), 'clock_time': 4713.571575641632, 'process_time': 4665.975859788}
+Time to generate 1000: 0.12964773178100586 sec.
+Time computing degree mmd:  0:00:05.424846
+[91mnspdk    [39m : [94m0.002909
+{'valid': 876, 'unique': 0.998, 'novel': 0.7665330661322646, 'nspdk': 0.0029093415027880987, 'fcd': 1.2535279374976511, 'valid_with_corr': 1000}
+Epoch 11 starts...
+Running metrics for iter afer 38000 steps/epochs and 4757.91406750679 seconds
+{'loss': tensor(0.9264), 'clock_time': 4757.91406750679, 'process_time': 4709.95341028}
+Time to generate 1000: 0.1295328140258789 sec.
+Time computing degree mmd:  0:00:05.464399
+[91mnspdk    [39m : [94m0.003222
+{'valid': 894, 'unique': 0.998, 'novel': 0.7474949899799599, 'nspdk': 0.0032217274339201296, 'fcd': 1.038483839731871, 'valid_with_corr': 1000}
+Running metrics for iter afer 40000 steps/epochs and 4985.035639286041 seconds
+{'loss': tensor(0.9228), 'clock_time': 4985.035639286041, 'process_time': 4935.185551951}
+Time to generate 1000: 0.12714242935180664 sec.
+Time computing degree mmd:  0:00:05.407325
+[91mnspdk    [39m : [94m0.003274
+{'valid': 894, 'unique': 0.995, 'novel': 0.7246231155778895, 'nspdk': 0.00327397351212505, 'fcd': 1.4714046468584456, 'valid_with_corr': 1000}
+Running metrics for train afer 41526 steps/epochs and 5181.842073440552 seconds
+{'loss': tensor(0.9228), 'clock_time': 5181.842073440552, 'process_time': 5130.342347019}
+Running metrics for val afer 41526 steps/epochs and 5181.843777418137 seconds
+{'loss': tensor(0.9533), 'clock_time': 5181.843777418137, 'process_time': 5130.3431939580005}
+Time to generate 1000: 0.1258995532989502 sec.
+Time computing degree mmd:  0:00:05.383818
+[91mnspdk    [39m : [94m0.003093
+{'valid': 884, 'unique': 0.997, 'novel': 0.7392176529588766, 'nspdk': 0.0030927609762461117, 'fcd': 1.1481675406371892, 'valid_with_corr': 1000}
+Epoch 12 starts...
+Running metrics for iter afer 42000 steps/epochs and 5248.911430358887 seconds
+{'loss': tensor(0.9221), 'clock_time': 5248.911430358887, 'process_time': 5196.880300142}
+Time to generate 1000: 0.12645292282104492 sec.
+Time computing degree mmd:  0:00:05.434065
+[91mnspdk    [39m : [94m0.003228
+{'valid': 903, 'unique': 0.997, 'novel': 0.7703109327983951, 'nspdk': 0.0032282769441154824, 'fcd': 1.0747379874065928, 'valid_with_corr': 1000}
+Running metrics for iter afer 44000 steps/epochs and 5474.99124622345 seconds
+{'loss': tensor(0.9197), 'clock_time': 5474.99124622345, 'process_time': 5421.050985508}
+Time to generate 1000: 0.13028311729431152 sec.
+Time computing degree mmd:  0:00:05.486314
+[91mnspdk    [39m : [94m0.002918
+{'valid': 905, 'unique': 0.994, 'novel': 0.7515090543259557, 'nspdk': 0.002917583445613159, 'fcd': 1.1662374514492129, 'valid_with_corr': 1000}
+Running metrics for train afer 45301 steps/epochs and 5648.471133947372 seconds
+{'loss': tensor(0.9202), 'clock_time': 5648.471133947372, 'process_time': 5593.109023785}
+Running metrics for val afer 45301 steps/epochs and 5648.473397731781 seconds
+{'loss': tensor(0.9484), 'clock_time': 5648.473397731781, 'process_time': 5593.109909757}
+Time to generate 1000: 0.12636327743530273 sec.
+Time computing degree mmd:  0:00:05.408811
+[91mnspdk    [39m : [94m0.003615
+{'valid': 894, 'unique': 0.999, 'novel': 0.7757757757757757, 'nspdk': 0.0036145127128604515, 'fcd': 1.1607696422380442, 'valid_with_corr': 1000}
+Epoch 13 starts...
+Running metrics for iter afer 46000 steps/epochs and 5739.155075073242 seconds
+{'loss': tensor(0.9190), 'clock_time': 5739.155075073242, 'process_time': 5683.034931815}
+Time to generate 1000: 0.1285538673400879 sec.
+Time computing degree mmd:  0:00:05.374611
+[91mnspdk    [39m : [94m0.003716
+{'valid': 899, 'unique': 0.997, 'novel': 0.7552657973921765, 'nspdk': 0.0037158891231808266, 'fcd': 1.4904555738696956, 'valid_with_corr': 1000}
+Running metrics for iter afer 48000 steps/epochs and 5965.197735548019 seconds
+{'loss': tensor(0.9185), 'clock_time': 5965.197735548019, 'process_time': 5907.143599319}
+Time to generate 1000: 0.1273059844970703 sec.
+Time computing degree mmd:  0:00:05.369186
+[91mnspdk    [39m : [94m0.003059
+{'valid': 903, 'unique': 0.995, 'novel': 0.7256281407035176, 'nspdk': 0.003059050949349551, 'fcd': 1.2736129142069323, 'valid_with_corr': 1000}
+Running metrics for train afer 49076 steps/epochs and 6115.498599529266 seconds
+{'loss': tensor(0.9170), 'clock_time': 6115.498599529266, 'process_time': 6056.203575976}
+Running metrics for val afer 49076 steps/epochs and 6115.50031542778 seconds
+{'loss': tensor(0.9379), 'clock_time': 6115.50031542778, 'process_time': 6056.204421065}
+Time to generate 1000: 0.12738847732543945 sec.
+Time computing degree mmd:  0:00:05.458171
+[91mnspdk    [39m : [94m0.002930
+{'valid': 883, 'unique': 0.998, 'novel': 0.7755511022044088, 'nspdk': 0.0029296794786495828, 'fcd': 1.2290339837762438, 'valid_with_corr': 1000}
+Epoch 14 starts...
+Running metrics for iter afer 50000 steps/epochs and 6229.436956167221 seconds
+{'loss': tensor(0.9141), 'clock_time': 6229.436956167221, 'process_time': 6169.199060149}
+Time to generate 1000: 0.12614750862121582 sec.
+Time computing degree mmd:  0:00:05.440546
+[91mnspdk    [39m : [94m0.003276
+{'valid': 873, 'unique': 0.995, 'novel': 0.7577889447236181, 'nspdk': 0.003275578477106633, 'fcd': 1.3184963060045547, 'valid_with_corr': 1000}
+Running metrics for iter afer 52000 steps/epochs and 6452.323225021362 seconds
+{'loss': tensor(0.9158), 'clock_time': 6452.323225021362, 'process_time': 6390.216302842}
+Time to generate 1000: 0.12822842597961426 sec.
+Time computing degree mmd:  0:00:05.415480
+[91mnspdk    [39m : [94m0.002677
+{'valid': 911, 'unique': 0.995, 'novel': 0.7557788944723618, 'nspdk': 0.0026769499048201473, 'fcd': 1.16857341578892, 'valid_with_corr': 1000}
+Running metrics for train afer 52851 steps/epochs and 6578.13964343071 seconds
+{'loss': tensor(0.9152), 'clock_time': 6578.13964343071, 'process_time': 6515.014991876}
+Running metrics for val afer 52851 steps/epochs and 6578.141370773315 seconds
+{'loss': tensor(0.9436), 'clock_time': 6578.141370773315, 'process_time': 6515.015846656}
+Time to generate 1000: 0.12901043891906738 sec.
+Time computing degree mmd:  0:00:05.374627
+[91mnspdk    [39m : [94m0.002572
+{'valid': 883, 'unique': 0.994, 'novel': 0.7645875251509054, 'nspdk': 0.002572435182260191, 'fcd': 1.0273188817939953, 'valid_with_corr': 1000}
+Epoch 15 starts...
+Running metrics for iter afer 54000 steps/epochs and 6714.698058128357 seconds
+{'loss': tensor(0.9132), 'clock_time': 6714.698058128357, 'process_time': 6650.008408823}
+Time to generate 1000: 0.1323707103729248 sec.
+Time computing degree mmd:  0:00:05.443102
+[91mnspdk    [39m : [94m0.002920
+{'valid': 908, 'unique': 0.998, 'novel': 0.7765531062124249, 'nspdk': 0.002920120069934695, 'fcd': 1.1276272136623504, 'valid_with_corr': 1000}
+Running metrics for iter afer 56000 steps/epochs and 6933.962320327759 seconds
+{'loss': tensor(0.9127), 'clock_time': 6933.962320327759, 'process_time': 6867.414690517}
+Time to generate 1000: 0.12342238426208496 sec.
+Time computing degree mmd:  0:00:05.409863
+[91mnspdk    [39m : [94m0.003288
+{'valid': 887, 'unique': 0.997, 'novel': 0.7472417251755266, 'nspdk': 0.0032880926407675704, 'fcd': 1.2282510456755489, 'valid_with_corr': 1000}
+Running metrics for train afer 56626 steps/epochs and 7034.026561021805 seconds
+{'loss': tensor(0.9119), 'clock_time': 7034.026561021805, 'process_time': 6966.690064455}
+Running metrics for val afer 56626 steps/epochs and 7034.02821969986 seconds
+{'loss': tensor(0.9393), 'clock_time': 7034.02821969986, 'process_time': 6966.690898811}
+Time to generate 1000: 0.12442398071289062 sec.
+Time computing degree mmd:  0:00:05.413680
+[91mnspdk    [39m : [94m0.003094
+{'valid': 894, 'unique': 0.996, 'novel': 0.7700803212851406, 'nspdk': 0.003094169631930155, 'fcd': 1.0253924158235677, 'valid_with_corr': 1000}
+Epoch 16 starts...
+Running metrics for iter afer 58000 steps/epochs and 7189.944732427597 seconds
+{'loss': tensor(0.9079), 'clock_time': 7189.944732427597, 'process_time': 7121.288830572}
+Time to generate 1000: 0.12474846839904785 sec.
+Time computing degree mmd:  0:00:05.409356
+[91mnspdk    [39m : [94m0.002639
+{'valid': 876, 'unique': 0.999, 'novel': 0.7547547547547547, 'nspdk': 0.0026393260591939804, 'fcd': 1.1137643795492451, 'valid_with_corr': 1000}
+Running metrics for iter afer 60000 steps/epochs and 7408.041118621826 seconds
+{'loss': tensor(0.9109), 'clock_time': 7408.041118621826, 'process_time': 7337.603585029}
+Time to generate 1000: 0.1256241798400879 sec.
+Time computing degree mmd:  0:00:05.349618
+[91mnspdk    [39m : [94m0.003720
+{'valid': 873, 'unique': 0.997, 'novel': 0.7673019057171514, 'nspdk': 0.0037203040481890715, 'fcd': 1.3892438065017743, 'valid_with_corr': 1000}
+Running metrics for train afer 60401 steps/epochs and 7486.174986600876 seconds
+{'loss': tensor(0.9090), 'clock_time': 7486.174986600876, 'process_time': 7415.13914432}
+Running metrics for val afer 60401 steps/epochs and 7486.176664113998 seconds
+{'loss': tensor(0.9383), 'clock_time': 7486.176664113998, 'process_time': 7415.139992941}
+Time to generate 1000: 0.12426996231079102 sec.
+Time computing degree mmd:  0:00:05.371246
+[91mnspdk    [39m : [94m0.002758
+{'valid': 894, 'unique': 0.998, 'novel': 0.7454909819639278, 'nspdk': 0.002758470553388792, 'fcd': 1.180207685194862, 'valid_with_corr': 1000}
+Epoch 17 starts...
+Running metrics for iter afer 62000 steps/epochs and 7663.882771968842 seconds
+{'loss': tensor(0.9071), 'clock_time': 7663.882771968842, 'process_time': 7591.352598438}
+Time to generate 1000: 0.12362957000732422 sec.
+Time computing degree mmd:  0:00:05.435996
+[91mnspdk    [39m : [94m0.003297
+{'valid': 895, 'unique': 0.997, 'novel': 0.7773319959879639, 'nspdk': 0.003296848648010997, 'fcd': 1.142022225862732, 'valid_with_corr': 1000}
+Running metrics for iter afer 64000 steps/epochs and 7882.747001171112 seconds
+{'loss': tensor(0.9091), 'clock_time': 7882.747001171112, 'process_time': 7808.364602136}
+Time to generate 1000: 0.12477612495422363 sec.
+Time computing degree mmd:  0:00:05.428416
+[91mnspdk    [39m : [94m0.003589
+{'valid': 882, 'unique': 0.997, 'novel': 0.7773319959879639, 'nspdk': 0.0035885416170532425, 'fcd': 1.4376833716589381, 'valid_with_corr': 1000}
+Running metrics for train afer 64176 steps/epochs and 7938.5621020793915 seconds
+{'loss': tensor(0.9075), 'clock_time': 7938.5621020793915, 'process_time': 7863.730676813}
+Running metrics for val afer 64176 steps/epochs and 7938.563760995865 seconds
+{'loss': tensor(0.9403), 'clock_time': 7938.563760995865, 'process_time': 7863.731536841}
+Time to generate 1000: 0.12441396713256836 sec.
+Time computing degree mmd:  0:00:05.436332
+[91mnspdk    [39m : [94m0.003713
+{'valid': 870, 'unique': 0.994, 'novel': 0.7766599597585513, 'nspdk': 0.003712573832786392, 'fcd': 1.4295958122939858, 'valid_with_corr': 1000}
+Epoch 18 starts...
+Running metrics for iter afer 66000 steps/epochs and 8138.624758720398 seconds
+{'loss': tensor(0.9032), 'clock_time': 8138.624758720398, 'process_time': 8062.140138122}
+Time to generate 1000: 0.12430930137634277 sec.
+Time computing degree mmd:  0:00:05.399079
+[91mnspdk    [39m : [94m0.003227
+{'valid': 899, 'unique': 0.997, 'novel': 0.7291875626880642, 'nspdk': 0.0032267443087639625, 'fcd': 1.1881403848473724, 'valid_with_corr': 1000}
+Running metrics for train afer 67951 steps/epochs and 8372.840741634369 seconds
+{'loss': tensor(0.9053), 'clock_time': 8372.840741634369, 'process_time': 8294.474993721999}
+Running metrics for val afer 67951 steps/epochs and 8372.842398166656 seconds
+{'loss': tensor(0.9325), 'clock_time': 8372.842398166656, 'process_time': 8294.475833919}
+Time to generate 1000: 0.12455129623413086 sec.
+Time computing degree mmd:  0:00:05.397863
+[91mnspdk    [39m : [94m0.003135
+{'valid': 897, 'unique': 0.998, 'novel': 0.717434869739479, 'nspdk': 0.0031354266457817026, 'fcd': 1.167607784996271, 'valid_with_corr': 1000}
+Epoch 19 starts...
+Running metrics for iter afer 68000 steps/epochs and 8395.506550073624 seconds
+{'loss': tensor(0.9073), 'clock_time': 8395.506550073624, 'process_time': 8316.965354290998}
+Time to generate 1000: 0.1254873275756836 sec.
+Time computing degree mmd:  0:00:05.389430
+[91mnspdk    [39m : [94m0.002633
+{'valid': 897, 'unique': 0.998, 'novel': 0.7545090180360722, 'nspdk': 0.0026333206666036557, 'fcd': 1.0140795844963328, 'valid_with_corr': 1000}
+Running metrics for iter afer 70000 steps/epochs and 8614.186159610748 seconds
+{'loss': tensor(0.9015), 'clock_time': 8614.186159610748, 'process_time': 8533.907838341998}
+Time to generate 1000: 0.12429523468017578 sec.
+Time computing degree mmd:  0:00:05.412988
+[91mnspdk    [39m : [94m0.003578
+{'valid': 906, 'unique': 0.994, 'novel': 0.761569416498994, 'nspdk': 0.003577539257183626, 'fcd': 1.4448942342800493, 'valid_with_corr': 1000}
+Running metrics for train afer 71726 steps/epochs and 8825.438426017761 seconds
+{'loss': tensor(0.9032), 'clock_time': 8825.438426017761, 'process_time': 8743.378264207}
+Running metrics for val afer 71726 steps/epochs and 8825.440099716187 seconds
+{'loss': tensor(0.9365), 'clock_time': 8825.440099716187, 'process_time': 8743.379117432}
+Time to generate 1000: 0.1235811710357666 sec.
+Time computing degree mmd:  0:00:05.412917
+[91mnspdk    [39m : [94m0.002539
+{'valid': 912, 'unique': 0.997, 'novel': 0.7321965897693079, 'nspdk': 0.0025390944062266274, 'fcd': 1.0966062108823884, 'valid_with_corr': 1000}
+Epoch 20 starts...
+Running metrics for iter afer 72000 steps/epochs and 8871.33551812172 seconds
+{'loss': tensor(0.9044), 'clock_time': 8871.33551812172, 'process_time': 8788.433449122998}
+Time to generate 1000: 0.12398719787597656 sec.
+Time computing degree mmd:  0:00:05.418073
+[91mnspdk    [39m : [94m0.002774
+{'valid': 892, 'unique': 0.998, 'novel': 0.7695390781563126, 'nspdk': 0.002773909317626333, 'fcd': 1.0227729658681923, 'valid_with_corr': 1000}
+Running metrics for iter afer 74000 steps/epochs and 9090.587765216827 seconds
+{'loss': tensor(0.9019), 'clock_time': 9090.587765216827, 'process_time': 9005.937978201999}
+Time to generate 1000: 0.12566590309143066 sec.
+Time computing degree mmd:  0:00:05.434998
+[91mnspdk    [39m : [94m0.002806
+{'valid': 892, 'unique': 0.998, 'novel': 0.7595190380761523, 'nspdk': 0.002806102564194224, 'fcd': 1.2250359704382738, 'valid_with_corr': 1000}
+Running metrics for train afer 75501 steps/epochs and 9279.08450627327 seconds
+{'loss': tensor(0.9021), 'clock_time': 9279.08450627327, 'process_time': 9192.929949561}
+Running metrics for val afer 75501 steps/epochs and 9279.086187124252 seconds
+{'loss': tensor(0.9311), 'clock_time': 9279.086187124252, 'process_time': 9192.930802529}
+Time to generate 1000: 0.12372756004333496 sec.
+Time computing degree mmd:  0:00:05.455286
+[91mnspdk    [39m : [94m0.002892
+{'valid': 887, 'unique': 0.998, 'novel': 0.7775551102204409, 'nspdk': 0.0028916833681786325, 'fcd': 1.0731041060230027, 'valid_with_corr': 1000}
+Epoch 21 starts...
+Running metrics for iter afer 76000 steps/epochs and 9346.803056240082 seconds
+{'loss': tensor(0.9013), 'clock_time': 9346.803056240082, 'process_time': 9260.122200058999}
+Time to generate 1000: 0.12523865699768066 sec.
+Time computing degree mmd:  0:00:05.441555
+[91mnspdk    [39m : [94m0.003012
+{'valid': 903, 'unique': 0.996, 'novel': 0.7690763052208835, 'nspdk': 0.003012088549137676, 'fcd': 1.0152288857723129, 'valid_with_corr': 1000}
+Running metrics for iter afer 78000 steps/epochs and 9566.038288116455 seconds
+{'loss': tensor(0.9013), 'clock_time': 9566.038288116455, 'process_time': 9477.589153549}
+Time to generate 1000: 0.12465953826904297 sec.
+Time computing degree mmd:  0:00:05.396557
+[91mnspdk    [39m : [94m0.003162
+{'valid': 876, 'unique': 0.997, 'novel': 0.7432296890672017, 'nspdk': 0.0031620033867710284, 'fcd': 1.1200138932071582, 'valid_with_corr': 1000}
+Running metrics for train afer 79276 steps/epochs and 9731.737095594406 seconds
+{'loss': tensor(0.9025), 'clock_time': 9731.737095594406, 'process_time': 9641.960489292}
+Running metrics for val afer 79276 steps/epochs and 9731.738773584366 seconds
+{'loss': tensor(0.9287), 'clock_time': 9731.738773584366, 'process_time': 9641.961337732999}
+Time to generate 1000: 0.12334489822387695 sec.
+Time computing degree mmd:  0:00:05.484041
+[91mnspdk    [39m : [94m0.003066
+{'valid': 898, 'unique': 0.998, 'novel': 0.7424849699398798, 'nspdk': 0.0030662982352909762, 'fcd': 1.1041126209999312, 'valid_with_corr': 1000}
+Epoch 22 starts...
+Running metrics for iter afer 80000 steps/epochs and 9822.712993621826 seconds
+{'loss': tensor(0.9033), 'clock_time': 9822.712993621826, 'process_time': 9732.213393893999}
+Time to generate 1000: 0.12424039840698242 sec.
+Time computing degree mmd:  0:00:05.425945
+[91mnspdk    [39m : [94m0.003367
+{'valid': 898, 'unique': 0.998, 'novel': 0.7264529058116233, 'nspdk': 0.0033670103215602265, 'fcd': 1.2640989612835867, 'valid_with_corr': 1000}
+Running metrics for iter afer 82000 steps/epochs and 10040.957194566727 seconds
+{'loss': tensor(0.8990), 'clock_time': 10040.957194566727, 'process_time': 9948.705141302}
+Time to generate 1000: 0.12594199180603027 sec.
+Time computing degree mmd:  0:00:05.378918
+[91mnspdk    [39m : [94m0.002806
+{'valid': 907, 'unique': 0.995, 'novel': 0.7517587939698492, 'nspdk': 0.0028061174327423943, 'fcd': 0.8638204229462474, 'valid_with_corr': 1000}
+Running metrics for train afer 83051 steps/epochs and 10184.210009098053 seconds
+{'loss': tensor(0.8992), 'clock_time': 10184.210009098053, 'process_time': 10090.809874288}
+Running metrics for val afer 83051 steps/epochs and 10184.211688041687 seconds
+{'loss': tensor(0.9344), 'clock_time': 10184.211688041687, 'process_time': 10090.81072962}
+Time to generate 1000: 0.12461972236633301 sec.
+Time computing degree mmd:  0:00:05.453301
+[91mnspdk    [39m : [94m0.003077
+{'valid': 906, 'unique': 0.995, 'novel': 0.7095477386934673, 'nspdk': 0.0030773906823765573, 'fcd': 1.1759099073703325, 'valid_with_corr': 1000}
+Epoch 23 starts...
+Running metrics for iter afer 84000 steps/epochs and 10297.712853431702 seconds
+{'loss': tensor(0.8982), 'clock_time': 10297.712853431702, 'process_time': 10203.356822529999}
+Time to generate 1000: 0.1300950050354004 sec.
+Time computing degree mmd:  0:00:05.387917
+[91mnspdk    [39m : [94m0.002938
+{'valid': 902, 'unique': 0.997, 'novel': 0.7301905717151455, 'nspdk': 0.0029383822985529773, 'fcd': 1.316512555019706, 'valid_with_corr': 1000}
+Running metrics for iter afer 86000 steps/epochs and 10515.89982676506 seconds
+{'loss': tensor(0.8986), 'clock_time': 10515.89982676506, 'process_time': 10419.727851769}
+Time to generate 1000: 0.12462162971496582 sec.
+Time computing degree mmd:  0:00:05.435105
+[91mnspdk    [39m : [94m0.003231
+{'valid': 883, 'unique': 0.998, 'novel': 0.7585170340681363, 'nspdk': 0.003231275287430113, 'fcd': 1.3011588292746978, 'valid_with_corr': 1000}
+Running metrics for train afer 86826 steps/epochs and 10636.804686307907 seconds
+{'loss': tensor(0.8981), 'clock_time': 10636.804686307907, 'process_time': 10539.675019923}
+Running metrics for val afer 86826 steps/epochs and 10636.806401014328 seconds
+{'loss': tensor(0.9316), 'clock_time': 10636.806401014328, 'process_time': 10539.675894569998}
+Time to generate 1000: 0.12468862533569336 sec.
+Time computing degree mmd:  0:00:05.430242
+[91mnspdk    [39m : [94m0.002808
+{'valid': 886, 'unique': 0.999, 'novel': 0.7647647647647647, 'nspdk': 0.002808045462735498, 'fcd': 0.9799115036445158, 'valid_with_corr': 1000}
+Epoch 24 starts...
+Running metrics for iter afer 88000 steps/epochs and 10772.974193811417 seconds
+{'loss': tensor(0.8969), 'clock_time': 10772.974193811417, 'process_time': 10674.763538551999}
+Time to generate 1000: 0.12518858909606934 sec.
+Time computing degree mmd:  0:00:05.430694
+[91mnspdk    [39m : [94m0.002805
+{'valid': 915, 'unique': 1.0, 'novel': 0.737, 'nspdk': 0.0028048260099216016, 'fcd': 1.0339646240726594, 'valid_with_corr': 1000}
+Running metrics for iter afer 90000 steps/epochs and 10991.798071622849 seconds
+{'loss': tensor(0.8973), 'clock_time': 10991.798071622849, 'process_time': 10891.788358509999}
+Time to generate 1000: 0.12472844123840332 sec.
+Time computing degree mmd:  0:00:05.390240
+[91mnspdk    [39m : [94m0.003527
+{'valid': 882, 'unique': 0.992, 'novel': 0.7792338709677419, 'nspdk': 0.0035266145071933264, 'fcd': 1.6517907972740957, 'valid_with_corr': 1000}
+Running metrics for train afer 90601 steps/epochs and 11089.590174913406 seconds
+{'loss': tensor(0.8969), 'clock_time': 11089.590174913406, 'process_time': 10988.768238895}
+Running metrics for val afer 90601 steps/epochs and 11089.592036008835 seconds
+{'loss': tensor(0.9273), 'clock_time': 11089.592036008835, 'process_time': 10988.769105198999}
+Time to generate 1000: 0.12344789505004883 sec.
+Time computing degree mmd:  0:00:05.368983
+[91mnspdk    [39m : [94m0.002773
+{'valid': 902, 'unique': 0.999, 'novel': 0.7397397397397397, 'nspdk': 0.002772864314623036, 'fcd': 1.2340179520820556, 'valid_with_corr': 1000}
+Epoch 25 starts...
+Running metrics for iter afer 92000 steps/epochs and 11248.113947629929 seconds
+{'loss': tensor(0.8957), 'clock_time': 11248.113947629929, 'process_time': 11146.055729602998}
+Time to generate 1000: 0.1559767723083496 sec.
+Time computing degree mmd:  0:00:05.422643
+[91mnspdk    [39m : [94m0.003077
+{'valid': 890, 'unique': 0.997, 'novel': 0.7482447342026078, 'nspdk': 0.003077350150385072, 'fcd': 1.1839303736741833, 'valid_with_corr': 1000}
+Running metrics for iter afer 94000 steps/epochs and 11466.831856012344 seconds
+{'loss': tensor(0.8987), 'clock_time': 11466.831856012344, 'process_time': 11362.943208573999}
+Time to generate 1000: 0.12459349632263184 sec.
+Time computing degree mmd:  0:00:05.399884
+[91mnspdk    [39m : [94m0.003082
+{'valid': 911, 'unique': 0.991, 'novel': 0.7426841574167508, 'nspdk': 0.003082390711563354, 'fcd': 1.1547289074977876, 'valid_with_corr': 1000}
+Running metrics for train afer 94376 steps/epochs and 11542.431487321854 seconds
+{'loss': tensor(0.8973), 'clock_time': 11542.431487321854, 'process_time': 11437.967471512}
+Running metrics for val afer 94376 steps/epochs and 11542.433022975922 seconds
+{'loss': tensor(0.9277), 'clock_time': 11542.433022975922, 'process_time': 11437.968287991}
+Time to generate 1000: 0.12380385398864746 sec.
+Time computing degree mmd:  0:00:05.394196
+[91mnspdk    [39m : [94m0.003232
+{'valid': 891, 'unique': 0.999, 'novel': 0.7517517517517518, 'nspdk': 0.0032321979013646973, 'fcd': 1.2436156365757824, 'valid_with_corr': 1000}
+Epoch 26 starts...
+Running metrics for iter afer 96000 steps/epochs and 11722.725960969925 seconds
+{'loss': tensor(0.8958), 'clock_time': 11722.725960969925, 'process_time': 11616.793806638}
+Time to generate 1000: 0.12381911277770996 sec.
+Time computing degree mmd:  0:00:05.377482
+[91mnspdk    [39m : [94m0.003552
+{'valid': 895, 'unique': 0.999, 'novel': 0.7347347347347347, 'nspdk': 0.003552016098905708, 'fcd': 1.2720738876818132, 'valid_with_corr': 1000}
+Running metrics for iter afer 98000 steps/epochs and 11940.943163633347 seconds
+{'loss': tensor(0.8963), 'clock_time': 11940.943163633347, 'process_time': 11833.215362522}
+Time to generate 1000: 0.1239924430847168 sec.
+Time computing degree mmd:  0:00:05.404916
+[91mnspdk    [39m : [94m0.003325
+{'valid': 920, 'unique': 0.997, 'novel': 0.7392176529588766, 'nspdk': 0.0033251672106365815, 'fcd': 1.241822465111234, 'valid_with_corr': 1000}
+Running metrics for train afer 98151 steps/epochs and 11994.068181991577 seconds
+{'loss': tensor(0.8955), 'clock_time': 11994.068181991577, 'process_time': 11885.945617144998}
+Running metrics for val afer 98151 steps/epochs and 11994.069852113724 seconds
+{'loss': tensor(0.9298), 'clock_time': 11994.069852113724, 'process_time': 11885.946456864998}
+Time to generate 1000: 0.12240862846374512 sec.
+Time computing degree mmd:  0:00:05.391877
+[91mnspdk    [39m : [94m0.002701
+{'valid': 901, 'unique': 0.999, 'novel': 0.7477477477477478, 'nspdk': 0.0027012231866446745, 'fcd': 1.120374991063919, 'valid_with_corr': 1000}
+Epoch 27 starts...
+Running metrics for iter afer 100000 steps/epochs and 12196.854681253433 seconds
+{'loss': tensor(0.8930), 'clock_time': 12196.854681253433, 'process_time': 12087.020566689998}
+Time to generate 1000: 0.12441349029541016 sec.
+Time computing degree mmd:  0:00:05.456537
+[91mnspdk    [39m : [94m0.003205
+{'valid': 902, 'unique': 0.995, 'novel': 0.735678391959799, 'nspdk': 0.0032050844706692505, 'fcd': 1.162368716679346, 'valid_with_corr': 1000}
+Running metrics for train afer 101926 steps/epochs and 12427.510936021805 seconds
+{'loss': tensor(0.8943), 'clock_time': 12427.510936021805, 'process_time': 12315.800160019}
+Running metrics for val afer 101926 steps/epochs and 12427.512597084045 seconds
+{'loss': tensor(0.9329), 'clock_time': 12427.512597084045, 'process_time': 12315.801002568998}
+Time to generate 1000: 0.12365317344665527 sec.
+Time computing degree mmd:  0:00:05.370051
+[91mnspdk    [39m : [94m0.003028
+{'valid': 918, 'unique': 0.998, 'novel': 0.7214428857715431, 'nspdk': 0.003028494791797509, 'fcd': 1.2198399421391173, 'valid_with_corr': 1000}
+Epoch 28 starts...
+Running metrics for iter afer 102000 steps/epochs and 12453.283666849136 seconds
+{'loss': tensor(0.8955), 'clock_time': 12453.283666849136, 'process_time': 12341.361459488}
+Time to generate 1000: 0.12343120574951172 sec.
+Time computing degree mmd:  0:00:05.355237
+[91mnspdk    [39m : [94m0.002770
+{'valid': 907, 'unique': 0.997, 'novel': 0.7392176529588766, 'nspdk': 0.002770166998795176, 'fcd': 1.0962523657596712, 'valid_with_corr': 1000}
+Running metrics for iter afer 104000 steps/epochs and 12671.729805469513 seconds
+{'loss': tensor(0.8913), 'clock_time': 12671.729805469513, 'process_time': 12558.001206202}
+Time to generate 1000: 0.12584590911865234 sec.
+Time computing degree mmd:  0:00:05.400447
+[91mnspdk    [39m : [94m0.003028
+{'valid': 891, 'unique': 0.997, 'novel': 0.757271815446339, 'nspdk': 0.0030277841881692913, 'fcd': 1.0417446845114569, 'valid_with_corr': 1000}
+Running metrics for train afer 105701 steps/epochs and 12879.834983110428 seconds
+{'loss': tensor(0.8929), 'clock_time': 12879.834983110428, 'process_time': 12764.336659871}
+Running metrics for val afer 105701 steps/epochs and 12879.83659696579 seconds
+{'loss': tensor(0.9289), 'clock_time': 12879.83659696579, 'process_time': 12764.3374792}
+Time to generate 1000: 0.12780332565307617 sec.
+Time computing degree mmd:  0:00:05.409402
+[91mnspdk    [39m : [94m0.002420
+{'valid': 898, 'unique': 0.994, 'novel': 0.7434607645875252, 'nspdk': 0.002419549093755191, 'fcd': 0.9103325090038332, 'valid_with_corr': 1000}
+Epoch 29 starts...
+Running metrics for iter afer 106000 steps/epochs and 12928.210826158524 seconds
+{'loss': tensor(0.8935), 'clock_time': 12928.210826158524, 'process_time': 12811.852841351}
+Time to generate 1000: 0.12377071380615234 sec.
+Time computing degree mmd:  0:00:05.432548
+[91mnspdk    [39m : [94m0.002922
+{'valid': 917, 'unique': 0.995, 'novel': 0.7658291457286432, 'nspdk': 0.002922309700340797, 'fcd': 1.0110729359410904, 'valid_with_corr': 1000}
+Running metrics for iter afer 108000 steps/epochs and 13147.075958967209 seconds
+{'loss': tensor(0.8912), 'clock_time': 13147.075958967209, 'process_time': 13028.815313386998}
+Time to generate 1000: 0.12781047821044922 sec.
+Time computing degree mmd:  0:00:05.380784
+[91mnspdk    [39m : [94m0.002686
+{'valid': 909, 'unique': 0.996, 'novel': 0.748995983935743, 'nspdk': 0.0026857960770782507, 'fcd': 1.1222318887023945, 'valid_with_corr': 1000}
+Running metrics for train afer 109476 steps/epochs and 13332.947954177856 seconds
+{'loss': tensor(0.8921), 'clock_time': 13332.947954177856, 'process_time': 13213.121645662999}
+Running metrics for val afer 109476 steps/epochs and 13332.94964170456 seconds
+{'loss': tensor(0.9265), 'clock_time': 13332.94964170456, 'process_time': 13213.122518623999}
+Time to generate 1000: 0.12564587593078613 sec.
+Time computing degree mmd:  0:00:05.424357
+[91mnspdk    [39m : [94m0.002843
+{'valid': 920, 'unique': 0.998, 'novel': 0.7535070140280561, 'nspdk': 0.002843369261416373, 'fcd': 0.9411158191978899, 'valid_with_corr': 1000}
+Epoch 30 starts...
+Running metrics for iter afer 110000 steps/epochs and 13403.28367137909 seconds
+{'loss': tensor(0.8930), 'clock_time': 13403.28367137909, 'process_time': 13282.906373676}
+Time to generate 1000: 0.12414360046386719 sec.
+Time computing degree mmd:  0:00:05.393060
+[91mnspdk    [39m : [94m0.002794
+{'valid': 905, 'unique': 0.995, 'novel': 0.7487437185929648, 'nspdk': 0.0027943994460956634, 'fcd': 0.9987740109691678, 'valid_with_corr': 1000}
+Running metrics for iter afer 112000 steps/epochs and 13622.298635721207 seconds
+{'loss': tensor(0.8914), 'clock_time': 13622.298635721207, 'process_time': 13500.089603412}
+Time to generate 1000: 0.12462782859802246 sec.
+Time computing degree mmd:  0:00:05.391847
+[91mnspdk    [39m : [94m0.003215
+{'valid': 917, 'unique': 0.996, 'novel': 0.7329317269076305, 'nspdk': 0.003215361903466385, 'fcd': 1.2767621623929557, 'valid_with_corr': 1000}
+Running metrics for train afer 113251 steps/epochs and 13785.504403114319 seconds
+{'loss': tensor(0.8913), 'clock_time': 13785.504403114319, 'process_time': 13661.902767357}
+Running metrics for val afer 113251 steps/epochs and 13785.505906581879 seconds
+{'loss': tensor(0.9294), 'clock_time': 13785.505906581879, 'process_time': 13661.903593427}
+Time to generate 1000: 0.12359952926635742 sec.
+Time computing degree mmd:  0:00:05.371805
+[91mnspdk    [39m : [94m0.003068
+{'valid': 897, 'unique': 0.993, 'novel': 0.7331319234642497, 'nspdk': 0.003067574164626996, 'fcd': 1.0542861727112296, 'valid_with_corr': 1000}
+Epoch 31 starts...
+Running metrics for iter afer 114000 steps/epochs and 13878.918455600739 seconds
+{'loss': tensor(0.8903), 'clock_time': 13878.918455600739, 'process_time': 13754.579490712998}
+Time to generate 1000: 0.12359881401062012 sec.
+Time computing degree mmd:  0:00:05.387288
+[91mnspdk    [39m : [94m0.003160
+{'valid': 897, 'unique': 0.997, 'novel': 0.753259779338014, 'nspdk': 0.0031599223930965925, 'fcd': 1.1375274060255158, 'valid_with_corr': 1000}
+Running metrics for iter afer 116000 steps/epochs and 14096.850379228592 seconds
+{'loss': tensor(0.8909), 'clock_time': 14096.850379228592, 'process_time': 13970.707681078999}
+Time to generate 1000: 0.12417888641357422 sec.
+Time computing degree mmd:  0:00:05.424409
+[91mnspdk    [39m : [94m0.003249
+{'valid': 889, 'unique': 0.998, 'novel': 0.7444889779559118, 'nspdk': 0.0032485794722205696, 'fcd': 1.2257584567215645, 'valid_with_corr': 1000}
+Running metrics for train afer 117026 steps/epochs and 14237.889611005783 seconds
+{'loss': tensor(0.8900), 'clock_time': 14237.889611005783, 'process_time': 14110.607236677999}
+Running metrics for val afer 117026 steps/epochs and 14237.891293764114 seconds
+{'loss': tensor(0.9218), 'clock_time': 14237.891293764114, 'process_time': 14110.608101365999}
+Time to generate 1000: 0.12246847152709961 sec.
+Time computing degree mmd:  0:00:05.432128
+[91mnspdk    [39m : [94m0.002475
+{'valid': 913, 'unique': 0.995, 'novel': 0.7487437185929648, 'nspdk': 0.0024749497021017697, 'fcd': 0.8318843420627218, 'valid_with_corr': 1000}
+Epoch 32 starts...
+Running metrics for iter afer 118000 steps/epochs and 14354.016376256943 seconds
+{'loss': tensor(0.8895), 'clock_time': 14354.016376256943, 'process_time': 14225.785396467}
+Time to generate 1000: 0.12442445755004883 sec.
+Time computing degree mmd:  0:00:05.401605
+[91mnspdk    [39m : [94m0.002860
+{'valid': 895, 'unique': 0.994, 'novel': 0.772635814889336, 'nspdk': 0.0028601507212996924, 'fcd': 1.108953236318257, 'valid_with_corr': 1000}
+Running metrics for iter afer 120000 steps/epochs and 14572.430844545364 seconds
+{'loss': tensor(0.8900), 'clock_time': 14572.430844545364, 'process_time': 14442.401842324}
+Time to generate 1000: 0.12810730934143066 sec.
+Time computing degree mmd:  0:00:05.373603
+[91mnspdk    [39m : [94m0.003850
+{'valid': 899, 'unique': 0.995, 'novel': 0.7195979899497488, 'nspdk': 0.0038500864003999657, 'fcd': 1.430163415329865, 'valid_with_corr': 1000}
+Running metrics for train afer 120801 steps/epochs and 14690.698108196259 seconds
+{'loss': tensor(0.8899), 'clock_time': 14690.698108196259, 'process_time': 14559.721571282}
+Running metrics for val afer 120801 steps/epochs and 14690.69972372055 seconds
+{'loss': tensor(0.9261), 'clock_time': 14690.69972372055, 'process_time': 14559.722400719}
+Time to generate 1000: 0.12373566627502441 sec.
+Time computing degree mmd:  0:00:05.397332
+[91mnspdk    [39m : [94m0.002742
+{'valid': 908, 'unique': 0.994, 'novel': 0.7706237424547284, 'nspdk': 0.0027417899091854436, 'fcd': 0.8757078787138042, 'valid_with_corr': 1000}
+Epoch 33 starts...
+Running metrics for iter afer 122000 steps/epochs and 14829.293620347977 seconds
+{'loss': tensor(0.8880), 'clock_time': 14829.293620347977, 'process_time': 14697.208714634999}
+Time to generate 1000: 0.12549614906311035 sec.
+Time computing degree mmd:  0:00:05.360528
+[91mnspdk    [39m : [94m0.002717
+{'valid': 901, 'unique': 0.994, 'novel': 0.7132796780684104, 'nspdk': 0.002717491828706564, 'fcd': 1.2536879929840623, 'valid_with_corr': 1000}
+Running metrics for iter afer 124000 steps/epochs and 15048.096767187119 seconds
+{'loss': tensor(0.8881), 'clock_time': 15048.096767187119, 'process_time': 14914.253897703999}
+Time to generate 1000: 0.12527966499328613 sec.
+Time computing degree mmd:  0:00:05.374167
+[91mnspdk    [39m : [94m0.002510
+{'valid': 910, 'unique': 0.996, 'novel': 0.7319277108433735, 'nspdk': 0.0025096517380631678, 'fcd': 0.9712745483438603, 'valid_with_corr': 1000}
+Running metrics for train afer 124576 steps/epochs and 15144.002278089523 seconds
+{'loss': tensor(0.8882), 'clock_time': 15144.002278089523, 'process_time': 15008.927877765998}
+Running metrics for val afer 124576 steps/epochs and 15144.003962278366 seconds
+{'loss': tensor(0.9209), 'clock_time': 15144.003962278366, 'process_time': 15008.928740172}
+Time to generate 1000: 0.12596392631530762 sec.
+Time computing degree mmd:  0:00:05.391005
+[91mnspdk    [39m : [94m0.003228
+{'valid': 903, 'unique': 0.996, 'novel': 0.7530120481927711, 'nspdk': 0.0032277046643280904, 'fcd': 1.0506457271794112, 'valid_with_corr': 1000}
+Epoch 34 starts...
+Running metrics for iter afer 126000 steps/epochs and 15305.320499897003 seconds
+{'loss': tensor(0.8881), 'clock_time': 15305.320499897003, 'process_time': 15168.967372259}
+Time to generate 1000: 0.12885785102844238 sec.
+Time computing degree mmd:  0:00:05.405031
+[91mnspdk    [39m : [94m0.002844
+{'valid': 898, 'unique': 0.999, 'novel': 0.7487487487487487, 'nspdk': 0.0028436713984595907, 'fcd': 1.1582494638963006, 'valid_with_corr': 1000}
+Running metrics for iter afer 128000 steps/epochs and 15524.006096124649 seconds
+{'loss': tensor(0.8906), 'clock_time': 15524.006096124649, 'process_time': 15385.867856163999}
+Time to generate 1000: 0.12604880332946777 sec.
+Time computing degree mmd:  0:00:05.353738
+[91mnspdk    [39m : [94m0.002853
+{'valid': 922, 'unique': 0.996, 'novel': 0.7158634538152611, 'nspdk': 0.002853071513598482, 'fcd': 0.9696930130429067, 'valid_with_corr': 1000}
+Running metrics for train afer 128351 steps/epochs and 15597.258043527603 seconds
+{'loss': tensor(0.8883), 'clock_time': 15597.258043527603, 'process_time': 15458.558116183}
+Running metrics for val afer 128351 steps/epochs and 15597.259720087051 seconds
+{'loss': tensor(0.9244), 'clock_time': 15597.259720087051, 'process_time': 15458.558966629}
+Time to generate 1000: 0.1237642765045166 sec.
+Time computing degree mmd:  0:00:05.427233
+[91mnspdk    [39m : [94m0.002764
+{'valid': 914, 'unique': 0.998, 'novel': 0.720440881763527, 'nspdk': 0.0027639605227599007, 'fcd': 1.1235934502181628, 'valid_with_corr': 1000}
+Epoch 35 starts...
+Running metrics for iter afer 130000 steps/epochs and 15780.751725673676 seconds
+{'loss': tensor(0.8863), 'clock_time': 15780.751725673676, 'process_time': 15640.523208104}
+Time to generate 1000: 0.12504863739013672 sec.
+Time computing degree mmd:  0:00:05.403695
+[91mnspdk    [39m : [94m0.003101
+{'valid': 896, 'unique': 0.999, 'novel': 0.7537537537537538, 'nspdk': 0.003100593350885028, 'fcd': 0.955908829881885, 'valid_with_corr': 1000}
+Running metrics for iter afer 132000 steps/epochs and 15999.119129180908 seconds
+{'loss': tensor(0.8905), 'clock_time': 15999.119129180908, 'process_time': 15857.148629591999}
+Time to generate 1000: 0.12425541877746582 sec.
+Time computing degree mmd:  0:00:05.405688
+[91mnspdk    [39m : [94m0.002813
+{'valid': 928, 'unique': 0.999, 'novel': 0.7067067067067067, 'nspdk': 0.002812977261843541, 'fcd': 1.0249824071733542, 'valid_with_corr': 1000}
+Running metrics for train afer 132126 steps/epochs and 16050.024344682693 seconds
+{'loss': tensor(0.8885), 'clock_time': 16050.024344682693, 'process_time': 15907.639566405}
+Running metrics for val afer 132126 steps/epochs and 16050.026002168655 seconds
+{'loss': tensor(0.9308), 'clock_time': 16050.026002168655, 'process_time': 15907.640412222}
+Time to generate 1000: 0.12614750862121582 sec.
+Time computing degree mmd:  0:00:05.422055
+[91mnspdk    [39m : [94m0.002669
+{'valid': 920, 'unique': 0.994, 'novel': 0.7293762575452716, 'nspdk': 0.002668855709758222, 'fcd': 1.0827342614037008, 'valid_with_corr': 1000}
+Epoch 36 starts...
+Running metrics for iter afer 134000 steps/epochs and 16255.820647716522 seconds
+{'loss': tensor(0.8846), 'clock_time': 16255.820647716522, 'process_time': 16111.807734434999}
+Time to generate 1000: 0.1255946159362793 sec.
+Time computing degree mmd:  0:00:05.433485
+[91mnspdk    [39m : [94m0.003038
+{'valid': 928, 'unique': 0.998, 'novel': 0.7264529058116233, 'nspdk': 0.0030384866022177826, 'fcd': 1.1454318074724377, 'valid_with_corr': 1000}
+Running metrics for train afer 135901 steps/epochs and 16483.96512031555 seconds
+{'loss': tensor(0.8865), 'clock_time': 16483.96512031555, 'process_time': 16338.0981012}
+Running metrics for val afer 135901 steps/epochs and 16483.966777086258 seconds
+{'loss': tensor(0.9222), 'clock_time': 16483.966777086258, 'process_time': 16338.098951708}
+Time to generate 1000: 0.12481451034545898 sec.
+Time computing degree mmd:  0:00:05.417488
+[91mnspdk    [39m : [94m0.003013
+{'valid': 904, 'unique': 0.997, 'novel': 0.7462387161484454, 'nspdk': 0.0030128369572311464, 'fcd': 1.248242739726372, 'valid_with_corr': 1000}
+Epoch 37 starts...
+Running metrics for iter afer 136000 steps/epochs and 16512.206389904022 seconds
+{'loss': tensor(0.8879), 'clock_time': 16512.206389904022, 'process_time': 16366.162773364998}
+Time to generate 1000: 0.12395811080932617 sec.
+Time computing degree mmd:  0:00:05.418182
+[91mnspdk    [39m : [94m0.003135
+{'valid': 924, 'unique': 0.998, 'novel': 0.7414829659318637, 'nspdk': 0.0031354599551238205, 'fcd': 1.2501495022952618, 'valid_with_corr': 1000}
+Running metrics for iter afer 138000 steps/epochs and 16730.99639248848 seconds
+{'loss': tensor(0.8854), 'clock_time': 16730.99639248848, 'process_time': 16583.222597312}
+Time to generate 1000: 0.12535786628723145 sec.
+Time computing degree mmd:  0:00:05.384776
+[91mnspdk    [39m : [94m0.002657
+{'valid': 924, 'unique': 0.995, 'novel': 0.7396984924623116, 'nspdk': 0.002656773520870681, 'fcd': 0.9825933795774695, 'valid_with_corr': 1000}
+Running metrics for train afer 139676 steps/epochs and 16936.9967648983 seconds
+{'loss': tensor(0.8857), 'clock_time': 16936.9967648983, 'process_time': 16787.521604512}
+Running metrics for val afer 139676 steps/epochs and 16936.998479366302 seconds
+{'loss': tensor(0.9152), 'clock_time': 16936.998479366302, 'process_time': 16787.522480434}
+Time to generate 1000: 0.12951970100402832 sec.
+Time computing degree mmd:  0:00:05.426257
+[91mnspdk    [39m : [94m0.002618
+{'valid': 908, 'unique': 0.994, 'novel': 0.7454728370221329, 'nspdk': 0.002617617180861287, 'fcd': 0.8567594415653801, 'valid_with_corr': 1000}
+Epoch 38 starts...
+Running metrics for iter afer 140000 steps/epochs and 16987.32922434807 seconds
+{'loss': tensor(0.8855), 'clock_time': 16987.32922434807, 'process_time': 16837.489637297}
+Time to generate 1000: 0.12412023544311523 sec.
+Time computing degree mmd:  0:00:05.418118
+[91mnspdk    [39m : [94m0.002637
+{'valid': 926, 'unique': 0.996, 'novel': 0.75, 'nspdk': 0.002636691626695331, 'fcd': 0.905521358070903, 'valid_with_corr': 1000}
+Running metrics for iter afer 142000 steps/epochs and 17206.132208824158 seconds
+{'loss': tensor(0.8841), 'clock_time': 17206.132208824158, 'process_time': 17054.528987862}
+Time to generate 1000: 0.12414097785949707 sec.
+Time computing degree mmd:  0:00:05.419967
+[91mnspdk    [39m : [94m0.002929
+{'valid': 903, 'unique': 0.994, 'novel': 0.7645875251509054, 'nspdk': 0.0029287932695345464, 'fcd': 1.1356742337849255, 'valid_with_corr': 1000}
+Running metrics for train afer 143451 steps/epochs and 17389.269466161728 seconds
+{'loss': tensor(0.8844), 'clock_time': 17389.269466161728, 'process_time': 17236.175063189}
+Running metrics for val afer 143451 steps/epochs and 17389.271093845367 seconds
+{'loss': tensor(0.9204), 'clock_time': 17389.271093845367, 'process_time': 17236.175897169}
+Time to generate 1000: 0.1248469352722168 sec.
+Time computing degree mmd:  0:00:05.427704
+[91mnspdk    [39m : [94m0.002749
+{'valid': 911, 'unique': 0.998, 'novel': 0.7555110220440882, 'nspdk': 0.002748521115823299, 'fcd': 1.1531022739658, 'valid_with_corr': 1000}
+Epoch 39 starts...
+Running metrics for iter afer 144000 steps/epochs and 17462.136964559555 seconds
+{'loss': tensor(0.8847), 'clock_time': 17462.136964559555, 'process_time': 17308.499117737}
+Time to generate 1000: 0.124420166015625 sec.
+Time computing degree mmd:  0:00:05.425618
+[91mnspdk    [39m : [94m0.002899
+{'valid': 925, 'unique': 0.998, 'novel': 0.7294589178356713, 'nspdk': 0.0028992220674488034, 'fcd': 1.0959152303850317, 'valid_with_corr': 1000}
+Running metrics for iter afer 146000 steps/epochs and 17680.794547080994 seconds
+{'loss': tensor(0.8830), 'clock_time': 17680.794547080994, 'process_time': 17525.446975344}
+Time to generate 1000: 0.12511110305786133 sec.
+Time computing degree mmd:  0:00:05.412094
+[91mnspdk    [39m : [94m0.002846
+{'valid': 909, 'unique': 0.996, 'novel': 0.7279116465863453, 'nspdk': 0.002845594923927275, 'fcd': 1.0201767828706956, 'valid_with_corr': 1000}
+Running metrics for train afer 147226 steps/epochs and 17841.449779510498 seconds
+{'loss': tensor(0.8836), 'clock_time': 17841.449779510498, 'process_time': 17684.726210662}
+Running metrics for val afer 147226 steps/epochs and 17841.451461791992 seconds
+{'loss': tensor(0.9180), 'clock_time': 17841.451461791992, 'process_time': 17684.727061292}
+Time to generate 1000: 0.12946081161499023 sec.
+Time computing degree mmd:  0:00:05.410546
+[91mnspdk    [39m : [94m0.002834
+{'valid': 902, 'unique': 0.996, 'novel': 0.7520080321285141, 'nspdk': 0.00283409387489153, 'fcd': 1.03853793181829, 'valid_with_corr': 1000}
+Epoch 40 starts...
+Running metrics for iter afer 148000 steps/epochs and 17937.664645671844 seconds
+{'loss': tensor(0.8838), 'clock_time': 17937.664645671844, 'process_time': 17780.160931942}
+Time to generate 1000: 0.12678766250610352 sec.
+Time computing degree mmd:  0:00:05.367928
+[91mnspdk    [39m : [94m0.002933
+{'valid': 901, 'unique': 0.998, 'novel': 0.7575150300601202, 'nspdk': 0.002932619958595839, 'fcd': 1.0037470428542008, 'valid_with_corr': 1000}
+Running metrics for iter afer 150000 steps/epochs and 18156.163625717163 seconds
+{'loss': tensor(0.8827), 'clock_time': 18156.163625717163, 'process_time': 17996.876836175}
+Time to generate 1000: 0.12478995323181152 sec.
+Time computing degree mmd:  0:00:05.414149
+[91mnspdk    [39m : [94m0.003100
+{'valid': 915, 'unique': 0.998, 'novel': 0.7224448897795591, 'nspdk': 0.0030997565600265897, 'fcd': 1.2954522619554396, 'valid_with_corr': 1000}
+Running metrics for train afer 151001 steps/epochs and 18295.08281993866 seconds
+{'loss': tensor(0.8825), 'clock_time': 18295.08281993866, 'process_time': 18134.611217555}
+Running metrics for val afer 151001 steps/epochs and 18295.08452272415 seconds
+{'loss': tensor(0.9186), 'clock_time': 18295.08452272415, 'process_time': 18134.612086168}
+Time to generate 1000: 0.1280825138092041 sec.
+Time computing degree mmd:  0:00:05.389040
+[91mnspdk    [39m : [94m0.003153
+{'valid': 898, 'unique': 0.991, 'novel': 0.7648839556004037, 'nspdk': 0.003152733496477822, 'fcd': 1.114011244569319, 'valid_with_corr': 1000}
+Epoch 41 starts...
+Running metrics for iter afer 152000 steps/epochs and 18413.67644381523 seconds
+{'loss': tensor(0.8803), 'clock_time': 18413.67644381523, 'process_time': 18252.274805319}
+Time to generate 1000: 0.12428617477416992 sec.
+Time computing degree mmd:  0:00:05.395955
+[91mnspdk    [39m : [94m0.002887
+{'valid': 932, 'unique': 0.994, 'novel': 0.7354124748490946, 'nspdk': 0.00288710564090483, 'fcd': 1.0057669997877134, 'valid_with_corr': 1000}
+Running metrics for iter afer 154000 steps/epochs and 18631.97493982315 seconds
+{'loss': tensor(0.8844), 'clock_time': 18631.97493982315, 'process_time': 18468.832570774}
+Time to generate 1000: 0.12387943267822266 sec.
+Time computing degree mmd:  0:00:05.392963
+[91mnspdk    [39m : [94m0.003469
+{'valid': 890, 'unique': 0.998, 'novel': 0.7394789579158316, 'nspdk': 0.0034694880055093913, 'fcd': 1.2864834526914848, 'valid_with_corr': 1000}
+Running metrics for train afer 154776 steps/epochs and 18748.23152756691 seconds
+{'loss': tensor(0.8826), 'clock_time': 18748.23152756691, 'process_time': 18584.17103798}
+Running metrics for val afer 154776 steps/epochs and 18748.23321247101 seconds
+{'loss': tensor(0.9172), 'clock_time': 18748.23321247101, 'process_time': 18584.171895214}
+Time to generate 1000: 0.124114990234375 sec.
+Time computing degree mmd:  0:00:05.404131
+[91mnspdk    [39m : [94m0.002598
+{'valid': 925, 'unique': 0.996, 'novel': 0.7118473895582329, 'nspdk': 0.002597660835942317, 'fcd': 1.095799566274092, 'valid_with_corr': 1000}
+Epoch 42 starts...
+Running metrics for iter afer 156000 steps/epochs and 18889.588626623154 seconds
+{'loss': tensor(0.8816), 'clock_time': 18889.588626623154, 'process_time': 18724.440107544}
+Time to generate 1000: 0.12611103057861328 sec.
+Time computing degree mmd:  0:00:05.431726
+[91mnspdk    [39m : [94m0.003233
+{'valid': 906, 'unique': 0.996, 'novel': 0.7550200803212851, 'nspdk': 0.0032325568378859804, 'fcd': 1.1965504425357132, 'valid_with_corr': 1000}
+Running metrics for iter afer 158000 steps/epochs and 19108.12089753151 seconds
+{'loss': tensor(0.8809), 'clock_time': 19108.12089753151, 'process_time': 18941.174131977}
+Time to generate 1000: 0.12598872184753418 sec.
+Time computing degree mmd:  0:00:05.405657
+[91mnspdk    [39m : [94m0.002585
+{'valid': 917, 'unique': 0.998, 'novel': 0.7424849699398798, 'nspdk': 0.0025853402953739946, 'fcd': 0.8477214420035608, 'valid_with_corr': 1000}
+Running metrics for train afer 158551 steps/epochs and 19200.95315694809 seconds
+{'loss': tensor(0.8809), 'clock_time': 19200.95315694809, 'process_time': 19033.297024692998}
+Running metrics for val afer 158551 steps/epochs and 19200.954841852188 seconds
+{'loss': tensor(0.9086), 'clock_time': 19200.954841852188, 'process_time': 19033.297882296}
+Time to generate 1000: 0.12427902221679688 sec.
+Time computing degree mmd:  0:00:05.401637
+[91mnspdk    [39m : [94m0.002671
+{'valid': 898, 'unique': 0.998, 'novel': 0.748496993987976, 'nspdk': 0.0026712930624622766, 'fcd': 0.9293957012160803, 'valid_with_corr': 1000}
+Epoch 43 starts...
+Running metrics for iter afer 160000 steps/epochs and 19364.83507013321 seconds
+{'loss': tensor(0.8793), 'clock_time': 19364.83507013321, 'process_time': 19195.869231103}
+Time to generate 1000: 0.12469148635864258 sec.
+Time computing degree mmd:  0:00:05.408859
+[91mnspdk    [39m : [94m0.002737
+{'valid': 914, 'unique': 0.997, 'novel': 0.7592778335005015, 'nspdk': 0.002737498892737389, 'fcd': 1.1722356427610165, 'valid_with_corr': 1000}
+Running metrics for iter afer 162000 steps/epochs and 19583.173983097076 seconds
+{'loss': tensor(0.8823), 'clock_time': 19583.173983097076, 'process_time': 19412.494299277998}
+Time to generate 1000: 0.15874695777893066 sec.
+Time computing degree mmd:  0:00:05.386438
+[91mnspdk    [39m : [94m0.002684
+{'valid': 922, 'unique': 0.996, 'novel': 0.7630522088353414, 'nspdk': 0.00268441118019902, 'fcd': 1.2636446440775941, 'valid_with_corr': 1000}
+Running metrics for train afer 162326 steps/epochs and 19653.959317684174 seconds
+{'loss': tensor(0.8804), 'clock_time': 19653.959317684174, 'process_time': 19482.71754761}
+Running metrics for val afer 162326 steps/epochs and 19653.96093440056 seconds
+{'loss': tensor(0.9161), 'clock_time': 19653.96093440056, 'process_time': 19482.718384223997}
+Time to generate 1000: 0.125657320022583 sec.
+Time computing degree mmd:  0:00:05.430574
+[91mnspdk    [39m : [94m0.002959
+{'valid': 899, 'unique': 0.996, 'novel': 0.7600401606425703, 'nspdk': 0.0029590616471409648, 'fcd': 0.9820657495070506, 'valid_with_corr': 1000}
+Epoch 44 starts...
+Running metrics for iter afer 164000 steps/epochs and 19839.713521003723 seconds
+{'loss': tensor(0.8800), 'clock_time': 19839.713521003723, 'process_time': 19666.937925649}
+Time to generate 1000: 0.12436604499816895 sec.
+Time computing degree mmd:  0:00:05.429701
+[91mnspdk    [39m : [94m0.002965
+{'valid': 882, 'unique': 0.998, 'novel': 0.7555110220440882, 'nspdk': 0.002964649029085553, 'fcd': 1.1849803131256245, 'valid_with_corr': 1000}
+Running metrics for iter afer 166000 steps/epochs and 20057.82501578331 seconds
+{'loss': tensor(0.8818), 'clock_time': 20057.82501578331, 'process_time': 19883.339709986998}
+Time to generate 1000: 0.12627840042114258 sec.
+Time computing degree mmd:  0:00:05.398622
+[91mnspdk    [39m : [94m0.002878
+{'valid': 909, 'unique': 0.995, 'novel': 0.7306532663316583, 'nspdk': 0.0028780713419373494, 'fcd': 1.0420481282161909, 'valid_with_corr': 1000}
+Running metrics for train afer 166101 steps/epochs and 20106.10262608528 seconds
+{'loss': tensor(0.8808), 'clock_time': 20106.10262608528, 'process_time': 19931.249060071998}
+Running metrics for val afer 166101 steps/epochs and 20106.104296207428 seconds
+{'loss': tensor(0.9153), 'clock_time': 20106.104296207428, 'process_time': 19931.249911865998}
+Time to generate 1000: 0.12282276153564453 sec.
+Time computing degree mmd:  0:00:05.438966
+[91mnspdk    [39m : [94m0.002620
+{'valid': 913, 'unique': 0.999, 'novel': 0.7537537537537538, 'nspdk': 0.002620114524977346, 'fcd': 1.0799818720725263, 'valid_with_corr': 1000}
+Epoch 45 starts...
+Running metrics for iter afer 168000 steps/epochs and 20314.65477371216 seconds
+{'loss': tensor(0.8796), 'clock_time': 20314.65477371216, 'process_time': 20138.159975257}
+Time to generate 1000: 0.1282966136932373 sec.
+Time computing degree mmd:  0:00:05.391017
+[91mnspdk    [39m : [94m0.002619
+{'valid': 914, 'unique': 0.997, 'novel': 0.7372116349047142, 'nspdk': 0.0026186278749386616, 'fcd': 0.9159831582512403, 'valid_with_corr': 1000}
+Running metrics for train afer 169876 steps/epochs and 20540.28470468521 seconds
+{'loss': tensor(0.8804), 'clock_time': 20540.28470468521, 'process_time': 20361.924545040998}
+Running metrics for val afer 169876 steps/epochs and 20540.28638100624 seconds
+{'loss': tensor(0.9249), 'clock_time': 20540.28638100624, 'process_time': 20361.925399916}
+Time to generate 1000: 0.12369823455810547 sec.
+Time computing degree mmd:  0:00:05.423716
+[91mnspdk    [39m : [94m0.002919
+{'valid': 891, 'unique': 0.997, 'novel': 0.7673019057171514, 'nspdk': 0.0029188598244277997, 'fcd': 1.242885144586566, 'valid_with_corr': 1000}
+Epoch 46 starts...
+Running metrics for iter afer 170000 steps/epochs and 20570.461461544037 seconds
+{'loss': tensor(0.8813), 'clock_time': 20570.461461544037, 'process_time': 20391.888919471}
+Time to generate 1000: 0.12561273574829102 sec.
+Time computing degree mmd:  0:00:05.388251
+[91mnspdk    [39m : [94m0.002559
+{'valid': 910, 'unique': 0.995, 'novel': 0.7326633165829146, 'nspdk': 0.002559200340648715, 'fcd': 0.9374704993969836, 'valid_with_corr': 1000}
+Running metrics for iter afer 172000 steps/epochs and 20789.19696879387 seconds
+{'loss': tensor(0.9729), 'clock_time': 20789.19696879387, 'process_time': 20608.869761276997}
+Time to generate 1000: 0.12549281120300293 sec.
+Time computing degree mmd:  0:00:04.656452
+[91mnspdk    [39m : [94m0.021414
+{'valid': 650, 'unique': 0.937, 'novel': 0.847385272145144, 'nspdk': 0.021413748121235948, 'fcd': 4.9323876568428275, 'valid_with_corr': 1000}
+Running metrics for train afer 173651 steps/epochs and 20991.861520767212 seconds
+{'loss': tensor(1.4317), 'clock_time': 20991.861520767212, 'process_time': 20809.851416826}
+Running metrics for val afer 173651 steps/epochs and 20991.86318254471 seconds
+{'loss': tensor(2.0661), 'clock_time': 20991.86318254471, 'process_time': 20809.852267373}
+Time to generate 1000: 0.12357640266418457 sec.
+Time computing degree mmd:  0:00:04.730577
+[91mnspdk    [39m : [94m0.019771
+{'valid': 684, 'unique': 0.943, 'novel': 0.8727465535524921, 'nspdk': 0.019771156157307068, 'fcd': 5.43205449185373, 'valid_with_corr': 1000}
+Epoch 47 starts...
+Running metrics for iter afer 174000 steps/epochs and 21044.09393262863 seconds
+{'loss': tensor(2.0351), 'clock_time': 21044.09393262863, 'process_time': 20861.645851715}
+Time to generate 1000: 0.12391257286071777 sec.
+Time computing degree mmd:  0:00:04.741609
+[91mnspdk    [39m : [94m0.019766
+{'valid': 667, 'unique': 0.939, 'novel': 0.873269435569755, 'nspdk': 0.01976599514793312, 'fcd': 5.381106498780838, 'valid_with_corr': 1000}
+Running metrics for iter afer 176000 steps/epochs and 21262.1620221138 seconds
+{'loss': tensor(2.0680), 'clock_time': 21262.1620221138, 'process_time': 21077.982863471}
+Time to generate 1000: 0.12403655052185059 sec.
+Time computing degree mmd:  0:00:04.790931
+[91mnspdk    [39m : [94m0.018653
+{'valid': 654, 'unique': 0.955, 'novel': 0.8575916230366493, 'nspdk': 0.018653077385986483, 'fcd': 5.316878802224139, 'valid_with_corr': 1000}
+Running metrics for train afer 177426 steps/epochs and 21442.469829320908 seconds
+{'loss': tensor(2.0579), 'clock_time': 21442.469829320908, 'process_time': 21256.788016034}
+Running metrics for val afer 177426 steps/epochs and 21442.471500873566 seconds
+{'loss': tensor(2.0490), 'clock_time': 21442.471500873566, 'process_time': 21256.788872175}
+Time to generate 1000: 0.12365436553955078 sec.
+Time computing degree mmd:  0:00:04.783509
+[91mnspdk    [39m : [94m0.023466
+{'valid': 638, 'unique': 0.943, 'novel': 0.8663838812301167, 'nspdk': 0.023465643380367107, 'fcd': 5.469377722203678, 'valid_with_corr': 1000}
+Epoch 48 starts...
+Running metrics for iter afer 178000 steps/epochs and 21517.28717637062 seconds
+{'loss': tensor(2.0263), 'clock_time': 21517.28717637062, 'process_time': 21331.022490236}
+Time to generate 1000: 0.12494349479675293 sec.
+Time computing degree mmd:  0:00:04.738349
+[91mnspdk    [39m : [94m0.020380
+{'valid': 651, 'unique': 0.94, 'novel': 0.8617021276595744, 'nspdk': 0.020379650076589317, 'fcd': 5.004463055107784, 'valid_with_corr': 1000}
+Running metrics for iter afer 180000 steps/epochs and 21735.501433610916 seconds
+{'loss': tensor(1.9152), 'clock_time': 21735.501433610916, 'process_time': 21547.444283778}
+Time to generate 1000: 0.12605071067810059 sec.
+Time computing degree mmd:  0:00:04.701661
+[91mnspdk    [39m : [94m0.018383
+{'valid': 694, 'unique': 0.929, 'novel': 0.8579117330462863, 'nspdk': 0.01838269122690131, 'fcd': 5.009272128114375, 'valid_with_corr': 1000}
+Running metrics for train afer 181201 steps/epochs and 21893.41524553299 seconds
+{'loss': tensor(1.9629), 'clock_time': 21893.41524553299, 'process_time': 21704.009328472}
+Running metrics for val afer 181201 steps/epochs and 21893.416928768158 seconds
+{'loss': tensor(2.0620), 'clock_time': 21893.416928768158, 'process_time': 21704.010185814}
+Time to generate 1000: 0.1223764419555664 sec.
+Time computing degree mmd:  0:00:04.742693
+[91mnspdk    [39m : [94m0.019838
+{'valid': 677, 'unique': 0.946, 'novel': 0.8805496828752643, 'nspdk': 0.019837780841529234, 'fcd': 5.0994460343531784, 'valid_with_corr': 1000}
+Epoch 49 starts...
+Running metrics for iter afer 182000 steps/epochs and 21991.524787425995 seconds
+{'loss': tensor(2.0362), 'clock_time': 21991.524787425995, 'process_time': 21801.337635571}
+Time to generate 1000: 0.12421107292175293 sec.
+Time computing degree mmd:  0:00:04.762141
+[91mnspdk    [39m : [94m0.019145
+{'valid': 647, 'unique': 0.972, 'novel': 0.8641975308641975, 'nspdk': 0.019144596940634667, 'fcd': 5.028327990738671, 'valid_with_corr': 1000}
+Running metrics for iter afer 184000 steps/epochs and 22209.118066072464 seconds
+{'loss': tensor(2.0383), 'clock_time': 22209.118066072464, 'process_time': 22017.139989744}
+Time to generate 1000: 0.12636923789978027 sec.
+Time computing degree mmd:  0:00:04.968472
+[91mnspdk    [39m : [94m0.019387
+{'valid': 625, 'unique': 0.971, 'novel': 0.9011328527291452, 'nspdk': 0.01938691267004436, 'fcd': 5.088529430598726, 'valid_with_corr': 1000}
+Running metrics for train afer 184976 steps/epochs and 22344.911456108093 seconds
+{'loss': tensor(2.0237), 'clock_time': 22344.911456108093, 'process_time': 22151.811815795998}
+Running metrics for val afer 184976 steps/epochs and 22344.912949085236 seconds
+{'loss': tensor(1.9935), 'clock_time': 22344.912949085236, 'process_time': 22151.812613702998}
+Time to generate 1000: 0.1251986026763916 sec.
+Time computing degree mmd:  0:00:04.949148
+[91mnspdk    [39m : [94m0.017693
+{'valid': 653, 'unique': 0.982, 'novel': 0.8706720977596741, 'nspdk': 0.017693152620565755, 'fcd': 4.95824063825529, 'valid_with_corr': 1000}
+Epoch 50 starts...
+Running metrics for iter afer 186000 steps/epochs and 22465.968601226807 seconds
+{'loss': tensor(2.1246), 'clock_time': 22465.968601226807, 'process_time': 22271.931649453}
+Time to generate 1000: 0.12787699699401855 sec.
+Time computing degree mmd:  0:00:04.977260
+[91mnspdk    [39m : [94m0.018450
+{'valid': 689, 'unique': 0.979, 'novel': 0.8835546475995915, 'nspdk': 0.018449845284620986, 'fcd': 4.734912227297478, 'valid_with_corr': 1000}
+Running metrics for iter afer 188000 steps/epochs and 22683.878074884415 seconds
+{'loss': tensor(1.9556), 'clock_time': 22683.878074884415, 'process_time': 22488.084087092}
+Time to generate 1000: 0.12699580192565918 sec.
+Time computing degree mmd:  0:00:04.814427
+[91mnspdk    [39m : [94m0.017714
+{'valid': 685, 'unique': 0.961, 'novel': 0.8699271592091571, 'nspdk': 0.01771372165806112, 'fcd': 5.093798568647564, 'valid_with_corr': 1000}
+Running metrics for train afer 188751 steps/epochs and 22796.713156938553 seconds
+{'loss': tensor(2.0282), 'clock_time': 22796.713156938553, 'process_time': 22600.048289942}
+Running metrics for val afer 188751 steps/epochs and 22796.714906215668 seconds
+{'loss': tensor(1.9254), 'clock_time': 22796.714906215668, 'process_time': 22600.049182246}
+Time to generate 1000: 0.1288132667541504 sec.
+Time computing degree mmd:  0:00:04.734294
+[91mnspdk    [39m : [94m0.015219
+{'valid': 727, 'unique': 0.949, 'novel': 0.8640674394099052, 'nspdk': 0.015219006807352414, 'fcd': 5.028478120351139, 'valid_with_corr': 1000}
+Epoch 51 starts...
+Running metrics for iter afer 190000 steps/epochs and 22939.85980272293 seconds
+{'loss': tensor(1.8587), 'clock_time': 22939.85980272293, 'process_time': 22742.049125419}
+Time to generate 1000: 0.1236262321472168 sec.
+Time computing degree mmd:  0:00:05.036230
+[91mnspdk    [39m : [94m0.012613
+{'valid': 745, 'unique': 0.975, 'novel': 0.8666666666666667, 'nspdk': 0.012613005248395315, 'fcd': 4.462940243087441, 'valid_with_corr': 1000}
+Running metrics for iter afer 192000 steps/epochs and 23158.277294635773 seconds
+{'loss': tensor(1.8561), 'clock_time': 23158.277294635773, 'process_time': 22958.622302945998}
+Time to generate 1000: 0.12484145164489746 sec.
+Time computing degree mmd:  0:00:04.951198
+[91mnspdk    [39m : [94m0.019894
+{'valid': 660, 'unique': 0.976, 'novel': 0.9006147540983607, 'nspdk': 0.01989430215268026, 'fcd': 5.16984083193865, 'valid_with_corr': 1000}
+Running metrics for train afer 192526 steps/epochs and 23248.314487218857 seconds
+{'loss': tensor(1.8764), 'clock_time': 23248.314487218857, 'process_time': 23047.964331893}
+Running metrics for val afer 192526 steps/epochs and 23248.31616306305 seconds
+{'loss': tensor(2.0658), 'clock_time': 23248.31616306305, 'process_time': 23047.965194463}
+Time to generate 1000: 0.12629985809326172 sec.
+Time computing degree mmd:  0:00:04.748496
+[91mnspdk    [39m : [94m0.020658
+{'valid': 664, 'unique': 0.953, 'novel': 0.8961175236096537, 'nspdk': 0.020657586394597888, 'fcd': 5.1796798743570385, 'valid_with_corr': 1000}
+Epoch 52 starts...
+Running metrics for iter afer 194000 steps/epochs and 23414.05660557747 seconds
+{'loss': tensor(2.0603), 'clock_time': 23414.05660557747, 'process_time': 23212.407901325998}
+Time to generate 1000: 0.12492561340332031 sec.
+Time computing degree mmd:  0:00:04.769852
+[91mnspdk    [39m : [94m0.020508
+{'valid': 660, 'unique': 0.957, 'novel': 0.8798328108672936, 'nspdk': 0.02050824083379424, 'fcd': 5.028426013505225, 'valid_with_corr': 1000}
+Running metrics for iter afer 196000 steps/epochs and 23632.128934383392 seconds
+{'loss': tensor(2.0683), 'clock_time': 23632.128934383392, 'process_time': 23428.754645792}
+Time to generate 1000: 0.12526249885559082 sec.
+Time computing degree mmd:  0:00:04.816215
+[91mnspdk    [39m : [94m0.021941
+{'valid': 667, 'unique': 0.948, 'novel': 0.8818565400843882, 'nspdk': 0.021940614733832325, 'fcd': 5.28294469431798, 'valid_with_corr': 1000}
+Running metrics for train afer 196301 steps/epochs and 23699.962838172913 seconds
+{'loss': tensor(2.0658), 'clock_time': 23699.962838172913, 'process_time': 23496.06684902}
+Running metrics for val afer 196301 steps/epochs and 23699.964470624924 seconds
+{'loss': tensor(2.0839), 'clock_time': 23699.964470624924, 'process_time': 23496.067687779}
+Time to generate 1000: 0.12328982353210449 sec.
+Time computing degree mmd:  0:00:04.753132
+[91mnspdk    [39m : [94m0.020602
+{'valid': 671, 'unique': 0.941, 'novel': 0.869287991498406, 'nspdk': 0.02060170148704188, 'fcd': 5.397242136603538, 'valid_with_corr': 1000}
+Epoch 53 starts...
+Running metrics for iter afer 198000 steps/epochs and 23887.77416062355 seconds
+{'loss': tensor(2.0678), 'clock_time': 23887.77416062355, 'process_time': 23682.352035}
+Time to generate 1000: 0.12460207939147949 sec.
+Time computing degree mmd:  0:00:04.760015
+[91mnspdk    [39m : [94m0.019159
+{'valid': 673, 'unique': 0.936, 'novel': 0.8760683760683761, 'nspdk': 0.019159378503894597, 'fcd': 5.3287850960222585, 'valid_with_corr': 1000}
+Running metrics for iter afer 200000 steps/epochs and 24105.597115516663 seconds
+{'loss': tensor(2.0675), 'clock_time': 24105.597115516663, 'process_time': 23898.469153036}
+Time to generate 1000: 0.1251695156097412 sec.
+Time computing degree mmd:  0:00:04.750463
+[91mnspdk    [39m : [94m0.020095
+{'valid': 653, 'unique': 0.952, 'novel': 0.8876050420168067, 'nspdk': 0.020095421223314702, 'fcd': 5.206198593393619, 'valid_with_corr': 1000}
+Running metrics for train afer 200076 steps/epochs and 24150.776348352432 seconds
+{'loss': tensor(2.0677), 'clock_time': 24150.776348352432, 'process_time': 23943.32253663}
+Running metrics for val afer 200076 steps/epochs and 24150.778012514114 seconds
+{'loss': tensor(2.0833), 'clock_time': 24150.778012514114, 'process_time': 23943.323386843}
+Time to generate 1000: 0.12394571304321289 sec.
+Time computing degree mmd:  0:00:04.675404
+[91mnspdk    [39m : [94m0.020894
+{'valid': 650, 'unique': 0.935, 'novel': 0.8834224598930481, 'nspdk': 0.020893657856262904, 'fcd': 5.468477527311265, 'valid_with_corr': 1000}
+Epoch 54 starts...
+Running metrics for iter afer 202000 steps/epochs and 24360.838046312332 seconds
+{'loss': tensor(2.0678), 'clock_time': 24360.838046312332, 'process_time': 24151.626651234}
+Time to generate 1000: 0.12815165519714355 sec.
+Time computing degree mmd:  0:00:04.747433
+[91mnspdk    [39m : [94m0.020396
+{'valid': 667, 'unique': 0.936, 'novel': 0.8878205128205128, 'nspdk': 0.020395642260499475, 'fcd': 5.204234712236843, 'valid_with_corr': 1000}
+Running metrics for train afer 203851 steps/epochs and 24583.908961057663 seconds
+{'loss': tensor(2.0676), 'clock_time': 24583.908961057663, 'process_time': 24372.860702119}
+Running metrics for val afer 203851 steps/epochs and 24583.91062426567 seconds
+{'loss': tensor(2.0838), 'clock_time': 24583.91062426567, 'process_time': 24372.86154627}
+Time to generate 1000: 0.12345075607299805 sec.
+Time computing degree mmd:  0:00:04.731288
+[91mnspdk    [39m : [94m0.019598
+{'valid': 692, 'unique': 0.94, 'novel': 0.8712765957446809, 'nspdk': 0.019597779382889313, 'fcd': 5.312783715489388, 'valid_with_corr': 1000}
+Epoch 55 starts...
+Running metrics for iter afer 204000 steps/epochs and 24616.567812681198 seconds
+{'loss': tensor(2.0672), 'clock_time': 24616.567812681198, 'process_time': 24405.284339914}
+Time to generate 1000: 0.12480020523071289 sec.
+Time computing degree mmd:  0:00:04.739414
+[91mnspdk    [39m : [94m0.019585
+{'valid': 664, 'unique': 0.944, 'novel': 0.902542372881356, 'nspdk': 0.019585317493500287, 'fcd': 5.225060044691972, 'valid_with_corr': 1000}
+Running metrics for iter afer 206000 steps/epochs and 24834.919595003128 seconds
+{'loss': tensor(2.0677), 'clock_time': 24834.919595003128, 'process_time': 24621.813887467}
+Time to generate 1000: 0.12590742111206055 sec.
+Time computing degree mmd:  0:00:04.773482
+[91mnspdk    [39m : [94m0.019093
+{'valid': 673, 'unique': 0.953, 'novel': 0.8782791185729276, 'nspdk': 0.01909301281701839, 'fcd': 5.140275030560154, 'valid_with_corr': 1000}
+Running metrics for train afer 207626 steps/epochs and 25035.690253019333 seconds
+{'loss': tensor(2.0675), 'clock_time': 25035.690253019333, 'process_time': 24820.934895404}
+Running metrics for val afer 207626 steps/epochs and 25035.691915273666 seconds
+{'loss': tensor(2.0832), 'clock_time': 25035.691915273666, 'process_time': 24820.935750974}
+Time to generate 1000: 0.1238558292388916 sec.
+Time computing degree mmd:  0:00:04.838171
+[91mnspdk    [39m : [94m0.018159
+{'valid': 653, 'unique': 0.949, 'novel': 0.8914646996838778, 'nspdk': 0.01815900581111629, 'fcd': 5.30024354513214, 'valid_with_corr': 1000}
+Epoch 56 starts...
+Running metrics for iter afer 208000 steps/epochs and 25090.539178609848 seconds
+{'loss': tensor(2.0678), 'clock_time': 25090.539178609848, 'process_time': 24875.361247962}
+Time to generate 1000: 0.12578368186950684 sec.
+Time computing degree mmd:  0:00:04.701354
+[91mnspdk    [39m : [94m0.021275
+{'valid': 648, 'unique': 0.951, 'novel': 0.8769716088328076, 'nspdk': 0.02127494482620096, 'fcd': 5.38295924051976, 'valid_with_corr': 1000}
+Running metrics for iter afer 210000 steps/epochs and 25308.748769760132 seconds
+{'loss': tensor(2.0675), 'clock_time': 25308.748769760132, 'process_time': 25091.797639823}
+Time to generate 1000: 0.12978053092956543 sec.
+Time computing degree mmd:  0:00:04.730595
+[91mnspdk    [39m : [94m0.020525
+{'valid': 662, 'unique': 0.941, 'novel': 0.8607863974495218, 'nspdk': 0.020525162191144086, 'fcd': 5.197789313871816, 'valid_with_corr': 1000}
+Running metrics for train afer 211401 steps/epochs and 25486.635672569275 seconds
+{'loss': tensor(2.0677), 'clock_time': 25486.635672569275, 'process_time': 25268.2720802}
+Running metrics for val afer 211401 steps/epochs and 25486.637354135513 seconds
+{'loss': tensor(2.0829), 'clock_time': 25486.637354135513, 'process_time': 25268.272930084}
+Time to generate 1000: 0.12244582176208496 sec.
+Time computing degree mmd:  0:00:04.785826
+[91mnspdk    [39m : [94m0.018430
+{'valid': 659, 'unique': 0.946, 'novel': 0.8742071881606766, 'nspdk': 0.018430184372034725, 'fcd': 5.220847941058079, 'valid_with_corr': 1000}
+Epoch 57 starts...
+Running metrics for iter afer 212000 steps/epochs and 25563.935244083405 seconds
+{'loss': tensor(2.0678), 'clock_time': 25563.935244083405, 'process_time': 25344.985705492}
+Time to generate 1000: 0.12430691719055176 sec.
+Time computing degree mmd:  0:00:04.743974
+[91mnspdk    [39m : [94m0.020696
+{'valid': 643, 'unique': 0.944, 'novel': 0.8845338983050848, 'nspdk': 0.020696153701610764, 'fcd': 5.447023882809788, 'valid_with_corr': 1000}
+Running metrics for iter afer 214000 steps/epochs and 25781.910556793213 seconds
+{'loss': tensor(2.0679), 'clock_time': 25781.910556793213, 'process_time': 25561.243263405}
+Time to generate 1000: 0.15681219100952148 sec.
+Time computing degree mmd:  0:00:04.731338
+[91mnspdk    [39m : [94m0.020072
+{'valid': 650, 'unique': 0.946, 'novel': 0.8625792811839323, 'nspdk': 0.020071717136043554, 'fcd': 5.265848964749505, 'valid_with_corr': 1000}
+Running metrics for train afer 215176 steps/epochs and 25937.08249282837 seconds
+{'loss': tensor(2.0676), 'clock_time': 25937.08249282837, 'process_time': 25715.169041384}
+Running metrics for val afer 215176 steps/epochs and 25937.08414554596 seconds
+{'loss': tensor(2.0832), 'clock_time': 25937.08414554596, 'process_time': 25715.169876051}
+Time to generate 1000: 0.12469887733459473 sec.
+Time computing degree mmd:  0:00:04.730483
+[91mnspdk    [39m : [94m0.020170
+{'valid': 668, 'unique': 0.938, 'novel': 0.8763326226012793, 'nspdk': 0.02016982676680737, 'fcd': 5.404167448700321, 'valid_with_corr': 1000}
+Epoch 58 starts...
+Running metrics for iter afer 216000 steps/epochs and 26037.34199309349 seconds
+{'loss': tensor(2.0675), 'clock_time': 26037.34199309349, 'process_time': 25814.649678964}
+Time to generate 1000: 0.12453937530517578 sec.
+Time computing degree mmd:  0:00:04.720194
+[91mnspdk    [39m : [94m0.021444
+{'valid': 649, 'unique': 0.943, 'novel': 0.887592788971368, 'nspdk': 0.021443684737828705, 'fcd': 5.1871634319902284, 'valid_with_corr': 1000}
+Running metrics for iter afer 218000 steps/epochs and 26255.23796415329 seconds
+{'loss': tensor(2.0672), 'clock_time': 26255.23796415329, 'process_time': 26030.813336922998}
+Time to generate 1000: 0.12448740005493164 sec.
+Time computing degree mmd:  0:00:04.753267
+[91mnspdk    [39m : [94m0.019989
+{'valid': 670, 'unique': 0.954, 'novel': 0.8888888888888888, 'nspdk': 0.0199886407641221, 'fcd': 5.152976442269665, 'valid_with_corr': 1000}
+Running metrics for train afer 218951 steps/epochs and 26388.20408964157 seconds
+{'loss': tensor(2.0675), 'clock_time': 26388.20408964157, 'process_time': 26162.699214944998}
+Running metrics for val afer 218951 steps/epochs and 26388.20575428009 seconds
+{'loss': tensor(2.0832), 'clock_time': 26388.20575428009, 'process_time': 26162.700056293997}
+Time to generate 1000: 0.12363600730895996 sec.
+Time computing degree mmd:  0:00:04.761592
+[91mnspdk    [39m : [94m0.018911
+{'valid': 686, 'unique': 0.958, 'novel': 0.8862212943632568, 'nspdk': 0.018910790641547492, 'fcd': 5.065087366737934, 'valid_with_corr': 1000}
+Epoch 59 starts...
+Running metrics for iter afer 220000 steps/epochs and 26511.401418209076 seconds
+{'loss': tensor(2.0671), 'clock_time': 26511.401418209076, 'process_time': 26284.892770282}
+Time to generate 1000: 0.12374162673950195 sec.
+Time computing degree mmd:  0:00:04.748151
+[91mnspdk    [39m : [94m0.020071
+{'valid': 679, 'unique': 0.951, 'novel': 0.879074658254469, 'nspdk': 0.020070697012265964, 'fcd': 5.4276931102884625, 'valid_with_corr': 1000}
+Running metrics for iter afer 222000 steps/epochs and 26728.876163721085 seconds
+{'loss': tensor(2.0675), 'clock_time': 26728.876163721085, 'process_time': 26500.610224604}
+Time to generate 1000: 0.1278553009033203 sec.
+Time computing degree mmd:  0:00:04.731852
+[91mnspdk    [39m : [94m0.019608
+{'valid': 694, 'unique': 0.953, 'novel': 0.8761804826862539, 'nspdk': 0.019608429795696186, 'fcd': 5.1391292781114615, 'valid_with_corr': 1000}
+Running metrics for train afer 222726 steps/epochs and 26839.32004761696 seconds
+{'loss': tensor(2.0674), 'clock_time': 26839.32004761696, 'process_time': 26610.183314957998}
+Running metrics for val afer 222726 steps/epochs and 26839.321717262268 seconds
+{'loss': tensor(2.0831), 'clock_time': 26839.321717262268, 'process_time': 26610.184163817998}
+Time to generate 1000: 0.12511634826660156 sec.
+Time computing degree mmd:  0:00:04.801372
+[91mnspdk    [39m : [94m0.020698
+{'valid': 643, 'unique': 0.955, 'novel': 0.9015706806282723, 'nspdk': 0.020698118345106292, 'fcd': 5.278069235680164, 'valid_with_corr': 1000}
+Epoch 60 starts...
+Running metrics for iter afer 224000 steps/epochs and 26984.966473340988 seconds
+{'loss': tensor(2.0666), 'clock_time': 26984.966473340988, 'process_time': 26754.708854159}
+Time to generate 1000: 0.12383842468261719 sec.
+Time computing degree mmd:  0:00:04.732265
+[91mnspdk    [39m : [94m0.021136
+{'valid': 658, 'unique': 0.944, 'novel': 0.8495762711864406, 'nspdk': 0.021135721962384557, 'fcd': 5.019155133374852, 'valid_with_corr': 1000}
+Running metrics for iter afer 226000 steps/epochs and 27202.886481285095 seconds
+{'loss': tensor(2.0682), 'clock_time': 27202.886481285095, 'process_time': 26970.878234747997}
+Time to generate 1000: 0.12516331672668457 sec.
+Time computing degree mmd:  0:00:04.788721
+[91mnspdk    [39m : [94m0.020710
+{'valid': 640, 'unique': 0.951, 'novel': 0.8958990536277602, 'nspdk': 0.020710473010729175, 'fcd': 5.589815000003039, 'valid_with_corr': 1000}
+Running metrics for train afer 226501 steps/epochs and 27290.418412923813 seconds
+{'loss': tensor(2.0674), 'clock_time': 27290.418412923813, 'process_time': 27057.697761505}
+Running metrics for val afer 226501 steps/epochs and 27290.42001891136 seconds
+{'loss': tensor(2.0831), 'clock_time': 27290.42001891136, 'process_time': 27057.698598187}
+Time to generate 1000: 0.1237025260925293 sec.
+Time computing degree mmd:  0:00:04.755400
+[91mnspdk    [39m : [94m0.021662
+{'valid': 668, 'unique': 0.94, 'novel': 0.8670212765957447, 'nspdk': 0.021661846131087042, 'fcd': 5.393721188770115, 'valid_with_corr': 1000}
+Epoch 61 starts...
+Running metrics for iter afer 228000 steps/epochs and 27458.360556602478 seconds
+{'loss': tensor(2.0672), 'clock_time': 27458.360556602478, 'process_time': 27224.309690991}
+Time to generate 1000: 0.12463021278381348 sec.
+Time computing degree mmd:  0:00:04.752383
+[91mnspdk    [39m : [94m0.020763
+{'valid': 641, 'unique': 0.946, 'novel': 0.8868921775898521, 'nspdk': 0.020762800079829197, 'fcd': 4.958682491222991, 'valid_with_corr': 1000}
+Running metrics for iter afer 230000 steps/epochs and 27676.47820019722 seconds
+{'loss': tensor(2.0678), 'clock_time': 27676.47820019722, 'process_time': 27440.585082990998}
+Time to generate 1000: 0.1251997947692871 sec.
+Time computing degree mmd:  0:00:04.700312
+[91mnspdk    [39m : [94m0.019678
+{'valid': 651, 'unique': 0.944, 'novel': 0.8728813559322034, 'nspdk': 0.019677710491866562, 'fcd': 5.1010942552483165, 'valid_with_corr': 1000}
+Running metrics for train afer 230276 steps/epochs and 27741.646465539932 seconds
+{'loss': tensor(2.0675), 'clock_time': 27741.646465539932, 'process_time': 27505.219694572}
+Running metrics for val afer 230276 steps/epochs and 27741.64831471443 seconds
+{'loss': tensor(2.0832), 'clock_time': 27741.64831471443, 'process_time': 27505.220600655}
+Time to generate 1000: 0.12849068641662598 sec.
+Time computing degree mmd:  0:00:04.761829
+[91mnspdk    [39m : [94m0.020279
+{'valid': 651, 'unique': 0.949, 'novel': 0.8672286617492097, 'nspdk': 0.020279477307464044, 'fcd': 5.173248191821848, 'valid_with_corr': 1000}
+Epoch 62 starts...
+Running metrics for iter afer 232000 steps/epochs and 27933.38086462021 seconds
+{'loss': tensor(2.0675), 'clock_time': 27933.38086462021, 'process_time': 27695.403153765998}
+Time to generate 1000: 0.1243898868560791 sec.
+Time computing degree mmd:  0:00:04.728641
+[91mnspdk    [39m : [94m0.020985
+{'valid': 658, 'unique': 0.96, 'novel': 0.884375, 'nspdk': 0.020985188561041757, 'fcd': 5.116678518829957, 'valid_with_corr': 1000}
+Running metrics for iter afer 234000 steps/epochs and 28151.27336883545 seconds
+{'loss': tensor(2.0676), 'clock_time': 28151.27336883545, 'process_time': 27911.565750395}
+Time to generate 1000: 0.12767243385314941 sec.
+Time computing degree mmd:  0:00:04.729308
+[91mnspdk    [39m : [94m0.020330
+{'valid': 668, 'unique': 0.935, 'novel': 0.8759358288770054, 'nspdk': 0.02032952838412841, 'fcd': 5.1710986884361105, 'valid_with_corr': 1000}
+Running metrics for train afer 234051 steps/epochs and 28193.926884174347 seconds
+{'loss': tensor(2.0676), 'clock_time': 28193.926884174347, 'process_time': 27953.88736518}
+Running metrics for val afer 234051 steps/epochs and 28193.92854118347 seconds
+{'loss': tensor(2.0824), 'clock_time': 28193.92854118347, 'process_time': 27953.888212766}
+Time to generate 1000: 0.12361693382263184 sec.
+Time computing degree mmd:  0:00:04.739567
+[91mnspdk    [39m : [94m0.020306
+{'valid': 671, 'unique': 0.936, 'novel': 0.8824786324786325, 'nspdk': 0.02030565101543838, 'fcd': 5.367238004393535, 'valid_with_corr': 1000}
+Epoch 63 starts...
+Running metrics for iter afer 236000 steps/epochs and 28405.92769598961 seconds
+{'loss': tensor(2.0676), 'clock_time': 28405.92769598961, 'process_time': 28164.172529998}
+Time to generate 1000: 0.1275007724761963 sec.
+Time computing degree mmd:  0:00:04.707742
+[91mnspdk    [39m : [94m0.021475
+{'valid': 654, 'unique': 0.917, 'novel': 0.8887677208287895, 'nspdk': 0.02147542901704913, 'fcd': 5.53240597724308, 'valid_with_corr': 1000}
+Running metrics for train afer 237826 steps/epochs and 28625.98357963562 seconds
+{'loss': tensor(2.0675), 'clock_time': 28625.98357963562, 'process_time': 28382.488529518}
+Running metrics for val afer 237826 steps/epochs and 28625.98537993431 seconds
+{'loss': tensor(2.0829), 'clock_time': 28625.98537993431, 'process_time': 28382.489486952}
+Time to generate 1000: 0.1231698989868164 sec.
+Time computing degree mmd:  0:00:04.733608
+[91mnspdk    [39m : [94m0.020873
+{'valid': 654, 'unique': 0.948, 'novel': 0.8713080168776371, 'nspdk': 0.02087255788362602, 'fcd': 5.3380698723415385, 'valid_with_corr': 1000}
+Epoch 64 starts...
+Running metrics for iter afer 238000 steps/epochs and 28661.123710870743 seconds
+{'loss': tensor(2.0678), 'clock_time': 28661.123710870743, 'process_time': 28417.375792253}
+Time to generate 1000: 0.1237497329711914 sec.
+Time computing degree mmd:  0:00:04.785374
+[91mnspdk    [39m : [94m0.020033
+{'valid': 654, 'unique': 0.949, 'novel': 0.8883034773445733, 'nspdk': 0.020032744501585598, 'fcd': 5.417953651726286, 'valid_with_corr': 1000}
+Running metrics for iter afer 240000 steps/epochs and 28878.721356868744 seconds
+{'loss': tensor(2.0683), 'clock_time': 28878.721356868744, 'process_time': 28633.25275452}
+Time to generate 1000: 0.1257467269897461 sec.
+Time computing degree mmd:  0:00:04.724727
+[91mnspdk    [39m : [94m0.020151
+{'valid': 677, 'unique': 0.935, 'novel': 0.8866310160427807, 'nspdk': 0.020151184711599074, 'fcd': 5.347362267328148, 'valid_with_corr': 1000}
+Running metrics for train afer 241601 steps/epochs and 29076.592583179474 seconds
+{'loss': tensor(2.0676), 'clock_time': 29076.592583179474, 'process_time': 28829.514104642}
+Running metrics for val afer 241601 steps/epochs and 29076.59420156479 seconds
+{'loss': tensor(2.0826), 'clock_time': 29076.59420156479, 'process_time': 28829.514927352}
+Time to generate 1000: 0.12253499031066895 sec.
+Time computing degree mmd:  0:00:04.773964
+[91mnspdk    [39m : [94m0.021342
+{'valid': 650, 'unique': 0.955, 'novel': 0.8774869109947644, 'nspdk': 0.021341718489534672, 'fcd': 5.048583536920098, 'valid_with_corr': 1000}
+Epoch 65 starts...
+Running metrics for iter afer 242000 steps/epochs and 29133.826567411423 seconds
+{'loss': tensor(2.0666), 'clock_time': 29133.826567411423, 'process_time': 28886.295712711}
+Time to generate 1000: 0.12374258041381836 sec.
+Time computing degree mmd:  0:00:04.742460
+[91mnspdk    [39m : [94m0.020397
+{'valid': 681, 'unique': 0.953, 'novel': 0.8751311647429171, 'nspdk': 0.020397251575736686, 'fcd': 5.29608935148628, 'valid_with_corr': 1000}
+Running metrics for iter afer 244000 steps/epochs and 29352.211187839508 seconds
+{'loss': tensor(2.0676), 'clock_time': 29352.211187839508, 'process_time': 29102.892670234}
+Time to generate 1000: 0.12520933151245117 sec.
+Time computing degree mmd:  0:00:04.834801
+[91mnspdk    [39m : [94m0.020654
+{'valid': 632, 'unique': 0.941, 'novel': 0.8660998937300743, 'nspdk': 0.020654115486376273, 'fcd': 5.080304897639163, 'valid_with_corr': 1000}
+Running metrics for train afer 245376 steps/epochs and 29527.81889295578 seconds
+{'loss': tensor(2.0677), 'clock_time': 29527.81889295578, 'process_time': 29277.109212067}
+Running metrics for val afer 245376 steps/epochs and 29527.820591688156 seconds
+{'loss': tensor(2.0828), 'clock_time': 29527.820591688156, 'process_time': 29277.110084273998}
+Time to generate 1000: 0.13219523429870605 sec.
+Time computing degree mmd:  0:00:04.741544
+[91mnspdk    [39m : [94m0.019865
+{'valid': 633, 'unique': 0.948, 'novel': 0.9029535864978903, 'nspdk': 0.01986521822411086, 'fcd': 5.408030036278099, 'valid_with_corr': 1000}
+Epoch 66 starts...
+Running metrics for iter afer 246000 steps/epochs and 29607.76285147667 seconds
+{'loss': tensor(2.0683), 'clock_time': 29607.76285147667, 'process_time': 29356.401726198}
+Time to generate 1000: 0.12789630889892578 sec.
+Time computing degree mmd:  0:00:04.694781
+[91mnspdk    [39m : [94m0.021826
+{'valid': 645, 'unique': 0.925, 'novel': 0.8778378378378379, 'nspdk': 0.021825689272965326, 'fcd': 5.47980419684934, 'valid_with_corr': 1000}
+Running metrics for iter afer 248000 steps/epochs and 29825.862731695175 seconds
+{'loss': tensor(2.0668), 'clock_time': 29825.862731695175, 'process_time': 29572.749676131}
+Time to generate 1000: 0.12454080581665039 sec.
+Time computing degree mmd:  0:00:04.720416
+[91mnspdk    [39m : [94m0.021113
+{'valid': 676, 'unique': 0.951, 'novel': 0.886435331230284, 'nspdk': 0.02111253687100073, 'fcd': 5.50296220147327, 'valid_with_corr': 1000}
+Running metrics for train afer 249151 steps/epochs and 29978.66555905342 seconds
+{'loss': tensor(2.0674), 'clock_time': 29978.66555905342, 'process_time': 29724.277587413}
+Running metrics for val afer 249151 steps/epochs and 29978.667239665985 seconds
+{'loss': tensor(2.0822), 'clock_time': 29978.667239665985, 'process_time': 29724.278452044}
+Time to generate 1000: 0.12457633018493652 sec.
+Time computing degree mmd:  0:00:04.728970
+[91mnspdk    [39m : [94m0.020732
+{'valid': 662, 'unique': 0.944, 'novel': 0.8771186440677966, 'nspdk': 0.020731828158926158, 'fcd': 5.403513403415857, 'valid_with_corr': 1000}
+Epoch 67 starts...
+Running metrics for iter afer 250000 steps/epochs and 30081.007866859436 seconds
+{'loss': tensor(2.0671), 'clock_time': 30081.007866859436, 'process_time': 29825.829193898}
+Time to generate 1000: 0.12479138374328613 sec.
+Time computing degree mmd:  0:00:04.748836
+[91mnspdk    [39m : [94m0.020270
+{'valid': 682, 'unique': 0.935, 'novel': 0.8705882352941177, 'nspdk': 0.02027012787696647, 'fcd': 5.3113172086526745, 'valid_with_corr': 1000}
+Running metrics for iter afer 252000 steps/epochs and 30298.968012094498 seconds
+{'loss': tensor(2.0675), 'clock_time': 30298.968012094498, 'process_time': 30042.036074232}
+Time to generate 1000: 0.1295640468597412 sec.
+Time computing degree mmd:  0:00:04.703637
+[91mnspdk    [39m : [94m0.020756
+{'valid': 680, 'unique': 0.937, 'novel': 0.8740661686232657, 'nspdk': 0.02075566147201069, 'fcd': 4.975503979577134, 'valid_with_corr': 1000}
+Running metrics for train afer 252926 steps/epochs and 30429.077288150787 seconds
+{'loss': tensor(2.0674), 'clock_time': 30429.077288150787, 'process_time': 30171.111055182}
+Running metrics for val afer 252926 steps/epochs and 30429.078949213028 seconds
+{'loss': tensor(2.0827), 'clock_time': 30429.078949213028, 'process_time': 30171.111898043}
+Time to generate 1000: 0.12424683570861816 sec.
+Time computing degree mmd:  0:00:05.337001
+[91mnspdk    [39m : [94m0.020984
+{'valid': 649, 'unique': 0.939, 'novel': 0.8796592119275826, 'nspdk': 0.020983512220751344, 'fcd': 5.301855900996063, 'valid_with_corr': 1000}
+Epoch 68 starts...
+Running metrics for iter afer 254000 steps/epochs and 30554.15932559967 seconds
+{'loss': tensor(2.0678), 'clock_time': 30554.15932559967, 'process_time': 30295.219380055998}
+Time to generate 1000: 0.12677216529846191 sec.
+Time computing degree mmd:  0:00:04.804969
+[91mnspdk    [39m : [94m0.020858
+{'valid': 652, 'unique': 0.947, 'novel': 0.883843717001056, 'nspdk': 0.02085819501728059, 'fcd': 5.45427236683831, 'valid_with_corr': 1000}
+Running metrics for iter afer 256000 steps/epochs and 30771.545040369034 seconds
+{'loss': tensor(2.0674), 'clock_time': 30771.545040369034, 'process_time': 30510.839144831}
+Time to generate 1000: 0.12403082847595215 sec.
+Time computing degree mmd:  0:00:04.768290
+[91mnspdk    [39m : [94m0.020015
+{'valid': 642, 'unique': 0.936, 'novel': 0.8728632478632479, 'nspdk': 0.020015251685677832, 'fcd': 5.29663055837073, 'valid_with_corr': 1000}
+Running metrics for train afer 256701 steps/epochs and 30879.281097650528 seconds
+{'loss': tensor(2.0675), 'clock_time': 30879.281097650528, 'process_time': 30617.721881707}
+Running metrics for val afer 256701 steps/epochs and 30879.282779693604 seconds
+{'loss': tensor(2.0835), 'clock_time': 30879.282779693604, 'process_time': 30617.722741979}
+Time to generate 1000: 0.12338113784790039 sec.
+Time computing degree mmd:  0:00:04.732014
+[91mnspdk    [39m : [94m0.021038
+{'valid': 665, 'unique': 0.94, 'novel': 0.8872340425531915, 'nspdk': 0.02103796384919157, 'fcd': 5.3482331250297435, 'valid_with_corr': 1000}
+Epoch 69 starts...
+Running metrics for iter afer 258000 steps/epochs and 31026.74163532257 seconds
+{'loss': tensor(2.0669), 'clock_time': 31026.74163532257, 'process_time': 30763.990405081}
+Time to generate 1000: 0.1245107650756836 sec.
+Time computing degree mmd:  0:00:04.738326
+[91mnspdk    [39m : [94m0.021913
+{'valid': 656, 'unique': 0.953, 'novel': 0.8856243441762854, 'nspdk': 0.021913227931505158, 'fcd': 5.2237360954292456, 'valid_with_corr': 1000}
+Running metrics for iter afer 260000 steps/epochs and 31243.55410528183 seconds
+{'loss': tensor(2.0678), 'clock_time': 31243.55410528183, 'process_time': 30979.073068946}
+Time to generate 1000: 0.12496232986450195 sec.
+Time computing degree mmd:  0:00:04.763480
+[91mnspdk    [39m : [94m0.020731
+{'valid': 680, 'unique': 0.952, 'novel': 0.8792016806722689, 'nspdk': 0.020730912406008828, 'fcd': 5.176005999087856, 'valid_with_corr': 1000}
+Running metrics for train afer 260476 steps/epochs and 31328.70075583458 seconds
+{'loss': tensor(2.0675), 'clock_time': 31328.70075583458, 'process_time': 31063.559082369}
+Running metrics for val afer 260476 steps/epochs and 31328.70245361328 seconds
+{'loss': tensor(2.0831), 'clock_time': 31328.70245361328, 'process_time': 31063.559951047}
+Time to generate 1000: 0.12366032600402832 sec.
+Time computing degree mmd:  0:00:04.756580
+[91mnspdk    [39m : [94m0.021172
+{'valid': 673, 'unique': 0.945, 'novel': 0.870899470899471, 'nspdk': 0.021172362025950103, 'fcd': 5.289324411143745, 'valid_with_corr': 1000}
+Epoch 70 starts...
+Running metrics for iter afer 262000 steps/epochs and 31498.93615412712 seconds
+{'loss': tensor(2.0678), 'clock_time': 31498.93615412712, 'process_time': 31232.434499496998}
+Time to generate 1000: 0.13807463645935059 sec.
+Time computing degree mmd:  0:00:04.707920
+[91mnspdk    [39m : [94m0.019861
+{'valid': 678, 'unique': 0.933, 'novel': 0.872454448017149, 'nspdk': 0.01986114759771468, 'fcd': 5.170136254881413, 'valid_with_corr': 1000}
+Running metrics for iter afer 264000 steps/epochs and 31716.303350925446 seconds
+{'loss': tensor(2.0672), 'clock_time': 31716.303350925446, 'process_time': 31448.030857293}
+Time to generate 1000: 0.12464737892150879 sec.
+Time computing degree mmd:  0:00:04.698679
+[91mnspdk    [39m : [94m0.021332
+{'valid': 670, 'unique': 0.929, 'novel': 0.8729817007534983, 'nspdk': 0.02133189291473858, 'fcd': 5.459471205183185, 'valid_with_corr': 1000}
+Running metrics for train afer 264251 steps/epochs and 31778.248132944107 seconds
+{'loss': tensor(2.0672), 'clock_time': 31778.248132944107, 'process_time': 31509.502744801}
+Running metrics for val afer 264251 steps/epochs and 31778.249806642532 seconds
+{'loss': tensor(2.0832), 'clock_time': 31778.249806642532, 'process_time': 31509.503598064}
+Time to generate 1000: 0.12248754501342773 sec.
+Time computing degree mmd:  0:00:04.768953
+[91mnspdk    [39m : [94m0.020532
+{'valid': 673, 'unique': 0.947, 'novel': 0.8764519535374868, 'nspdk': 0.020532226554978772, 'fcd': 5.125186288137314, 'valid_with_corr': 1000}
+Epoch 71 starts...
+Running metrics for iter afer 266000 steps/epochs and 31971.108913898468 seconds
+{'loss': tensor(2.0670), 'clock_time': 31971.108913898468, 'process_time': 31700.799839559}
+Time to generate 1000: 0.12418651580810547 sec.
+Time computing degree mmd:  0:00:04.762146
+[91mnspdk    [39m : [94m0.018190
+{'valid': 672, 'unique': 0.95, 'novel': 0.8673684210526316, 'nspdk': 0.018190220983381772, 'fcd': 5.34474297088817, 'valid_with_corr': 1000}
+Running metrics for iter afer 268000 steps/epochs and 32188.739449501038 seconds
+{'loss': tensor(2.0676), 'clock_time': 32188.739449501038, 'process_time': 31916.714553711998}
+Time to generate 1000: 0.1244659423828125 sec.
+Time computing degree mmd:  0:00:04.776253
+[91mnspdk    [39m : [94m0.019585
+{'valid': 644, 'unique': 0.959, 'novel': 0.8821689259645464, 'nspdk': 0.01958490132894239, 'fcd': 5.281486760708475, 'valid_with_corr': 1000}
+Running metrics for train afer 268026 steps/epochs and 32228.363662481308 seconds
+{'loss': tensor(2.0674), 'clock_time': 32228.363662481308, 'process_time': 31956.025102567}
+Running metrics for val afer 268026 steps/epochs and 32228.365344762802 seconds
+{'loss': tensor(2.0837), 'clock_time': 32228.365344762802, 'process_time': 31956.025957502}
+Time to generate 1000: 0.1235654354095459 sec.
+Time computing degree mmd:  0:00:04.730561
+[91mnspdk    [39m : [94m0.020047
+{'valid': 669, 'unique': 0.928, 'novel': 0.8793103448275862, 'nspdk': 0.02004653424841432, 'fcd': 5.493358181746004, 'valid_with_corr': 1000}
+Epoch 72 starts...
+Running metrics for iter afer 270000 steps/epochs and 32443.463889598846 seconds
+{'loss': tensor(2.0676), 'clock_time': 32443.463889598846, 'process_time': 32169.367436747998}
+Time to generate 1000: 0.12529301643371582 sec.
+Time computing degree mmd:  0:00:04.694050
+[91mnspdk    [39m : [94m0.021195
+{'valid': 696, 'unique': 0.931, 'novel': 0.8732545649838883, 'nspdk': 0.021195373265747358, 'fcd': 5.407902658788544, 'valid_with_corr': 1000}
+Running metrics for train afer 271801 steps/epochs and 32660.85120868683 seconds
+{'loss': tensor(2.0674), 'clock_time': 32660.85120868683, 'process_time': 32384.924508327}
+Running metrics for val afer 271801 steps/epochs and 32660.8531062603 seconds
+{'loss': tensor(2.0833), 'clock_time': 32660.8531062603, 'process_time': 32384.925399341}
+Time to generate 1000: 0.12336325645446777 sec.
+Time computing degree mmd:  0:00:04.795999
+[91mnspdk    [39m : [94m0.020078
+{'valid': 649, 'unique': 0.947, 'novel': 0.8680042238648363, 'nspdk': 0.020078250469032916, 'fcd': 5.220814185156293, 'valid_with_corr': 1000}
+Epoch 73 starts...
+Running metrics for iter afer 272000 steps/epochs and 32698.593047618866 seconds
+{'loss': tensor(2.0672), 'clock_time': 32698.593047618866, 'process_time': 32422.38633153}
+Time to generate 1000: 0.12435555458068848 sec.
+Time computing degree mmd:  0:00:04.732823
+[91mnspdk    [39m : [94m0.021239
+{'valid': 667, 'unique': 0.945, 'novel': 0.8867724867724868, 'nspdk': 0.021239259821381667, 'fcd': 5.3046781449457825, 'valid_with_corr': 1000}
+Running metrics for iter afer 274000 steps/epochs and 32915.77697181702 seconds
+{'loss': tensor(2.0676), 'clock_time': 32915.77697181702, 'process_time': 32637.771693063998}
+Time to generate 1000: 0.12471437454223633 sec.
+Time computing degree mmd:  0:00:04.705830
+[91mnspdk    [39m : [94m0.021986
+{'valid': 684, 'unique': 0.93, 'novel': 0.8870967741935484, 'nspdk': 0.021986184862888003, 'fcd': 5.438230982501938, 'valid_with_corr': 1000}
+Running metrics for train afer 275576 steps/epochs and 33110.97267174721 seconds
+{'loss': tensor(2.0674), 'clock_time': 33110.97267174721, 'process_time': 32831.391856569}
+Running metrics for val afer 275576 steps/epochs and 33110.97433638573 seconds
+{'loss': tensor(2.0834), 'clock_time': 33110.97433638573, 'process_time': 32831.392711333}
+Time to generate 1000: 0.12219595909118652 sec.
+Time computing degree mmd:  0:00:04.783167
+[91mnspdk    [39m : [94m0.020143
+{'valid': 641, 'unique': 0.942, 'novel': 0.8683651804670913, 'nspdk': 0.02014312558607742, 'fcd': 5.456948737316786, 'valid_with_corr': 1000}
+Epoch 74 starts...
+Running metrics for iter afer 276000 steps/epochs and 33171.24318289757 seconds
+{'loss': tensor(2.0671), 'clock_time': 33171.24318289757, 'process_time': 32891.201119881}
+Time to generate 1000: 0.12417173385620117 sec.
+Time computing degree mmd:  0:00:04.728014
+[91mnspdk    [39m : [94m0.020964
+{'valid': 654, 'unique': 0.946, 'novel': 0.8763213530655392, 'nspdk': 0.02096350923989948, 'fcd': 5.227163627029096, 'valid_with_corr': 1000}
+Running metrics for iter afer 278000 steps/epochs and 33388.561432123184 seconds
+{'loss': tensor(2.0673), 'clock_time': 33388.561432123184, 'process_time': 33106.69980865}
+Time to generate 1000: 0.12630510330200195 sec.
+Time computing degree mmd:  0:00:04.712662
+[91mnspdk    [39m : [94m0.019558
+{'valid': 699, 'unique': 0.949, 'novel': 0.8861959957850368, 'nspdk': 0.01955802046439062, 'fcd': 5.518495199402551, 'valid_with_corr': 1000}
+Running metrics for train afer 279351 steps/epochs and 33560.95435357094 seconds
+{'loss': tensor(2.0674), 'clock_time': 33560.95435357094, 'process_time': 33277.638192068}
+Running metrics for val afer 279351 steps/epochs and 33560.95603132248 seconds
+{'loss': tensor(2.0831), 'clock_time': 33560.95603132248, 'process_time': 33277.63904113}
+Time to generate 1000: 0.12228083610534668 sec.
+Time computing degree mmd:  0:00:04.790291
+[91mnspdk    [39m : [94m0.019986
+{'valid': 673, 'unique': 0.944, 'novel': 0.8675847457627118, 'nspdk': 0.01998590951384166, 'fcd': 5.332195810487647, 'valid_with_corr': 1000}
+Epoch 75 starts...
+Running metrics for iter afer 280000 steps/epochs and 33643.503766059875 seconds
+{'loss': tensor(2.0678), 'clock_time': 33643.503766059875, 'process_time': 33359.527023828996}
+Time to generate 1000: 0.12403345108032227 sec.
+Time computing degree mmd:  0:00:04.736995
+[91mnspdk    [39m : [94m0.020286
+{'valid': 673, 'unique': 0.943, 'novel': 0.8812301166489925, 'nspdk': 0.02028576786418837, 'fcd': 5.217212487618404, 'valid_with_corr': 1000}
+Running metrics for iter afer 282000 steps/epochs and 33861.11255168915 seconds
+{'loss': tensor(2.0671), 'clock_time': 33861.11255168915, 'process_time': 33575.361580663}
+Time to generate 1000: 0.12459802627563477 sec.
+Time computing degree mmd:  0:00:04.731488
+[91mnspdk    [39m : [94m0.019575
+{'valid': 686, 'unique': 0.928, 'novel': 0.8696120689655172, 'nspdk': 0.01957501496690181, 'fcd': 5.501495327945236, 'valid_with_corr': 1000}
+Running metrics for train afer 283126 steps/epochs and 34011.1146402359 seconds
+{'loss': tensor(2.0673), 'clock_time': 34011.1146402359, 'process_time': 33724.151094326}
+Running metrics for val afer 283126 steps/epochs and 34011.11632299423 seconds
+{'loss': tensor(2.0830), 'clock_time': 34011.11632299423, 'process_time': 33724.151943796}
+Time to generate 1000: 0.12339472770690918 sec.
+Time computing degree mmd:  0:00:04.813775
+[91mnspdk    [39m : [94m0.019159
+{'valid': 666, 'unique': 0.954, 'novel': 0.8721174004192872, 'nspdk': 0.019159047417946967, 'fcd': 5.383217876307437, 'valid_with_corr': 1000}
+Epoch 76 starts...
+Running metrics for iter afer 284000 steps/epochs and 34115.57924580574 seconds
+{'loss': tensor(2.0674), 'clock_time': 34115.57924580574, 'process_time': 33827.780191838996}
+Time to generate 1000: 0.12422490119934082 sec.
+Time computing degree mmd:  0:00:04.720132
+[91mnspdk    [39m : [94m0.019615
+{'valid': 685, 'unique': 0.939, 'novel': 0.8572949946751863, 'nspdk': 0.01961498188368485, 'fcd': 5.327558328228989, 'valid_with_corr': 1000}
+Running metrics for iter afer 286000 steps/epochs and 34333.36640763283 seconds
+{'loss': tensor(2.0678), 'clock_time': 34333.36640763283, 'process_time': 34043.80311078}
+Time to generate 1000: 0.1248025894165039 sec.
+Time computing degree mmd:  0:00:04.726208
+[91mnspdk    [39m : [94m0.019784
+{'valid': 687, 'unique': 0.93, 'novel': 0.8795698924731182, 'nspdk': 0.01978436800472627, 'fcd': 5.445279231768367, 'valid_with_corr': 1000}
+Running metrics for train afer 286901 steps/epochs and 34460.7787938118 seconds
+{'loss': tensor(2.0674), 'clock_time': 34460.7787938118, 'process_time': 34170.178240372}
+Running metrics for val afer 286901 steps/epochs and 34460.780556201935 seconds
+{'loss': tensor(2.0833), 'clock_time': 34460.780556201935, 'process_time': 34170.17910789}
+Time to generate 1000: 0.12366437911987305 sec.
+Time computing degree mmd:  0:00:04.710734
+[91mnspdk    [39m : [94m0.021851
+{'valid': 664, 'unique': 0.923, 'novel': 0.8699891657638137, 'nspdk': 0.021850703762332058, 'fcd': 5.340945780745436, 'valid_with_corr': 1000}
+Epoch 77 starts...
+Running metrics for iter afer 288000 steps/epochs and 34587.760466337204 seconds
+{'loss': tensor(2.0672), 'clock_time': 34587.760466337204, 'process_time': 34296.154106901}
+Time to generate 1000: 0.12531590461730957 sec.
+Time computing degree mmd:  0:00:04.773279
+[91mnspdk    [39m : [94m0.021223
+{'valid': 674, 'unique': 0.946, 'novel': 0.8868921775898521, 'nspdk': 0.021222993280523877, 'fcd': 5.190970123924032, 'valid_with_corr': 1000}
+Running metrics for iter afer 290000 steps/epochs and 34805.754046440125 seconds
+{'loss': tensor(2.0666), 'clock_time': 34805.754046440125, 'process_time': 34512.407849045}
+Time to generate 1000: 0.12419962882995605 sec.
+Time computing degree mmd:  0:00:04.778049
+[91mnspdk    [39m : [94m0.020007
+{'valid': 672, 'unique': 0.957, 'novel': 0.9007314524555904, 'nspdk': 0.020007267703084308, 'fcd': 5.081546453215054, 'valid_with_corr': 1000}
+Running metrics for train afer 290676 steps/epochs and 34910.841757535934 seconds
+{'loss': tensor(2.0673), 'clock_time': 34910.841757535934, 'process_time': 34616.655851667}
+Running metrics for val afer 290676 steps/epochs and 34910.843500614166 seconds
+{'loss': tensor(2.0831), 'clock_time': 34910.843500614166, 'process_time': 34616.656747618}
+Time to generate 1000: 0.12363696098327637 sec.
+Time computing degree mmd:  0:00:04.717091
+[91mnspdk    [39m : [94m0.022369
+{'valid': 644, 'unique': 0.938, 'novel': 0.8805970149253731, 'nspdk': 0.022369174847710116, 'fcd': 5.432389475830611, 'valid_with_corr': 1000}
+Epoch 78 starts...
+Running metrics for iter afer 292000 steps/epochs and 35061.158093214035 seconds
+{'loss': tensor(2.0677), 'clock_time': 35061.158093214035, 'process_time': 34765.734525731}
+Time to generate 1000: 0.12441277503967285 sec.
+Time computing degree mmd:  0:00:04.706400
+[91mnspdk    [39m : [94m0.022588
+{'valid': 665, 'unique': 0.936, 'novel': 0.8782051282051282, 'nspdk': 0.022588464198014746, 'fcd': 5.428349827391013, 'valid_with_corr': 1000}
+Running metrics for iter afer 294000 steps/epochs and 35278.58042931557 seconds
+{'loss': tensor(2.0676), 'clock_time': 35278.58042931557, 'process_time': 34981.367497448}
+Time to generate 1000: 0.12380504608154297 sec.
+Time computing degree mmd:  0:00:04.751385
+[91mnspdk    [39m : [94m0.020729
+{'valid': 645, 'unique': 0.945, 'novel': 0.8698412698412699, 'nspdk': 0.02072894876954906, 'fcd': 5.306578795568392, 'valid_with_corr': 1000}
+Running metrics for train afer 294451 steps/epochs and 35361.3958530426 seconds
+{'loss': tensor(2.0675), 'clock_time': 35361.3958530426, 'process_time': 35063.53741813}
+Running metrics for val afer 294451 steps/epochs and 35361.39749145508 seconds
+{'loss': tensor(2.0834), 'clock_time': 35361.39749145508, 'process_time': 35063.538252851}
+Time to generate 1000: 0.12421584129333496 sec.
+Time computing degree mmd:  0:00:04.756062
+[91mnspdk    [39m : [94m0.020093
+{'valid': 649, 'unique': 0.953, 'novel': 0.8929695697796433, 'nspdk': 0.020093137732072358, 'fcd': 5.018327805696067, 'valid_with_corr': 1000}
+Epoch 79 starts...
+Running metrics for iter afer 296000 steps/epochs and 35534.397270441055 seconds
+{'loss': tensor(2.0673), 'clock_time': 35534.397270441055, 'process_time': 35235.092269311}
+Time to generate 1000: 0.12583661079406738 sec.
+Time computing degree mmd:  0:00:04.764537
+[91mnspdk    [39m : [94m0.020709
+{'valid': 674, 'unique': 0.95, 'novel': 0.8821052631578947, 'nspdk': 0.020709037315028378, 'fcd': 5.330320572780394, 'valid_with_corr': 1000}
+Running metrics for iter afer 298000 steps/epochs and 35751.50381875038 seconds
+{'loss': tensor(2.0677), 'clock_time': 35751.50381875038, 'process_time': 35450.461999954}
+Time to generate 1000: 0.1239936351776123 sec.
+Time computing degree mmd:  0:00:04.744897
+[91mnspdk    [39m : [94m0.020010
+{'valid': 647, 'unique': 0.951, 'novel': 0.9085173501577287, 'nspdk': 0.0200097944894862, 'fcd': 5.144828092876349, 'valid_with_corr': 1000}
+Running metrics for train afer 298226 steps/epochs and 35811.66091942787 seconds
+{'loss': tensor(2.0675), 'clock_time': 35811.66091942787, 'process_time': 35510.131873544}
+Running metrics for val afer 298226 steps/epochs and 35811.66271519661 seconds
+{'loss': tensor(2.0834), 'clock_time': 35811.66271519661, 'process_time': 35510.132716816}
+Time to generate 1000: 0.12349414825439453 sec.
+Time computing degree mmd:  0:00:04.793271
+[91mnspdk    [39m : [94m0.019822
+{'valid': 666, 'unique': 0.966, 'novel': 0.8747412008281573, 'nspdk': 0.019822423840547276, 'fcd': 5.020693839424872, 'valid_with_corr': 1000}
+Epoch 80 starts...
+Running metrics for iter afer 300000 steps/epochs and 36007.2745115757 seconds
+{'loss': tensor(2.0669), 'clock_time': 36007.2745115757, 'process_time': 35704.079110617}
+Time to generate 1000: 0.1254129409790039 sec.
+Time computing degree mmd:  0:00:04.736014
+[91mnspdk    [39m : [94m0.021370
+{'valid': 653, 'unique': 0.944, 'novel': 0.8675847457627118, 'nspdk': 0.021369557670344125, 'fcd': 5.277256650437117, 'valid_with_corr': 1000}
+Running metrics for iter afer 302000 steps/epochs and 36224.843645095825 seconds
+{'loss': tensor(2.0676), 'clock_time': 36224.843645095825, 'process_time': 35919.83703062}
+Time to generate 1000: 0.12685561180114746 sec.
+Time computing degree mmd:  0:00:04.757330
+[91mnspdk    [39m : [94m0.021329
+{'valid': 666, 'unique': 0.94, 'novel': 0.8638297872340426, 'nspdk': 0.02132920047515613, 'fcd': 5.155938306794582, 'valid_with_corr': 1000}
+Running metrics for train afer 302001 steps/epochs and 36261.84992599487 seconds
+{'loss': tensor(2.0672), 'clock_time': 36261.84992599487, 'process_time': 35956.558406918}
+Running metrics for val afer 302001 steps/epochs and 36261.8515291214 seconds
+{'loss': tensor(2.0833), 'clock_time': 36261.8515291214, 'process_time': 35956.559228793}
+Time to generate 1000: 0.12341737747192383 sec.
+Time computing degree mmd:  0:00:04.680184
+[91mnspdk    [39m : [94m0.022113
+{'valid': 655, 'unique': 0.94, 'novel': 0.875531914893617, 'nspdk': 0.022112911238208688, 'fcd': 5.2583368683594855, 'valid_with_corr': 1000}
+Epoch 81 starts...
+Running metrics for iter afer 304000 steps/epochs and 36479.82283973694 seconds
+{'loss': tensor(2.0674), 'clock_time': 36479.82283973694, 'process_time': 36172.734052887}
+Time to generate 1000: 0.12490701675415039 sec.
+Time computing degree mmd:  0:00:04.735263
+[91mnspdk    [39m : [94m0.020840
+{'valid': 674, 'unique': 0.94, 'novel': 0.8776595744680851, 'nspdk': 0.020839719523903427, 'fcd': 5.329393584909468, 'valid_with_corr': 1000}
+Running metrics for train afer 305776 steps/epochs and 36694.98248577118 seconds
+{'loss': tensor(2.0674), 'clock_time': 36694.98248577118, 'process_time': 36386.054300986}
+Running metrics for val afer 305776 steps/epochs and 36694.984073638916 seconds
+{'loss': tensor(2.0831), 'clock_time': 36694.984073638916, 'process_time': 36386.055132782}
+Time to generate 1000: 0.12499070167541504 sec.
+Time computing degree mmd:  0:00:04.754700
+[91mnspdk    [39m : [94m0.020856
+{'valid': 664, 'unique': 0.942, 'novel': 0.8736730360934183, 'nspdk': 0.02085615234000171, 'fcd': 5.141778604990641, 'valid_with_corr': 1000}
+Epoch 82 starts...
+Running metrics for iter afer 306000 steps/epochs and 36735.05639624596 seconds
+{'loss': tensor(2.0675), 'clock_time': 36735.05639624596, 'process_time': 36425.817880575}
+Time to generate 1000: 0.12411952018737793 sec.
+Time computing degree mmd:  0:00:04.782930
+[91mnspdk    [39m : [94m0.021839
+{'valid': 649, 'unique': 0.952, 'novel': 0.8771008403361344, 'nspdk': 0.02183855023250575, 'fcd': 5.267912408583438, 'valid_with_corr': 1000}
+Running metrics for iter afer 308000 steps/epochs and 36952.48479628563 seconds
+{'loss': tensor(2.0672), 'clock_time': 36952.48479628563, 'process_time': 36641.521292389}
+Time to generate 1000: 0.1258561611175537 sec.
+Time computing degree mmd:  0:00:04.712266
+[91mnspdk    [39m : [94m0.020034
+{'valid': 660, 'unique': 0.956, 'novel': 0.8849372384937239, 'nspdk': 0.02003355254791883, 'fcd': 5.257328639108394, 'valid_with_corr': 1000}
+Running metrics for train afer 309551 steps/epochs and 37144.99516105652 seconds
+{'loss': tensor(2.0673), 'clock_time': 37144.99516105652, 'process_time': 36832.456742338996}
+Running metrics for val afer 309551 steps/epochs and 37144.996792554855 seconds
+{'loss': tensor(2.0833), 'clock_time': 37144.996792554855, 'process_time': 36832.457567143996}
+Time to generate 1000: 0.12381625175476074 sec.
+Time computing degree mmd:  0:00:04.762334
+[91mnspdk    [39m : [94m0.021133
+{'valid': 647, 'unique': 0.941, 'novel': 0.8809776833156217, 'nspdk': 0.021133302879643462, 'fcd': 5.311926188123881, 'valid_with_corr': 1000}
+Epoch 83 starts...
+Running metrics for iter afer 310000 steps/epochs and 37207.73296070099 seconds
+{'loss': tensor(2.0670), 'clock_time': 37207.73296070099, 'process_time': 36894.682848644}
+Time to generate 1000: 0.12605595588684082 sec.
+Time computing degree mmd:  0:00:04.804093
+[91mnspdk    [39m : [94m0.020442
+{'valid': 654, 'unique': 0.957, 'novel': 0.8714733542319749, 'nspdk': 0.02044192839083936, 'fcd': 5.043836556278368, 'valid_with_corr': 1000}
+Running metrics for iter afer 312000 steps/epochs and 37425.127460718155 seconds
+{'loss': tensor(2.0670), 'clock_time': 37425.127460718155, 'process_time': 37110.307511733}
+Time to generate 1000: 0.12472653388977051 sec.
+Time computing degree mmd:  0:00:04.739505
+[91mnspdk    [39m : [94m0.020725
+{'valid': 670, 'unique': 0.938, 'novel': 0.8816631130063965, 'nspdk': 0.020724643426966727, 'fcd': 5.4108559504055975, 'valid_with_corr': 1000}
+Running metrics for train afer 313326 steps/epochs and 37594.99024629593 seconds
+{'loss': tensor(2.0674), 'clock_time': 37594.99024629593, 'process_time': 37278.805384202}
+Running metrics for val afer 313326 steps/epochs and 37594.99193453789 seconds
+{'loss': tensor(2.0830), 'clock_time': 37594.99193453789, 'process_time': 37278.806238877}
+Time to generate 1000: 0.12316536903381348 sec.
+Time computing degree mmd:  0:00:04.747439
+[91mnspdk    [39m : [94m0.020376
+{'valid': 684, 'unique': 0.935, 'novel': 0.8652406417112299, 'nspdk': 0.02037622815327772, 'fcd': 5.137560504881421, 'valid_with_corr': 1000}
+Epoch 84 starts...
+Running metrics for iter afer 314000 steps/epochs and 37680.183294296265 seconds
+{'loss': tensor(2.0680), 'clock_time': 37680.183294296265, 'process_time': 37363.304604252}
+Time to generate 1000: 0.12590503692626953 sec.
+Time computing degree mmd:  0:00:04.760117
+[91mnspdk    [39m : [94m0.019935
+{'valid': 670, 'unique': 0.953, 'novel': 0.8866736621196223, 'nspdk': 0.019934628269263455, 'fcd': 5.023916784927593, 'valid_with_corr': 1000}
+Running metrics for iter afer 316000 steps/epochs and 37897.93017411232 seconds
+{'loss': tensor(2.0677), 'clock_time': 37897.93017411232, 'process_time': 37579.260019763}
+Time to generate 1000: 0.12576937675476074 sec.
+Time computing degree mmd:  0:00:04.736864
+[91mnspdk    [39m : [94m0.021349
+{'valid': 679, 'unique': 0.933, 'novel': 0.864951768488746, 'nspdk': 0.021348731360480988, 'fcd': 5.3868729427988065, 'valid_with_corr': 1000}
+Running metrics for train afer 317101 steps/epochs and 38044.76119971275 seconds
+{'loss': tensor(2.0674), 'clock_time': 38044.76119971275, 'process_time': 37724.88749175}
+Running metrics for val afer 317101 steps/epochs and 38044.76283502579 seconds
+{'loss': tensor(2.0830), 'clock_time': 38044.76283502579, 'process_time': 37724.888321776}
+Time to generate 1000: 0.12508106231689453 sec.
+Time computing degree mmd:  0:00:04.745695
+[91mnspdk    [39m : [94m0.020654
+{'valid': 668, 'unique': 0.93, 'novel': 0.875268817204301, 'nspdk': 0.020653842524386123, 'fcd': 5.282869372094417, 'valid_with_corr': 1000}
+Epoch 85 starts...
+Running metrics for iter afer 318000 steps/epochs and 38152.4468433857 seconds
+{'loss': tensor(2.0671), 'clock_time': 38152.4468433857, 'process_time': 37831.718030954}
+Time to generate 1000: 0.12428498268127441 sec.
+Time computing degree mmd:  0:00:04.811323
+[91mnspdk    [39m : [94m0.020772
+{'valid': 644, 'unique': 0.951, 'novel': 0.886435331230284, 'nspdk': 0.020772316650455036, 'fcd': 5.162363554005054, 'valid_with_corr': 1000}
+Running metrics for iter afer 320000 steps/epochs and 38370.47137379646 seconds
+{'loss': tensor(2.0679), 'clock_time': 38370.47137379646, 'process_time': 38047.917153868}
+Time to generate 1000: 0.12420868873596191 sec.
+Time computing degree mmd:  0:00:04.751777
+[91mnspdk    [39m : [94m0.021358
+{'valid': 694, 'unique': 0.928, 'novel': 0.8696120689655172, 'nspdk': 0.0213580304998382, 'fcd': 5.326847807525656, 'valid_with_corr': 1000}
+Running metrics for train afer 320876 steps/epochs and 38495.488483428955 seconds
+{'loss': tensor(2.0674), 'clock_time': 38495.488483428955, 'process_time': 38171.918267061}
+Running metrics for val afer 320876 steps/epochs and 38495.49016046524 seconds
+{'loss': tensor(2.0828), 'clock_time': 38495.49016046524, 'process_time': 38171.919121467}
+Time to generate 1000: 0.12612342834472656 sec.
+Time computing degree mmd:  0:00:04.721181
+[91mnspdk    [39m : [94m0.020392
+{'valid': 659, 'unique': 0.955, 'novel': 0.8722513089005236, 'nspdk': 0.020392273122040422, 'fcd': 5.374734037462094, 'valid_with_corr': 1000}
+Epoch 86 starts...
+Running metrics for iter afer 322000 steps/epochs and 38625.18297171593 seconds
+{'loss': tensor(2.0673), 'clock_time': 38625.18297171593, 'process_time': 38300.536502162}
+Time to generate 1000: 0.12402939796447754 sec.
+Time computing degree mmd:  0:00:04.757239
+[91mnspdk    [39m : [94m0.021469
+{'valid': 652, 'unique': 0.951, 'novel': 0.8853838065194533, 'nspdk': 0.021469377149119145, 'fcd': 5.437042777623269, 'valid_with_corr': 1000}
+Running metrics for iter afer 324000 steps/epochs and 38843.07168650627 seconds
+{'loss': tensor(2.0669), 'clock_time': 38843.07168650627, 'process_time': 38516.660672891}
+Time to generate 1000: 0.1242518424987793 sec.
+Time computing degree mmd:  0:00:04.765762
+[91mnspdk    [39m : [94m0.020984
+{'valid': 675, 'unique': 0.941, 'novel': 0.8831030818278427, 'nspdk': 0.020984453139791942, 'fcd': 5.380277873153254, 'valid_with_corr': 1000}
+Running metrics for train afer 324651 steps/epochs and 38945.43103528023 seconds
+{'loss': tensor(2.0672), 'clock_time': 38945.43103528023, 'process_time': 38618.207889922}
+Running metrics for val afer 324651 steps/epochs and 38945.43270158768 seconds
+{'loss': tensor(2.0836), 'clock_time': 38945.43270158768, 'process_time': 38618.208734741}
+Time to generate 1000: 0.12414383888244629 sec.
+Time computing degree mmd:  0:00:04.733511
+[91mnspdk    [39m : [94m0.019862
+{'valid': 671, 'unique': 0.949, 'novel': 0.8756585879873551, 'nspdk': 0.019862064203376467, 'fcd': 5.241963176088198, 'valid_with_corr': 1000}
+Epoch 87 starts...
+Running metrics for iter afer 326000 steps/epochs and 39097.87401461601 seconds
+{'loss': tensor(2.0680), 'clock_time': 39097.87401461601, 'process_time': 38769.440354444}
+Time to generate 1000: 0.1266782283782959 sec.
+Time computing degree mmd:  0:00:04.787734
+[91mnspdk    [39m : [94m0.020688
+{'valid': 616, 'unique': 0.947, 'novel': 0.8912354804646251, 'nspdk': 0.0206884825221611, 'fcd': 5.125515727067523, 'valid_with_corr': 1000}
+Running metrics for iter afer 328000 steps/epochs and 39316.16173887253 seconds
+{'loss': tensor(2.0670), 'clock_time': 39316.16173887253, 'process_time': 38985.999297262}
+Time to generate 1000: 0.12425541877746582 sec.
+Time computing degree mmd:  0:00:04.745229
+[91mnspdk    [39m : [94m0.020987
+{'valid': 654, 'unique': 0.954, 'novel': 0.8773584905660378, 'nspdk': 0.02098733026539451, 'fcd': 5.030749705851967, 'valid_with_corr': 1000}
+Running metrics for train afer 328426 steps/epochs and 39395.960497140884 seconds
+{'loss': tensor(2.0674), 'clock_time': 39395.960497140884, 'process_time': 39065.156192839}
+Running metrics for val afer 328426 steps/epochs and 39395.962180137634 seconds
+{'loss': tensor(2.0831), 'clock_time': 39395.962180137634, 'process_time': 39065.157051329}
+Time to generate 1000: 0.12590503692626953 sec.
+Time computing degree mmd:  0:00:04.707260
+[91mnspdk    [39m : [94m0.020032
+{'valid': 669, 'unique': 0.934, 'novel': 0.8790149892933619, 'nspdk': 0.020032351745830346, 'fcd': 5.16110717220975, 'valid_with_corr': 1000}
+Epoch 88 starts...
+Running metrics for iter afer 330000 steps/epochs and 39571.48401594162 seconds
+{'loss': tensor(2.0667), 'clock_time': 39571.48401594162, 'process_time': 39239.287304367}
+Time to generate 1000: 0.12366437911987305 sec.
+Time computing degree mmd:  0:00:04.765337
+[91mnspdk    [39m : [94m0.020463
+{'valid': 647, 'unique': 0.95, 'novel': 0.8673684210526316, 'nspdk': 0.020463378413691224, 'fcd': 5.262189433763204, 'valid_with_corr': 1000}
+Running metrics for iter afer 332000 steps/epochs and 39788.88867402077 seconds
+{'loss': tensor(2.0675), 'clock_time': 39788.88867402077, 'process_time': 39454.871515410996}
+Time to generate 1000: 0.12368011474609375 sec.
+Time computing degree mmd:  0:00:04.693740
+[91mnspdk    [39m : [94m0.022111
+{'valid': 669, 'unique': 0.932, 'novel': 0.8733905579399142, 'nspdk': 0.022111432706282963, 'fcd': 5.475336953046284, 'valid_with_corr': 1000}
+Running metrics for train afer 332201 steps/epochs and 39846.660994291306 seconds
+{'loss': tensor(2.0674), 'clock_time': 39846.660994291306, 'process_time': 39512.153214108}
+Running metrics for val afer 332201 steps/epochs and 39846.66264343262 seconds
+{'loss': tensor(2.0832), 'clock_time': 39846.66264343262, 'process_time': 39512.154053148}
+Time to generate 1000: 0.12188935279846191 sec.
+Time computing degree mmd:  0:00:04.804288
+[91mnspdk    [39m : [94m0.021184
+{'valid': 656, 'unique': 0.95, 'novel': 0.8842105263157894, 'nspdk': 0.02118443752166474, 'fcd': 5.1958597209259665, 'valid_with_corr': 1000}
+Epoch 89 starts...
+Running metrics for iter afer 334000 steps/epochs and 40044.73759555817 seconds
+{'loss': tensor(2.0678), 'clock_time': 40044.73759555817, 'process_time': 39708.628045396}
+Time to generate 1000: 0.12484097480773926 sec.
+Time computing degree mmd:  0:00:04.734732
+[91mnspdk    [39m : [94m0.019041
+{'valid': 632, 'unique': 0.948, 'novel': 0.8744725738396625, 'nspdk': 0.019040788738120318, 'fcd': 4.868271095177736, 'valid_with_corr': 1000}
+Running metrics for train afer 335976 steps/epochs and 40279.920407533646 seconds
+{'loss': tensor(2.0673), 'clock_time': 40279.920407533646, 'process_time': 39941.943212911996}
+Running metrics for val afer 335976 steps/epochs and 40279.922092437744 seconds
+{'loss': tensor(2.0824), 'clock_time': 40279.922092437744, 'process_time': 39941.944070154}
+Time to generate 1000: 0.12348246574401855 sec.
+Time computing degree mmd:  0:00:04.751158
+[91mnspdk    [39m : [94m0.020670
+{'valid': 653, 'unique': 0.947, 'novel': 0.8817317845828934, 'nspdk': 0.020670332115643453, 'fcd': 5.2896289033744495, 'valid_with_corr': 1000}
+Epoch 90 starts...
+Running metrics for iter afer 336000 steps/epochs and 40299.50661277771 seconds
+{'loss': tensor(2.0672), 'clock_time': 40299.50661277771, 'process_time': 39961.382136525}
+Time to generate 1000: 0.12506365776062012 sec.
+Time computing degree mmd:  0:00:04.664941
+[91mnspdk    [39m : [94m0.020996
+{'valid': 672, 'unique': 0.943, 'novel': 0.8685047720042418, 'nspdk': 0.020995992437794347, 'fcd': 5.2939597374376355, 'valid_with_corr': 1000}
+Running metrics for iter afer 338000 steps/epochs and 40517.6588010788 seconds
+{'loss': tensor(2.0677), 'clock_time': 40517.6588010788, 'process_time': 40177.763008516}
+Time to generate 1000: 0.1351633071899414 sec.
+Time computing degree mmd:  0:00:04.722560
+[91mnspdk    [39m : [94m0.021933
+{'valid': 672, 'unique': 0.951, 'novel': 0.8969505783385909, 'nspdk': 0.02193323133424696, 'fcd': 5.134770114476478, 'valid_with_corr': 1000}
+Running metrics for train afer 339751 steps/epochs and 40730.04505991936 seconds
+{'loss': tensor(2.0674), 'clock_time': 40730.04505991936, 'process_time': 40388.465804872}
+Running metrics for val afer 339751 steps/epochs and 40730.04696679115 seconds
+{'loss': tensor(2.0830), 'clock_time': 40730.04696679115, 'process_time': 40388.46667438}
+Time to generate 1000: 0.1252589225769043 sec.
+Time computing degree mmd:  0:00:04.794375
+[91mnspdk    [39m : [94m0.021026
+{'valid': 671, 'unique': 0.958, 'novel': 0.8935281837160751, 'nspdk': 0.021026208537636037, 'fcd': 5.18419887764918, 'valid_with_corr': 1000}
+Epoch 91 starts...
+Running metrics for iter afer 340000 steps/epochs and 40772.15709090233 seconds
+{'loss': tensor(2.0674), 'clock_time': 40772.15709090233, 'process_time': 40430.242895313}
+Time to generate 1000: 0.12615418434143066 sec.
+Time computing degree mmd:  0:00:04.686642
+[91mnspdk    [39m : [94m0.020696
+{'valid': 667, 'unique': 0.944, 'novel': 0.8845338983050848, 'nspdk': 0.020696108286785753, 'fcd': 5.281439506503354, 'valid_with_corr': 1000}
+Running metrics for iter afer 342000 steps/epochs and 40990.184146642685 seconds
+{'loss': tensor(2.0671), 'clock_time': 40990.184146642685, 'process_time': 40646.517529811}
+Time to generate 1000: 0.12452173233032227 sec.
+Time computing degree mmd:  0:00:04.757834
+[91mnspdk    [39m : [94m0.020270
+{'valid': 648, 'unique': 0.952, 'novel': 0.8728991596638656, 'nspdk': 0.020269609957316748, 'fcd': 5.30233141559798, 'valid_with_corr': 1000}
+Running metrics for train afer 343526 steps/epochs and 41180.190710783005 seconds
+{'loss': tensor(2.0673), 'clock_time': 41180.190710783005, 'process_time': 40834.977380001}
+Running metrics for val afer 343526 steps/epochs and 41180.19257450104 seconds
+{'loss': tensor(2.0831), 'clock_time': 41180.19257450104, 'process_time': 40834.978246113}
+Time to generate 1000: 0.12448310852050781 sec.
+Time computing degree mmd:  0:00:04.798603
+[91mnspdk    [39m : [94m0.020906
+{'valid': 677, 'unique': 0.919, 'novel': 0.8857453754080522, 'nspdk': 0.020906495603421144, 'fcd': 5.480428829545907, 'valid_with_corr': 1000}
+Epoch 92 starts...
+Running metrics for iter afer 344000 steps/epochs and 41245.43459773064 seconds
+{'loss': tensor(2.0672), 'clock_time': 41245.43459773064, 'process_time': 40899.689964675}
+Time to generate 1000: 0.1270461082458496 sec.
+Time computing degree mmd:  0:00:04.750640
+[91mnspdk    [39m : [94m0.019472
+{'valid': 679, 'unique': 0.938, 'novel': 0.8731343283582089, 'nspdk': 0.01947168713508865, 'fcd': 5.334581849632219, 'valid_with_corr': 1000}
+Running metrics for iter afer 346000 steps/epochs and 41463.2771692276 seconds
+{'loss': tensor(2.0676), 'clock_time': 41463.2771692276, 'process_time': 41115.680536828}
+Time to generate 1000: 0.125349760055542 sec.
+Time computing degree mmd:  0:00:04.719622
+[91mnspdk    [39m : [94m0.020412
+{'valid': 672, 'unique': 0.932, 'novel': 0.8680257510729614, 'nspdk': 0.020412170896718373, 'fcd': 5.323521885657794, 'valid_with_corr': 1000}
+Running metrics for train afer 347301 steps/epochs and 41630.745344638824 seconds
+{'loss': tensor(2.0673), 'clock_time': 41630.745344638824, 'process_time': 41281.798039613}
+Running metrics for val afer 347301 steps/epochs and 41630.74699282646 seconds
+{'loss': tensor(2.0829), 'clock_time': 41630.74699282646, 'process_time': 41281.798884799}
+Time to generate 1000: 0.12586474418640137 sec.
+Time computing degree mmd:  0:00:04.754135
+[91mnspdk    [39m : [94m0.020814
+{'valid': 656, 'unique': 0.943, 'novel': 0.8716861081654295, 'nspdk': 0.020814178195369015, 'fcd': 5.269167242123352, 'valid_with_corr': 1000}
+Epoch 93 starts...
+Running metrics for iter afer 348000 steps/epochs and 41718.42745757103 seconds
+{'loss': tensor(2.0671), 'clock_time': 41718.42745757103, 'process_time': 41368.797283725}
+Time to generate 1000: 0.12424015998840332 sec.
+Time computing degree mmd:  0:00:04.765306
+[91mnspdk    [39m : [94m0.020569
+{'valid': 675, 'unique': 0.939, 'novel': 0.873269435569755, 'nspdk': 0.020568678195826473, 'fcd': 5.198569231066713, 'valid_with_corr': 1000}
+Running metrics for iter afer 350000 steps/epochs and 41935.670696258545 seconds
+{'loss': tensor(2.0672), 'clock_time': 41935.670696258545, 'process_time': 41584.283754757}
+Time to generate 1000: 0.12689447402954102 sec.
+Time computing degree mmd:  0:00:04.736413
+[91mnspdk    [39m : [94m0.019976
+{'valid': 676, 'unique': 0.95, 'novel': 0.8821052631578947, 'nspdk': 0.01997643920132608, 'fcd': 5.154332933672727, 'valid_with_corr': 1000}
+Running metrics for train afer 351076 steps/epochs and 42080.504093408585 seconds
+{'loss': tensor(2.0675), 'clock_time': 42080.504093408585, 'process_time': 41727.930592266}
+Running metrics for val afer 351076 steps/epochs and 42080.505752801895 seconds
+{'loss': tensor(2.0832), 'clock_time': 42080.505752801895, 'process_time': 41727.931438982}
+Time to generate 1000: 0.12524986267089844 sec.
+Time computing degree mmd:  0:00:04.808845
+[91mnspdk    [39m : [94m0.021056
+{'valid': 669, 'unique': 0.943, 'novel': 0.8780487804878049, 'nspdk': 0.021055788091704775, 'fcd': 5.418283980835547, 'valid_with_corr': 1000}
+Epoch 94 starts...
+Running metrics for iter afer 352000 steps/epochs and 42190.582904577255 seconds
+{'loss': tensor(2.0672), 'clock_time': 42190.582904577255, 'process_time': 41837.137689425996}
+Time to generate 1000: 0.12422800064086914 sec.
+Time computing degree mmd:  0:00:04.714468
+[91mnspdk    [39m : [94m0.021128
+{'valid': 645, 'unique': 0.943, 'novel': 0.8610816542948038, 'nspdk': 0.021127719114722, 'fcd': 5.30749305056386, 'valid_with_corr': 1000}
+Running metrics for iter afer 354000 steps/epochs and 42407.73657822609 seconds
+{'loss': tensor(2.0682), 'clock_time': 42407.73657822609, 'process_time': 42052.542725581996}
+Time to generate 1000: 0.12506389617919922 sec.
+Time computing degree mmd:  0:00:04.719591
+[91mnspdk    [39m : [94m0.019919
+{'valid': 650, 'unique': 0.933, 'novel': 0.8735262593783494, 'nspdk': 0.019918937730317637, 'fcd': 5.296176959636661, 'valid_with_corr': 1000}
+Running metrics for train afer 354851 steps/epochs and 42529.95838832855 seconds
+{'loss': tensor(2.0675), 'clock_time': 42529.95838832855, 'process_time': 42173.763395321}
+Running metrics for val afer 354851 steps/epochs and 42529.96007037163 seconds
+{'loss': tensor(2.0832), 'clock_time': 42529.96007037163, 'process_time': 42173.764247041}
+Time to generate 1000: 0.12458992004394531 sec.
+Time computing degree mmd:  0:00:04.754542
+[91mnspdk    [39m : [94m0.022401
+{'valid': 634, 'unique': 0.929, 'novel': 0.8848223896663079, 'nspdk': 0.022400557630594703, 'fcd': 5.452050797375854, 'valid_with_corr': 1000}
+Epoch 95 starts...
+Running metrics for iter afer 356000 steps/epochs and 42662.39412689209 seconds
+{'loss': tensor(2.0667), 'clock_time': 42662.39412689209, 'process_time': 42305.129314756996}
+Time to generate 1000: 0.12461328506469727 sec.
+Time computing degree mmd:  0:00:04.749203
+[91mnspdk    [39m : [94m0.019275
+{'valid': 640, 'unique': 0.955, 'novel': 0.8764397905759163, 'nspdk': 0.019275336109347313, 'fcd': 5.231141086649352, 'valid_with_corr': 1000}
+Running metrics for iter afer 358000 steps/epochs and 42879.85831308365 seconds
+{'loss': tensor(2.0677), 'clock_time': 42879.85831308365, 'process_time': 42520.875826654}
+Time to generate 1000: 0.12552690505981445 sec.
+Time computing degree mmd:  0:00:04.712681
+[91mnspdk    [39m : [94m0.020366
+{'valid': 641, 'unique': 0.954, 'novel': 0.8763102725366876, 'nspdk': 0.020365831326744605, 'fcd': 5.17035015543145, 'valid_with_corr': 1000}
+Running metrics for train afer 358626 steps/epochs and 42978.9613904953 seconds
+{'loss': tensor(2.0674), 'clock_time': 42978.9613904953, 'process_time': 42619.189647497}
+Running metrics for val afer 358626 steps/epochs and 42978.963039159775 seconds
+{'loss': tensor(2.0827), 'clock_time': 42978.963039159775, 'process_time': 42619.190488986}
+Time to generate 1000: 0.12495541572570801 sec.
+Time computing degree mmd:  0:00:04.777172
+[91mnspdk    [39m : [94m0.020487
+{'valid': 675, 'unique': 0.943, 'novel': 0.8822905620360552, 'nspdk': 0.020487312382755724, 'fcd': 5.282727016557317, 'valid_with_corr': 1000}
+Epoch 96 starts...
+Running metrics for iter afer 360000 steps/epochs and 43131.45160698891 seconds
+{'loss': tensor(2.0671), 'clock_time': 43131.45160698891, 'process_time': 42770.484173069}
+Time to generate 1000: 0.11794495582580566 sec.
+Time computing degree mmd:  0:00:04.775630
+[91mnspdk    [39m : [94m0.018765

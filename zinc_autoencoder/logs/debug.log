@@ -1,0 +1,27 @@
+2023-07-12 11:26:05,698 INFO    MainThread:3692753 [wandb_setup.py:_flush():76] Current SDK version is 0.15.3
+2023-07-12 11:26:05,702 INFO    MainThread:3692753 [wandb_setup.py:_flush():76] Configure stats pid to 3692753
+2023-07-12 11:26:05,709 INFO    MainThread:3692753 [wandb_setup.py:_flush():76] Loading settings from /home/users/b/boget3/.config/wandb/settings
+2023-07-12 11:26:05,716 INFO    MainThread:3692753 [wandb_setup.py:_flush():76] Loading settings from /home/users/b/boget3/vqvae-graph/wandb/settings
+2023-07-12 11:26:05,717 INFO    MainThread:3692753 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2023-07-12 11:26:05,725 INFO    MainThread:3692753 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2023-07-12 11:26:05,731 INFO    MainThread:3692753 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program': '/home/users/b/boget3/vqvae-graph/./main.py'}
+2023-07-12 11:26:05,739 INFO    MainThread:3692753 [wandb_init.py:_log_setup():507] Logging user logs to /home/users/b/boget3/vqvae-graph/wandb/run-20230712_112605-chfc1oz3/logs/debug.log
+2023-07-12 11:26:05,747 INFO    MainThread:3692753 [wandb_init.py:_log_setup():508] Logging internal logs to /home/users/b/boget3/vqvae-graph/wandb/run-20230712_112605-chfc1oz3/logs/debug-internal.log
+2023-07-12 11:26:05,752 INFO    MainThread:3692753 [wandb_init.py:init():547] calling init triggers
+2023-07-12 11:26:05,763 INFO    MainThread:3692753 [wandb_init.py:init():554] wandb.init called with sweep_config: {}
+config: {'data': {'data': 'ZINC250k', 'dir': './data', 'max_node_num': 38, 'max_feat_num': 9, 'add_spectral_feat': True, 'add_cycles_feat': True, 'add_path_feat': True, 'add_random_feat': True}, 'training': {'log': False, 'batch_size': 32, 'learning_rate': 0.001, 'lr_decay': 0.5, 'decay_iteration': 25000, 'beta1': 0.9, 'beta2': 0.99, 'n_iter': 1000000, 'epochs': 250, 'betas': [0.9, 0.99]}, 'model': {'encoder': {'name': 'GNN_PYG', 'n_layers': 4, 'nhf': 32, 'mlp_hidden_size': 128, 'mlp_n_layers': 3, 'add_input_noise': False, 'skip_connection': True, 'normalization': 'batch_norm'}, 'decoder': {'name': 'GNN', 'n_layers': 4, 'nhf': 32, 'mlp_hidden_size': 128, 'mlp_n_layers': 3, 'skip_connection': True, 'normalization': 'batch_norm'}, 'quantizer': {'name': 'Quantizer', 'nz': 8, 'codebook_size': 32, 'nc': 2, 'commitment_cost': 0.25, 'decay': 0.99, 'epsilon': 1e-05}, 'gamma': 0.1}, 'log': {'n_loggin_steps': 1000, 'n_loggin_epochs': 1, 'wandb': 'online'}, 'dataset': 'zinc', 'work_type': 'train_autoencoder', 'train_prior': False, 'sample': False, 'model_folder': 'run-20230628_182605-gpdewnzq'}
+2023-07-12 11:26:05,764 INFO    MainThread:3692753 [wandb_init.py:init():596] starting backend
+2023-07-12 11:26:05,772 INFO    MainThread:3692753 [wandb_init.py:init():600] setting up manager
+2023-07-12 11:26:05,777 INFO    MainThread:3692753 [backend.py:_multiprocessing_setup():106] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2023-07-12 11:26:05,786 INFO    MainThread:3692753 [wandb_init.py:init():606] backend started and connected
+2023-07-12 11:26:05,792 INFO    MainThread:3692753 [wandb_init.py:init():700] updated telemetry
+2023-07-12 11:26:06,492 INFO    MainThread:3692753 [wandb_init.py:init():737] communicating run to backend with 60.0 second timeout
+2023-07-12 11:26:07,088 INFO    MainThread:3692753 [wandb_run.py:_on_init():2177] communicating current version
+2023-07-12 11:26:07,223 INFO    MainThread:3692753 [wandb_run.py:_on_init():2186] got version response upgrade_message: "wandb version 0.15.5 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2023-07-12 11:26:07,227 INFO    MainThread:3692753 [wandb_init.py:init():787] starting run threads in backend
+2023-07-12 11:26:16,081 INFO    MainThread:3692753 [wandb_run.py:_console_start():2158] atexit reg
+2023-07-12 11:26:16,099 INFO    MainThread:3692753 [wandb_run.py:_redirect():2013] redirect: SettingsConsole.WRAP_RAW
+2023-07-12 11:26:16,109 INFO    MainThread:3692753 [wandb_run.py:_redirect():2078] Wrapping output streams.
+2023-07-12 11:26:16,115 INFO    MainThread:3692753 [wandb_run.py:_redirect():2103] Redirects installed.
+2023-07-12 11:26:16,143 INFO    MainThread:3692753 [wandb_init.py:init():829] run started, returning control to user process
